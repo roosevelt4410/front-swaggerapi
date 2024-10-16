@@ -1,7 +1,16 @@
 import axios from "axios"
 
-const BASE_URL = 'http://localhost:8080/users'; 
+
+const configg = {
+    backendUrl: process.env.REACT_APP_PUBLIC_BACKEND
+  };
+
+
+/* const BASE_URL = 'http://localhost:8080/apitestswagger/users';  */
+const BASE_URL = `${configg.backendUrl}/users`;
 /* const BASE_URL = 'http://localhost:8080/apitestswagger-0.0.1/users'; */
+
+console.log(BASE_URL); // Para verificar si la URL se construye correctamente
 const config = () => {
     return {
         headers: {
