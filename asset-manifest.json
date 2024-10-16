@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/front-swaggerapi/static/css/main.d55bf4a5.css",
-    "main.js": "/front-swaggerapi/static/js/main.23302030.js",
+    "main.js": "/front-swaggerapi/static/js/main.095eb37a.js",
     "index.html": "/front-swaggerapi/index.html",
     "main.d55bf4a5.css.map": "/front-swaggerapi/static/css/main.d55bf4a5.css.map",
-    "main.23302030.js.map": "/front-swaggerapi/static/js/main.23302030.js.map"
+    "main.095eb37a.js.map": "/front-swaggerapi/static/js/main.095eb37a.js.map"
   },
   "entrypoints": [
     "static/css/main.d55bf4a5.css",
-    "static/js/main.23302030.js"
+    "static/js/main.095eb37a.js"
   ]
 }
