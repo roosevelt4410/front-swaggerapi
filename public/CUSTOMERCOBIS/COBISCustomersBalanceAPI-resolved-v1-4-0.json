@@ -316,15 +316,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -364,15 +355,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -412,15 +394,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -460,15 +433,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -580,15 +544,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -1018,15 +973,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -1066,15 +1012,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -1114,15 +1051,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -1162,15 +1090,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -1282,15 +1201,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -1806,15 +1716,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -1854,15 +1755,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -1902,15 +1794,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -1950,15 +1833,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -2070,15 +1944,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -2477,15 +2342,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -2525,15 +2381,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -2573,15 +2420,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -2621,15 +2459,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -2743,15 +2572,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -3293,15 +3113,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -3341,15 +3152,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -3389,15 +3191,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -3437,15 +3230,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -3557,15 +3341,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -3968,15 +3743,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -4016,15 +3782,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -4064,15 +3821,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -4112,15 +3860,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -4232,15 +3971,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -4648,15 +4378,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -4696,15 +4417,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -4744,15 +4456,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -4792,15 +4495,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -4914,15 +4608,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -5443,15 +5128,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -5491,15 +5167,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -5539,15 +5206,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -5587,15 +5245,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -5709,15 +5358,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -6265,15 +5905,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -6313,15 +5944,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -6361,15 +5983,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -6409,15 +6022,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -6529,15 +6133,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -6932,15 +6527,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -6980,15 +6566,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -7028,15 +6605,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -7076,15 +6644,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -7196,15 +6755,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -7706,15 +7256,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -7754,15 +7295,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -7802,15 +7334,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -7850,15 +7373,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -7970,15 +7484,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {

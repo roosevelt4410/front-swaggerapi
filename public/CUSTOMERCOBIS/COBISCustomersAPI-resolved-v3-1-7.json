@@ -17,7 +17,7 @@
   },
   "servers": [
     {
-      "url": "https://dev.api.customers.product.cobiscloud.com",
+      "url": "https://vitrynfmmk.execute-api.us-east-1.amazonaws.com/qa/customers/v1",
       "description": "URL del ambiente de desarrollo."
     }
   ],
@@ -33,131 +33,155 @@
   ],
   "paths": {
     "/customers/natural-persons/{customerId}": {
-      "get": {
+      "post": {
         "tags": [
           "NaturalPersons"
         ],
+        
         "summary": "Consulta cliente o prospecto por el código COBIS del cliente. Código de servicio: AS0001-ConsultaPersonaNaturalPorCodigo",
         "description": "Realiza la consulta de los datos básicos de un cliente o prospecto de tipo persona natural mediante el código COBIS.",
         "operationId": "CustomersNaturalPersonsGETById",
         "parameters": [
-          {
-            "name": "x-request-id",
-            "in": "header",
-            "description": "Identificador único de la solicitud o petición.",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/RequestID"
-            }
+  {
+    "name": "x-request-id",
+    "in": "header",
+    "description": "Identificador único de la solicitud o petición.",
+    "required": true,
+    "schema": {
+      "$ref": "#/components/schemas/RequestID"
+    }
+  },
+  {
+    "name": "x-financial-id",
+    "in": "header",
+    "description": "ID del banco o entidad que provee los servicios financieros.",
+    "required": false,
+    "schema": {
+      "maxLength": 30,
+      "type": "string"
+    }
+  },
+  {
+    "name": "x-end-user-login",
+    "in": "header",
+    "description": "Login de usuario en la aplicación de front-end que realiza la petición.",
+    "required": true,
+    "schema": {
+      "maxLength": 30,
+      "type": "string"
+    }
+  },
+  {
+    "name": "x-end-user-request-date-time",
+    "in": "header",
+    "description": "Fecha y hora en la que se originó la solicitud o petición por el usuario en la aplicación de front-end.",
+    "required": true,
+    "schema": {
+      "$ref": "#/components/schemas/ISODateTime"
+    }
+  },
+  {
+    "name": "x-end-user-terminal",
+    "in": "header",
+    "description": "Terminal (IP, número de teléfono, o identificador del dispositivo) desde el cual se originó la solicitud o petición por el usuario en la aplicación de front-end.",
+    "required": true,
+    "schema": {
+      "maxLength": 30,
+      "pattern": "^[a-zA-Z0-9_.-.+:\\/]{0,30}$",
+      "type": "string"
+    }
+  },
+  {
+    "name": "x-end-user-last-logged-date-time",
+    "in": "header",
+    "description": "Fecha y hora del último logueo del usuario en la aplicación.",
+    "required": false,
+    "schema": {
+      "$ref": "#/components/schemas/ISODateTime"
+    }
+  },
+  {
+    "name": "x-jws-signature",
+    "in": "header",
+    "description": "JSON Web Signature (JWS) generado para firmar las peticiones RQ.",
+    "required": false,
+    "schema": {
+      "type": "string"
+    }
+  },
+  {
+    "name": "x-reverse",
+    "in": "header",
+    "description": "Indicador de ejecución de reverso de una transacción. Valores:['true','false']. Default: 'false' No aplica reverso.",
+    "required": false,
+    "schema": {
+      "type": "string"
+    }
+  },
+  {
+    "name": "x-requestId-to-reverse",
+    "in": "header",
+    "description": "Identificador único de la transacción que se requiere reversar. Este campo es requerido en caso de que el campo x-reverse sea 'true'.",
+    "required": false,
+    "schema": {
+      "$ref": "#/components/schemas/RequestID"
+    }
+  },
+  {
+    "name": "Accept-Language",
+    "in": "header",
+    "description": "Indica el conjunto de lenguajes de preferencia que soporta el cliente en la respuesta, valor por defecto Español Colombia (es-CO). Ver https://tools.ietf.org/html/rfc5646",
+    "required": false,
+    "schema": {
+      "type": "string"
+    }
+  },
+  {
+    "name": "x-channel",
+    "in": "header",
+    "description": "Identificador numérico del canal desde el cual se origina la solicitud.",
+    "required": false,
+    "schema": {
+      "$ref": "#/components/schemas/ChannelCode"
+    }
+  },
+  {
+    "name": "customerId",
+    "in": "path",
+    "description": "Código COBIS del cliente.",
+    "required": true,
+    "style": "simple",
+    "explode": false,
+    "schema": {
+      "$ref": "#/components/schemas/CustomerCode"
+    }
+  }
+],
+"requestBody": {
+  "required": true,
+  "content": {
+    "application/json": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "someField": {
+            "type": "string",
+            "description": "Descripción del campo que deseas enviar en el body."
           },
-          {
-            "name": "x-financial-id",
-            "in": "header",
-            "description": "ID del banco o entidad que provee los servicios financieros.",
-            "required": false,
-            "schema": {
-              "maxLength": 30,
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-end-user-login",
-            "in": "header",
-            "description": "Login de usuario en la aplicación de front-end que realiza la petición.",
-            "required": true,
-            "schema": {
-              "maxLength": 30,
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-end-user-request-date-time",
-            "in": "header",
-            "description": "Fecha y hora en la que se originó la solicitud o petición por el usuario en la aplicación de front-end.",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/ISODateTime"
-            }
-          },
-          {
-            "name": "x-end-user-terminal",
-            "in": "header",
-            "description": "Terminal (IP, número de teléfono, o identificador del dispositivo) desde el cual se originó la solicitud o petición por el usuario en la aplicación de front-end.",
-            "required": true,
-            "schema": {
-              "maxLength": 30,
-              "pattern": "^[a-zA-Z0-9_.-.+:\\/]{0,30}$",
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-end-user-last-logged-date-time",
-            "in": "header",
-            "description": "Fecha y hora del último logueo del usuario en la aplicación.",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/ISODateTime"
-            }
-          },
-          {
-            "name": "x-jws-signature",
-            "in": "header",
-            "description": "JSON Web Signature (JWS) generado para firmar las peticiones RQ.",
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-reverse",
-            "in": "header",
-            "description": "Indicador de ejecución de reverso de una transacción. Valores:['true','false']. Default: 'false' No aplica reverso.",
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-requestId-to-reverse",
-            "in": "header",
-            "description": "Identificador único de la transacción que se requiere reversar. Este campo es requerido en caso de que el campo x-reverse sea 'true'.",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/RequestID"
-            }
-          },
-          {
-            "name": "Accept-Language",
-            "in": "header",
-            "description": "Indica el conjunto de lenguajes de preferencia que soporta el cliente en la respuesta, valor por defecto Español Colombia (es-CO). Ver https://tools.ietf.org/html/rfc5646",
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-channel",
-            "in": "header",
-            "description": "Identificador numérico del canal desde el cual se origina la solicitud.",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/ChannelCode"
-            }
-          },
-          {
-            "name": "customerId",
-            "in": "path",
-            "description": "Código COBIS del cliente.",
-            "required": true,
-            "style": "simple",
-            "explode": false,
-            "schema": {
-              "$ref": "#/components/schemas/CustomerCode"
-            }
+          "anotherField": {
+            "type": "integer",
+            "description": "Otro campo para enviar datos adicionales."
           }
-        ],
-        "responses": {
-          "200": {
+        },
+        "required": [
+          "someField"
+        ]
+      }
+    }
+  }
+},
+"responses": {
+  "200": {
             "description": "Se ha realizado la consulta exitosamente.",
             "headers": {
               "x-correlation-id": {
@@ -312,16 +336,11 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
+             
+
+
+              
             },
             "content": {
               "application/json": {
@@ -360,15 +379,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -408,15 +418,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -456,15 +457,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -504,15 +496,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
@@ -585,15 +568,6 @@
               },
               "X-Content-Type-Options": {
                 "$ref": "#/components/headers/X-Content-Type-Options"
-              },
-              "Cache-Control": {
-                "$ref": "#/components/headers/Cache-Control"
-              },
-              "Referrer-Policy": {
-                "$ref": "#/components/headers/Referrer-Policy"
-              },
-              "Permissions-Policy": {
-                "$ref": "#/components/headers/Permissions-Policy"
               }
             },
             "content": {
