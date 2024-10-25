@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useState,  useContext } from 'react';
+import { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignOutAlt, faUsers, faThList, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt, faUsers, faUniversity, faBook, faFolderOpen } from '@fortawesome/free-solid-svg-icons';
 import { AuthContext } from '../Auth/context/AuthContext';
 
 export const Navbar = () => {
@@ -28,56 +28,59 @@ export const Navbar = () => {
                 <div className={`md:flex ${isOpen ? 'block' : 'hidden'} items-center`}>
                     {login.isAuth && (
                         <>
+                            
                             <Link
                                 to="/users"
-                                className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2"
+                                className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2 flex flex-col items-center"
                             >
                                 <FontAwesomeIcon icon={faUsers} className="fa-lg" />
+                                <span className="text-xs mt-1">Users</span>
                             </Link>
+
+                            
                             <Link
                                 to="/apis"
-                                className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2"
+                                className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2 flex flex-col items-center"
                             >
-                                <FontAwesomeIcon icon={faThList} className="fa-lg" />
+                                <FontAwesomeIcon icon={faUniversity} className="fa-lg" /> 
+                                <span className="text-xs mt-1">Banco</span>
                             </Link>
+
+                            
                             <Link
                                 to="/apis/apisComponetsExternas"
-                                className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2"
+                                className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2 flex flex-col items-center"
                             >
-                                <FontAwesomeIcon icon={faExternalLinkAlt} className="fa-lg" />
+                                <FontAwesomeIcon icon={faBook} className="fa-lg" /> 
+                                <span className="text-xs mt-1">Cobis</span>
                             </Link>
 
-                            {/* <div className="relative ml-3">
-                        <button
-                            onClick={handleButtonClick}
-                            className={`bg-white text-gray-800 placeholder-gray-500 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:border-empresa-verde transition-all ${isSearchExpanded ? 'w-48' : 'w-32'} hover:w-48 hover:scale-105`}
-                        >
-                            <FontAwesomeIcon
-                                icon={faSearch}
-                                className={`mr-2 text-empresa-verde ${isSearchExpanded ? 'ml-2' : ''}`}
-                            />
-                        </button>
-                        {isSearchExpanded && (
-                            <input
-                                type="text"
-                                placeholder="Buscar Api..."
-                                className="absolute right-0 top-0 w-full font-mono bg-gray-300 text-black placeholder-black border-none outline-none focus:outline-none py-2 px-4 rounded-full shadow-md"
-                                ref={searchInputRef}
-                                onBlur={handleBlur}
-                            />
-                        )}
-                    </div> */}
-                            <div className="ml-4 ">
+                            
+                            <Link
+    to="/apis/buc"
+    className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2 flex flex-col items-center group"
+>
+    <FontAwesomeIcon icon={faFolderOpen} className="fa-lg" />
+    <span className="text-xs mt-1">
+        <span className="group-hover:hidden">CI</span> {/* Texto corto visible por defecto */}
+        <span className="hidden group-hover:inline">Capa de Interoperabilidad</span> {/* Texto largo visible al hacer hover */}
+    </span>
+</Link>
 
-                                <button onClick={handlerLogout} className="bg-empresa-verde hover:bg-empresa-rojo text-white rounded-full font-bold py-2 px-4 hover:text-white ">
+
+                            
+                            <div className="ml-4">
+                                <button
+                                    onClick={handlerLogout}
+                                    className="bg-empresa-verde hover:bg-empresa-rojo text-white rounded-full font-bold py-2 px-4 hover:text-white"
+                                >
                                     <FontAwesomeIcon icon={faSignOutAlt} className="mr-2 text-white" />
-                                   
                                 </button>
-
                             </div>
                         </>
                     )}
                 </div>
+
             </div>
         </nav>
     );
