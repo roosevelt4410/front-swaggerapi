@@ -27,6 +27,7 @@ const ApisComponent = () => {
 
       <SwaggerUI
         url={`${config.backendUrl}/v2/api-docs`}
+        
         requestInterceptor={(req: any) => {
           if (token) {
             req.headers['Authorization'] = `Bearer ${token}`;
