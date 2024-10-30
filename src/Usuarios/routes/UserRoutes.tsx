@@ -6,6 +6,7 @@ import { UsersPage } from "../pages/UsersPage";
 import RegisterPage from "../pages/RegisterPage";
 import Navbar from "../../Components/Navbar";
 import { ApiRoutes } from "../../Apis/routes/ApiRoutes";
+import ChangePassword from "../components/ChangePassword";
 
 export const UserRoutes = () => {
     const { login } = useContext(AuthContext);
@@ -15,6 +16,7 @@ export const UserRoutes = () => {
                 <Navbar />
                 <Routes>
                     <Route path="users" element={<UsersPage />} />
+                    <Route path="users/changePassword" element={<ChangePassword />} />
                     {!login.isAdmin || <>
                         <Route path="users/register" element={<RegisterPage />} />
                         <Route path="users/edit/:id" element={<RegisterPage />} />
