@@ -21,7 +21,7 @@ const ChangePassword: React.FC = () => {
     console.log(sessionStorage.getItem('token'));
     try {
       /* const response = await axios.post(`http://localhost:8080/apitestswagger/users/changepassword`, { */
-      const response = await axios.post(`https://10.14.36.33:8443/apitestswagger/users/changepassword`,{
+      const response = await axios.post(`https://10.14.36.33:8444/apitestswagger/users/changepassword`,{
         oldPassword,
         newPassword,
       }, {
