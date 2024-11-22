@@ -1,0 +1,76 @@
+asyncapi: '3.0.0'
+info:
+  title: "Documentación de Mensajería - OrderPublisher"
+  version: "1.0.0"
+  description: |
+    Este documento describe el componente `OrderPublisher`, que publica mensajes de órdenes en la cola de RabbitMQ. 
+    Los mensajes de orden contienen información detallada de la orden creada.
+
+servers:
+  rabbitmqBroker:
+    url: "amqp://localhost:5672"
+    protocol: amqp
+    description: "RabbitMQ broker que maneja los mensajes de órdenes."
+
+channels:
+  orderQueue:
+    description: "Cola que recibe mensajes de órdenes para ser procesados."
+    publish:
+      summary: "Publica un mensaje de orden en la cola"
+      operationId: "publishOrder"
+      message:
+        contentType: "application/json"
+        payload:
+          $ref: "#/components/schemas/OrderMessage"
+        examples:
+          - orderId: 101
+            customerName: "Juan Pérez"
+            orderDate: "2023-10-05T13:45:00Z"
+            items:
+              - itemId: 1
+                quantity: 3
+                price: 29.99
+            totalAmount: 89.97
+
+components:
+  schemas:
+    OrderMessage:
+      type: object
+      properties:
+        orderId:
+          type: integer
+          description: "ID único de la orden"
+          example: 101
+        customerName:
+          type: string
+          description: "Nombre del cliente que realizó la orden"
+          example: "Juan Pérez"
+        orderDate:
+          type: string
+          format: date-time
+          description: "Fecha en la que se realizó la orden"
+          example: "2023-10-05T13:45:00Z"
+        items:
+          type: array
+          description: "Lista de artículos en la orden"
+          items:
+            type: object
+            properties:
+              itemId:
+                type: integer
+                description: "ID del artículo"
+                example: 1
+              quantity:
+                type: integer
+                description: "Cantidad del artículo en la orden"
+                example: 3
+              price:
+                type: number
+                format: float
+                description: "Precio unitario del artículo"
+                example: 29.99
+        totalAmount:
+          type: number
+          format: float
+          description: "Monto total de la orden"
+          example: 89.97
