@@ -1,0 +1,4002 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "interoperabilidad-buc",
+        "description": "Proyecto de interoperabilidad BUC",
+        "version": "0.0.1"
+    },
+    "servers": [
+        {
+            "url": "https://mocks.coomeva.com",
+            "description": "Generated server url"
+        }
+    ],
+    "paths": {
+        "/api/v1/buc/crearDatosFinancieros": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Crear datos financieros de un cliente",
+                "operationId": "crearDatosFinancieros",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestConsultaBucRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la creacion exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CanonicalConsultarDatosAdicionalesResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            }
+        },
+        "/api/v1/buc/crearDatosBasicos": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Crear datos basicos de un cliente",
+                "operationId": "crearDatosBasicos",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestCrearDatosBasicosBucRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la creacion exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CanonicalConsultarDatosBasicosResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            }
+        },
+        "/api/v1/buc/crearDatosAdicionales": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Crear datos adicionales de un cliente",
+                "operationId": "crearDatosAdicionales",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestConsultaBucRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la creacion exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CanonicalConsultarDatosAdicionalesResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            }
+        },
+        "/api/v1/buc/consultarDatosFinancieros": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Consultar datos financieros de un cliente",
+                "operationId": "consultarDatosFinancieros",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestConsultaBucRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la consulta exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CanonicalConsultarDatosFinancierosResponse"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            }
+        },
+        "/api/v1/buc/consultarDatosBasicos": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Consultar datos basicos de un cliente",
+                "operationId": "consultarDatosBasicos",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestConsultaBucRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Se ha realizado la consulta exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CanonicalConsultarDatosBasicosResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            }
+        },
+        "/api/v1/buc/consultarDatosAdicionales": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Consultar datos adicionales de un cliente",
+                "operationId": "consultarDatosAdicionales",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestConsultaBucRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Se ha realizado la consulta exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CanonicalConsultarDatosAdicionalesResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            }
+        },
+        "/api/v1/health/ping": {
+            "get": {
+                "tags": [
+                    "health-controller"
+                ],
+                "operationId": "ping",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "CanonicalRequestConsultaBucRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/ConsultaBucRequestDTO"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "ClientApp": {
+                "required": [
+                    "appName",
+                    "appVersion",
+                    "userAgent"
+                ],
+                "type": "object",
+                "properties": {
+                    "appName": {
+                        "type": "string",
+                        "description": "Nombre de la aplicación",
+                        "example": "Bancoomeva App"
+                    },
+                    "appVersion": {
+                        "type": "string",
+                        "description": "Versión de la aplicación",
+                        "example": "1.0.0"
+                    },
+                    "userAgent": {
+                        "type": "string",
+                        "description": "UserAgent de la aplicación",
+                        "example": "BancoomevaApp/1.0.0 (iOS 15.2)"
+                    }
+                },
+                "description": "Información sobre la aplicación cliente"
+            },
+            "ConsultaBucRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "customerId": {
+                        "type": "string",
+                        "description": "Codigo del cliente",
+                        "example": "8748378"
+                    },
+                    "documentType": {
+                        "type": "string",
+                        "description": "Tipo de identificación del cliente",
+                        "example": "CC"
+                    },
+                    "documentNumber": {
+                        "type": "string",
+                        "description": "Número de identificación del cliente",
+                        "example": "10058399283"
+                    }
+                },
+                "description": "Objeto para la cunsulta de un cliente ya sea por su código o su identificación"
+            },
+            "DeviceContext": {
+                "required": [
+                    "clientApp",
+                    "deviceId",
+                    "deviceType",
+                    "geoLocation",
+                    "ipAddress",
+                    "macAddress",
+                    "osVersion"
+                ],
+                "type": "object",
+                "properties": {
+                    "deviceId": {
+                        "type": "string",
+                        "description": "Identificador único del dispositivo desde el cual se origina la solicitud",
+                        "example": "device123"
+                    },
+                    "deviceType": {
+                        "type": "string",
+                        "description": "Tipo de dispositivo",
+                        "example": "mobile"
+                    },
+                    "osVersion": {
+                        "type": "string",
+                        "description": "Versión del sistema operativo en el dispositivo",
+                        "example": "iOS 15.2"
+                    },
+                    "ipAddress": {
+                        "type": "string",
+                        "description": "Dirección IP del dispositivo",
+                        "example": "127.0.0.1"
+                    },
+                    "macAddress": {
+                        "type": "string",
+                        "description": "Dirección MAC del dispositivo",
+                        "example": "00:1B:44:11:3A:B7"
+                    },
+                    "geoLocation": {
+                        "$ref": "#/components/schemas/GeoLocation"
+                    },
+                    "clientApp": {
+                        "$ref": "#/components/schemas/ClientApp"
+                    }
+                },
+                "description": "Proporciona información sobre el dispositivo desde el cual se origina la solicitud"
+            },
+            "GeoLocation": {
+                "required": [
+                    "latitude",
+                    "longitude"
+                ],
+                "type": "object",
+                "properties": {
+                    "latitude": {
+                        "type": "string",
+                        "description": "Latitud de geolocalización",
+                        "example": "4.710989"
+                    },
+                    "longitude": {
+                        "type": "string",
+                        "description": "Longitud de geolocalización",
+                        "example": "-74.072092"
+                    }
+                },
+                "description": "Información de geolocalización"
+            },
+            "Header": {
+                "required": [
+                    "authToken",
+                    "messageId",
+                    "originatingBank",
+                    "requestType",
+                    "timestamp",
+                    "transactionId"
+                ],
+                "type": "object",
+                "properties": {
+                    "messageId": {
+                        "type": "string",
+                        "description": "Identificador único del mensaje que permite rastrear la solicitud",
+                        "example": "12345-abcde-67890-fghij"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "description": "Fecha y hora en que se generó la solicitud, en formato ISO8601",
+                        "example": "2024-10-08T12:30:00"
+                    },
+                    "originatingBank": {
+                        "type": "string",
+                        "description": "Nombre del banco o entidad que origina la solicitud",
+                        "example": "Bancoomeva"
+                    },
+                    "authToken": {
+                        "type": "string",
+                        "description": "Token de autenticación utilizado para validar la solicitud",
+                        "example": "123456"
+                    },
+                    "callbackUrl": {
+                        "type": "string",
+                        "description": "URL a la que se enviará la respuesta una vez procesada la solicitud",
+                        "example": "https://api.bancoomeva.com/callback"
+                    },
+                    "requestType": {
+                        "type": "string",
+                        "description": "Tipo de solicitud",
+                        "example": "transfer"
+                    },
+                    "transactionId": {
+                        "type": "string",
+                        "description": "Identificador único de la transacción específica",
+                        "example": "txn-001"
+                    }
+                },
+                "description": "Contiene información esencial para identificar y autenticar la transacción"
+            },
+            "Metadata": {
+                "required": [
+                    "priority",
+                    "processingMode",
+                    "serviceLevelAgreement"
+                ],
+                "type": "object",
+                "properties": {
+                    "priority": {
+                        "pattern": "high|medium|low",
+                        "type": "string",
+                        "description": "Nivel de prioridad de la solicitud",
+                        "example": "high"
+                    },
+                    "serviceLevelAgreement": {
+                        "type": "string",
+                        "description": "Nivel de servicio que define el tiempo de respuesta esperado",
+                        "example": "standard"
+                    },
+                    "processingMode": {
+                        "pattern": "synchronous|asynchronous",
+                        "type": "string",
+                        "description": "Modo de procesamiento",
+                        "example": "synchronous"
+                    }
+                },
+                "description": "Define la prioridad, el nivel de servicio y el modo de procesamiento de la solicitud"
+            },
+            "CanonicalConsultarDatosAdicionalesResponseDTO": {
+                "required": [
+                    "message",
+                    "messageId",
+                    "operationData",
+                    "path",
+                    "status",
+                    "timestamp"
+                ],
+                "type": "object",
+                "properties": {
+                    "messageId": {
+                        "type": "string",
+                        "description": "Identificador único que enlaza la respuesta con la solicitud original",
+                        "example": "12345-abcde-67890-fghij"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "description": "Marca de tiempo en que se genera la respuesta",
+                        "example": "2024-10-08T12:30:00"
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "Estado de la operación",
+                        "example": "Success"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Lista de mensajes de error, en caso de que la solicitud no se haya procesado correctamente",
+                        "example": [],
+                        "items": {
+                            "type": "string",
+                            "description": "Lista de mensajes de error, en caso de que la solicitud no se haya procesado correctamente",
+                            "example": "[]"
+                        }
+                    },
+                    "errorType": {
+                        "type": "string",
+                        "description": "Clasificación del error",
+                        "example": "validation"
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "Ruta o endpoint donde ocurrió el error",
+                        "example": "/api/v1/orders"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Descripción general del resultado de la operación",
+                        "example": "Request processed successfully"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/ConsultarDatosAdicionalesResponseDTO"
+                    }
+                }
+            },
+            "ConsultarDatosAdicionalesResponseDTO": {
+                "required": [
+                    "datosAdicionales",
+                    "datosNegocio",
+                    "participantes",
+                    "referencias"
+                ],
+                "type": "object",
+                "properties": {
+                    "participantes": {
+                        "$ref": "#/components/schemas/ParticipantesDTO"
+                    },
+                    "datosAdicionales": {
+                        "$ref": "#/components/schemas/DatosAdicionalesDTO"
+                    },
+                    "referencias": {
+                        "$ref": "#/components/schemas/ReferenciasDTO"
+                    },
+                    "datosNegocio": {
+                        "$ref": "#/components/schemas/DatosNegocioDTO"
+                    }
+                },
+                "description": "DTO que representa la respuesta de consulta de datos adicionales"
+            },
+            "DatosAdicionalesDTO": {
+                "required": [
+                    "actividadEconomicaLaEmpresaDondeTrabaja",
+                    "autorizaRecibirInformacionATravesTextoACelular",
+                    "departamentoExpedicion",
+                    "envioCorrespondenciaReporteAnualComisionesRact",
+                    "fechaCorteEstadoCuenta",
+                    "lugarExpedicion",
+                    "paisExpedicion",
+                    "tipoEmpresaDondeTrabaja"
+                ],
+                "type": "object",
+                "properties": {
+                    "departamentoExpedicion": {
+                        "type": "string",
+                        "description": "Departamento de expedición",
+                        "example": "natural"
+                    },
+                    "paisExpedicion": {
+                        "type": "string",
+                        "description": "País de expedición",
+                        "example": "natural"
+                    },
+                    "actividadEconomicaLaEmpresaDondeTrabaja": {
+                        "type": "string",
+                        "description": "Actividad económica de la empresa",
+                        "example": "natural"
+                    },
+                    "tipoEmpresaDondeTrabaja": {
+                        "type": "string",
+                        "description": "Tipo de empresa",
+                        "example": "natural"
+                    },
+                    "lugarExpedicion": {
+                        "type": "string",
+                        "description": "Lugar de expedición",
+                        "example": "natural"
+                    },
+                    "autorizaRecibirInformacionATravesTextoACelular": {
+                        "type": "string",
+                        "description": "Autoriza recibir información por mensaje de texto",
+                        "example": "natural"
+                    },
+                    "fechaCorteEstadoCuenta": {
+                        "type": "string",
+                        "description": "Fecha de corte del estado de cuenta",
+                        "example": "natural"
+                    },
+                    "envioCorrespondenciaReporteAnualComisionesRact": {
+                        "type": "string",
+                        "description": "Envío de reporte anual de comisiones",
+                        "example": "natural"
+                    }
+                },
+                "description": "DTO que representa los datos adicionales"
+            },
+            "DatosNegocioDTO": {
+                "required": [
+                    "actividadNegocio",
+                    "diasAtencion",
+                    "direccion",
+                    "direccionNegocioIgualAlDomicilioPersonal",
+                    "horaFin",
+                    "horaInicio",
+                    "inicioActividades",
+                    "nombreEstablecimiento",
+                    "numeroEmpleados",
+                    "numeroIdentificacionTributaria",
+                    "queActividad",
+                    "quienAtiendeElNegocio",
+                    "tiempoDesempenandoLaActividadAnos",
+                    "tiempoExperienciaEmpresarial",
+                    "tipoEstablecimiento",
+                    "tipoIdentificacionTributaria"
+                ],
+                "type": "object",
+                "properties": {
+                    "nombreEstablecimiento": {
+                        "type": "string",
+                        "description": "Nombre del establecimiento",
+                        "example": "Restaurante La Delicia"
+                    },
+                    "tipoIdentificacionTributaria": {
+                        "type": "string",
+                        "description": "Tipo de identificación tributaria",
+                        "example": "NIT"
+                    },
+                    "numeroIdentificacionTributaria": {
+                        "type": "string",
+                        "description": "Número de identificación tributaria",
+                        "example": "900123456"
+                    },
+                    "queActividad": {
+                        "type": "string",
+                        "description": "Actividad del negocio",
+                        "example": "Gastronomía"
+                    },
+                    "direccionNegocioIgualAlDomicilioPersonal": {
+                        "type": "string",
+                        "description": "Dirección del negocio igual al domicilio personal",
+                        "example": "No"
+                    },
+                    "direccion": {
+                        "type": "string",
+                        "description": "Dirección del negocio",
+                        "example": "Calle 123, Ciudad"
+                    },
+                    "tiempoDesempenandoLaActividadAnos": {
+                        "type": "string",
+                        "description": "Tiempo desempeñando la actividad en años",
+                        "example": "5"
+                    },
+                    "tipoEstablecimiento": {
+                        "type": "string",
+                        "description": "Tipo de establecimiento",
+                        "example": "Fijo"
+                    },
+                    "diasAtencion": {
+                        "type": "string",
+                        "description": "Días de atención",
+                        "example": "Lunes a Viernes"
+                    },
+                    "horaInicio": {
+                        "type": "string",
+                        "description": "Hora de inicio",
+                        "example": "08:00"
+                    },
+                    "horaFin": {
+                        "type": "string",
+                        "description": "Hora de fin",
+                        "example": "18:00"
+                    },
+                    "quienAtiendeElNegocio": {
+                        "type": "string",
+                        "description": "Quien atiende el negocio",
+                        "example": "Propietario"
+                    },
+                    "numeroEmpleados": {
+                        "type": "string",
+                        "description": "Número de empleados",
+                        "example": "10"
+                    },
+                    "inicioActividades": {
+                        "type": "string",
+                        "description": "Fecha de inicio de actividades",
+                        "example": "2018-01-01"
+                    },
+                    "tiempoExperienciaEmpresarial": {
+                        "type": "string",
+                        "description": "Tiempo de experiencia empresarial",
+                        "example": "10 años"
+                    },
+                    "actividadNegocio": {
+                        "type": "string",
+                        "description": "Actividad del negocio",
+                        "example": "Restaurante"
+                    }
+                },
+                "description": "DTO que representa los datos del negocio"
+            },
+            "ParticipantesDTO": {
+                "required": [
+                    "atributoLaRelacion",
+                    "mensajeLaRelacion",
+                    "prospectoRelacionado",
+                    "tipoRelacion",
+                    "valorAtributo"
+                ],
+                "type": "object",
+                "properties": {
+                    "tipoRelacion": {
+                        "type": "string",
+                        "description": "Tipo de relación",
+                        "example": "juridica"
+                    },
+                    "prospectoRelacionado": {
+                        "type": "string",
+                        "description": "Prospecto relacionado",
+                        "example": "juridica"
+                    },
+                    "mensajeLaRelacion": {
+                        "type": "string",
+                        "description": "Mensaje de la relación",
+                        "example": "juridica"
+                    },
+                    "atributoLaRelacion": {
+                        "type": "string",
+                        "description": "Atributo de la relación",
+                        "example": "juridica"
+                    },
+                    "valorAtributo": {
+                        "type": "string",
+                        "description": "Valor del atributo",
+                        "example": "juridica"
+                    }
+                },
+                "description": "DTO que representa los participantes"
+            },
+            "ReferenciaFamiliarDTO": {
+                "required": [
+                    "cargo",
+                    "fechaFin",
+                    "fechaInicio",
+                    "funcion",
+                    "nombre",
+                    "nombreLaInstitucion",
+                    "numeroIdentificacion",
+                    "parentesco",
+                    "pepReferencia",
+                    "prefijo",
+                    "primerApellido",
+                    "segundoApellido",
+                    "telefono",
+                    "tipoContacto",
+                    "tipoIdentificacion",
+                    "tipoTelefono",
+                    "ultimaFechaActualizacion"
+                ],
+                "type": "object",
+                "properties": {
+                    "nombre": {
+                        "type": "string",
+                        "description": "Nombre",
+                        "example": "natural"
+                    },
+                    "primerApellido": {
+                        "type": "string",
+                        "description": "Primer apellido",
+                        "example": "natural"
+                    },
+                    "segundoApellido": {
+                        "type": "string",
+                        "description": "Segundo apellido",
+                        "example": "natural"
+                    },
+                    "parentesco": {
+                        "type": "string",
+                        "description": "Parentesco",
+                        "example": "natural"
+                    },
+                    "telefono": {
+                        "type": "string",
+                        "description": "Teléfono",
+                        "example": "natural"
+                    },
+                    "tipoIdentificacion": {
+                        "type": "string",
+                        "description": "Tipo de identificación",
+                        "example": "natural"
+                    },
+                    "numeroIdentificacion": {
+                        "type": "string",
+                        "description": "Número de identificación",
+                        "example": "natural"
+                    },
+                    "tipoContacto": {
+                        "type": "string",
+                        "description": "Tipo de contacto",
+                        "example": "natural"
+                    },
+                    "tipoTelefono": {
+                        "type": "string",
+                        "description": "Tipo de teléfono",
+                        "example": "natural"
+                    },
+                    "prefijo": {
+                        "type": "string",
+                        "description": "Prefijo",
+                        "example": "natural"
+                    },
+                    "pepReferencia": {
+                        "type": "string",
+                        "description": "PEP referencia",
+                        "example": "natural"
+                    },
+                    "funcion": {
+                        "type": "string",
+                        "description": "Función",
+                        "example": "natural"
+                    },
+                    "nombreLaInstitucion": {
+                        "type": "string",
+                        "description": "Nombre de la institución",
+                        "example": "natural"
+                    },
+                    "cargo": {
+                        "type": "string",
+                        "description": "Cargo",
+                        "example": "natural"
+                    },
+                    "fechaInicio": {
+                        "type": "string",
+                        "description": "Fecha de inicio",
+                        "example": "natural"
+                    },
+                    "fechaFin": {
+                        "type": "string",
+                        "description": "Fecha de fin",
+                        "example": "natural"
+                    },
+                    "ultimaFechaActualizacion": {
+                        "type": "string",
+                        "description": "Última fecha de actualización",
+                        "example": "natural"
+                    }
+                },
+                "description": "DTO que representa una referencia familiar"
+            },
+            "ReferenciaLaboralDTO": {
+                "required": [
+                    "cargoActual",
+                    "correo",
+                    "existeCompania",
+                    "fechaIngreso",
+                    "fechaSalida",
+                    "moneda",
+                    "nombreLaEmpresa",
+                    "relacionDependenciaLaboral",
+                    "rol",
+                    "sueldo",
+                    "tiempoEnLaActividad",
+                    "tipoContrato",
+                    "vinculo"
+                ],
+                "type": "object",
+                "properties": {
+                    "nombreLaEmpresa": {
+                        "type": "string",
+                        "description": "Nombre de la empresa",
+                        "example": "Empresa ABC"
+                    },
+                    "fechaIngreso": {
+                        "type": "string",
+                        "description": "Fecha de ingreso",
+                        "example": "2019-05-01"
+                    },
+                    "fechaSalida": {
+                        "type": "string",
+                        "description": "Fecha de salida",
+                        "example": "2021-07-01"
+                    },
+                    "tipoContrato": {
+                        "type": "string",
+                        "description": "Tipo de contrato",
+                        "example": "Indefinido"
+                    },
+                    "cargoActual": {
+                        "type": "string",
+                        "description": "Cargo actual",
+                        "example": "Desarrollador"
+                    },
+                    "rol": {
+                        "type": "string",
+                        "description": "Rol desempeñado",
+                        "example": "Backend Developer"
+                    },
+                    "relacionDependenciaLaboral": {
+                        "type": "string",
+                        "description": "Relación de dependencia laboral",
+                        "example": "Empleado"
+                    },
+                    "moneda": {
+                        "type": "string",
+                        "description": "Moneda del sueldo",
+                        "example": "COP"
+                    },
+                    "sueldo": {
+                        "type": "string",
+                        "description": "Sueldo",
+                        "example": "3000.0"
+                    },
+                    "tiempoEnLaActividad": {
+                        "type": "string",
+                        "description": "Tiempo en la actividad",
+                        "example": "2 años"
+                    },
+                    "existeCompania": {
+                        "type": "string",
+                        "description": "Existencia de la compañía",
+                        "example": "Sí"
+                    },
+                    "correo": {
+                        "type": "string",
+                        "description": "Correo electrónico",
+                        "example": "contacto@empresaabc.com"
+                    },
+                    "vinculo": {
+                        "type": "string",
+                        "description": "Vínculo con la empresa",
+                        "example": "Directo"
+                    }
+                },
+                "description": "DTO que representa una referencia laboral"
+            },
+            "ReferenciaPersonalDTO": {
+                "required": [
+                    "cargo",
+                    "fechaFin",
+                    "fechaInicio",
+                    "funcion",
+                    "nombre",
+                    "nombreLaInstitucion",
+                    "numeroIdentificacion",
+                    "parentesco",
+                    "pepReferencia",
+                    "prefijo",
+                    "primerApellido",
+                    "segundoApellido",
+                    "telefono",
+                    "tipoContacto",
+                    "tipoIdentificacion",
+                    "tipoTelefono",
+                    "ultimaFechaActualizacion"
+                ],
+                "type": "object",
+                "properties": {
+                    "nombre": {
+                        "type": "string",
+                        "description": "Nombre",
+                        "example": "Juan"
+                    },
+                    "primerApellido": {
+                        "type": "string",
+                        "description": "Primer apellido",
+                        "example": "Perez"
+                    },
+                    "segundoApellido": {
+                        "type": "string",
+                        "description": "Segundo apellido",
+                        "example": "Gomez"
+                    },
+                    "parentesco": {
+                        "type": "string",
+                        "description": "Parentesco",
+                        "example": "Hermano"
+                    },
+                    "telefono": {
+                        "type": "string",
+                        "description": "Teléfono",
+                        "example": "+571234567890"
+                    },
+                    "tipoIdentificacion": {
+                        "type": "string",
+                        "description": "Tipo de identificación",
+                        "example": "CC"
+                    },
+                    "numeroIdentificacion": {
+                        "type": "string",
+                        "description": "Número de identificación",
+                        "example": "1234567890"
+                    },
+                    "tipoContacto": {
+                        "type": "string",
+                        "description": "Tipo de contacto",
+                        "example": "Móvil"
+                    },
+                    "tipoTelefono": {
+                        "type": "string",
+                        "description": "Tipo de teléfono",
+                        "example": "Celular"
+                    },
+                    "prefijo": {
+                        "type": "string",
+                        "description": "Prefijo telefónico",
+                        "example": "+57"
+                    },
+                    "pepReferencia": {
+                        "type": "string",
+                        "description": "PEP referencia",
+                        "example": "No"
+                    },
+                    "funcion": {
+                        "type": "string",
+                        "description": "Función de la referencia",
+                        "example": "Asistente"
+                    },
+                    "nombreLaInstitucion": {
+                        "type": "string",
+                        "description": "Nombre de la institución",
+                        "example": "Empresa XYZ"
+                    },
+                    "cargo": {
+                        "type": "string",
+                        "description": "Cargo en la institución",
+                        "example": "Gerente"
+                    },
+                    "fechaInicio": {
+                        "type": "string",
+                        "description": "Fecha de inicio",
+                        "example": "2020-01-01"
+                    },
+                    "fechaFin": {
+                        "type": "string",
+                        "description": "Fecha de fin",
+                        "example": "2023-01-01"
+                    },
+                    "ultimaFechaActualizacion": {
+                        "type": "string",
+                        "description": "Última fecha de actualización",
+                        "example": "2023-10-01"
+                    }
+                },
+                "description": "DTO que representa una referencia personal"
+            },
+            "ReferenciasDTO": {
+                "required": [
+                    "referenciaFamiliar",
+                    "referenciaLaborales",
+                    "referenciaPersonal"
+                ],
+                "type": "object",
+                "properties": {
+                    "referenciaFamiliar": {
+                        "type": "array",
+                        "description": "Lista de referencias familiares",
+                        "items": {
+                            "$ref": "#/components/schemas/ReferenciaFamiliarDTO"
+                        }
+                    },
+                    "referenciaPersonal": {
+                        "type": "array",
+                        "description": "Lista de referencias personales",
+                        "items": {
+                            "$ref": "#/components/schemas/ReferenciaPersonalDTO"
+                        }
+                    },
+                    "referenciaLaborales": {
+                        "type": "array",
+                        "description": "Lista de referencias laborales",
+                        "items": {
+                            "$ref": "#/components/schemas/ReferenciaLaboralDTO"
+                        }
+                    }
+                },
+                "description": "DTO que representa las referencias"
+            },
+            "ActivityDTO": {
+                "title": "ActivityDTO",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la actividad",
+                        "example": "40"
+                    }
+                },
+                "description": "Objeto de actividad"
+            },
+            "AddressDTO": {
+                "title": "AddressDTO",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Code of the address",
+                        "format": "int32"
+                    },
+                    "address": {
+                        "type": "string",
+                        "description": "Address"
+                    },
+                    "city": {
+                        "$ref": "#/components/schemas/CityDTO"
+                    },
+                    "type": {
+                        "$ref": "#/components/schemas/TypeDTO"
+                    },
+                    "creationDate": {
+                        "type": "string",
+                        "description": "Creation date of the address",
+                        "format": "date-time"
+                    },
+                    "valid": {
+                        "type": "boolean",
+                        "description": "Validity of the address"
+                    },
+                    "verified": {
+                        "type": "boolean",
+                        "description": "Verification status of the address"
+                    },
+                    "userRegistration": {
+                        "$ref": "#/components/schemas/UserRegistrationDTO"
+                    },
+                    "primaryAddress": {
+                        "type": "boolean",
+                        "description": "Primary address indicator"
+                    },
+                    "neighborhood": {
+                        "type": "string",
+                        "description": "Neighborhood of the address"
+                    },
+                    "province": {
+                        "$ref": "#/components/schemas/ProvinceDTO"
+                    },
+                    "country": {
+                        "$ref": "#/components/schemas/CountryDTO"
+                    },
+                    "propertyType": {
+                        "$ref": "#/components/schemas/PropertyTypeDTO"
+                    },
+                    "homeType": {
+                        "$ref": "#/components/schemas/HomeTypeDTO"
+                    },
+                    "street": {
+                        "type": "string",
+                        "description": "Street of the address"
+                    },
+                    "timeInCurrentResidence": {
+                        "type": "integer",
+                        "description": "Time in current residence",
+                        "format": "int32"
+                    },
+                    "numberOfPeopleLivingInResidence": {
+                        "type": "integer",
+                        "description": "Number of people living in residence",
+                        "format": "int32"
+                    },
+                    "internalNumber": {
+                        "type": "integer",
+                        "description": "Internal number of the address",
+                        "format": "int32"
+                    },
+                    "directions": {
+                        "type": "string",
+                        "description": "Directions to the address"
+                    },
+                    "propertyGroupName": {
+                        "type": "string",
+                        "description": "Property group name"
+                    },
+                    "unitHomeType": {
+                        "$ref": "#/components/schemas/UnitHomeTypeDTO"
+                    },
+                    "geolocalization": {
+                        "$ref": "#/components/schemas/GeolocalizationDTO"
+                    },
+                    "houseNumber": {
+                        "type": "string",
+                        "description": "House number"
+                    },
+                    "outerState": {
+                        "type": "string",
+                        "description": "Outer state"
+                    },
+                    "outerCity": {
+                        "type": "string",
+                        "description": "Outer city"
+                    },
+                    "floor": {
+                        "type": "string",
+                        "description": "Floor of the address"
+                    },
+                    "actualCreationDate": {
+                        "type": "string",
+                        "description": "Actual creation date of the address",
+                        "format": "date-time"
+                    },
+                    "lastUpdateDate": {
+                        "type": "string",
+                        "description": "Last update date of the address",
+                        "format": "date-time"
+                    },
+                    "actualLastUpdateDate": {
+                        "type": "string",
+                        "description": "Actual last update date of the address",
+                        "format": "date-time"
+                    },
+                    "userUpdated": {
+                        "$ref": "#/components/schemas/UserUpdatedDTO"
+                    },
+                    "mainStreetType": {
+                        "$ref": "#/components/schemas/MainStreetTypeDTO"
+                    },
+                    "secondaryStreetType": {
+                        "$ref": "#/components/schemas/SecondaryStreetTypeDTO"
+                    },
+                    "mainStreetNumber": {
+                        "type": "integer",
+                        "description": "Main street number",
+                        "format": "int32"
+                    },
+                    "secondaryStreetNumber": {
+                        "type": "integer",
+                        "description": "Secondary street number",
+                        "format": "int32"
+                    },
+                    "secondaryStreet": {
+                        "type": "string",
+                        "description": "Secondary street"
+                    },
+                    "mainStreetLetter": {
+                        "$ref": "#/components/schemas/MainStreetLetterDTO"
+                    },
+                    "secondaryStreetLetter": {
+                        "$ref": "#/components/schemas/SecondaryStreetLetterDTO"
+                    },
+                    "secondaryRegion": {
+                        "$ref": "#/components/schemas/SecondaryRegionDTO"
+                    },
+                    "propertyNumber": {
+                        "type": "string",
+                        "description": "Property number"
+                    },
+                    "propertyGroup": {
+                        "$ref": "#/components/schemas/PropertyGroupDTO"
+                    },
+                    "unitLetter": {
+                        "type": "string",
+                        "description": "Unit letter"
+                    },
+                    "interiorLetter": {
+                        "type": "string",
+                        "description": "Interior letter"
+                    }
+                },
+                "description": "Objeto interno de la respuesta del Cobis Address"
+            },
+            "AddressNPDTO": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "type": "string",
+                        "description": "Dirección completa de la persona natural",
+                        "example": "123 Main St"
+                    },
+                    "subdivision": {
+                        "$ref": "#/components/schemas/SubdivisionDTO"
+                    },
+                    "city": {
+                        "$ref": "#/components/schemas/CityDTO"
+                    },
+                    "type": {
+                        "$ref": "#/components/schemas/TypeDTO"
+                    },
+                    "region": {
+                        "$ref": "#/components/schemas/RegionDTO"
+                    },
+                    "zone": {
+                        "$ref": "#/components/schemas/ZoneDTO"
+                    },
+                    "branch": {
+                        "$ref": "#/components/schemas/BranchDTO"
+                    },
+                    "valid": {
+                        "type": "boolean",
+                        "description": "Indica si la dirección es válida",
+                        "example": true
+                    },
+                    "verified": {
+                        "type": "boolean",
+                        "description": "Indica si la dirección ha sido verificada",
+                        "example": true
+                    },
+                    "user": {
+                        "$ref": "#/components/schemas/UserRegistrationDTO"
+                    },
+                    "primaryAddress": {
+                        "type": "boolean",
+                        "description": "Indica si es la dirección principal",
+                        "example": true
+                    },
+                    "neighborhood": {
+                        "type": "string",
+                        "description": "Nombre del barrio o vecindario de la dirección",
+                        "example": "Downtown"
+                    },
+                    "province": {
+                        "$ref": "#/components/schemas/ProvinceDTO"
+                    },
+                    "zipCode": {
+                        "$ref": "#/components/schemas/ZipCodeDTO"
+                    },
+                    "street": {
+                        "type": "string",
+                        "description": "Nombre de la calle de la dirección",
+                        "example": "Oak Street"
+                    },
+                    "externalNumber": {
+                        "type": "integer",
+                        "description": "Número exterior de la dirección",
+                        "format": "int32",
+                        "example": 456
+                    },
+                    "internalNumber": {
+                        "type": "integer",
+                        "description": "Número interior de la dirección, si aplica",
+                        "format": "int32",
+                        "example": 12
+                    }
+                },
+                "description": "DTO que representa la dirección de una persona natural"
+            },
+            "BranchDTO": {
+                "title": "BranchDTO",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Código de la sucursal",
+                        "format": "int32",
+                        "example": 40
+                    }
+                },
+                "description": "Objeto de sucursal"
+            },
+            "CanonicalRequestCrearDatosBasicosBucRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/CrearDatosBasicosBucRequestDTO"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "CityDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Codigo de la ciudad",
+                        "format": "int32",
+                        "example": 1
+                    }
+                },
+                "description": "Codigo de la ciudad"
+            },
+            "ContactTypeDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "code",
+                        "example": "CT001"
+                    }
+                },
+                "description": "DTO que representa el tipo de contacto"
+            },
+            "ContractTypeDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "code",
+                        "example": "CN001"
+                    }
+                },
+                "description": "DTO que representa el tipo de contrato"
+            },
+            "CountryDTO": {
+                "title": "CountryDTO",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Codigo",
+                        "format": "int32",
+                        "example": 1
+                    }
+                },
+                "description": "Objeto del codigo del pais"
+            },
+            "CrearDatosBasicosBucRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "customerId": {
+                        "type": "string",
+                        "description": "ID del cliente",
+                        "example": "12345"
+                    },
+                    "documentType": {
+                        "type": "string",
+                        "description": "Tipo de documento del cliente",
+                        "example": "CC"
+                    },
+                    "documentNumber": {
+                        "type": "string",
+                        "description": "Número de documento del cliente",
+                        "example": "123456789"
+                    },
+                    "naturalPerson": {
+                        "$ref": "#/components/schemas/NaturalPersonDTO"
+                    },
+                    "customerRelationship": {
+                        "$ref": "#/components/schemas/CustomerRelationshipDTO"
+                    },
+                    "address": {
+                        "$ref": "#/components/schemas/AddressDTO"
+                    },
+                    "virtualAddress": {
+                        "$ref": "#/components/schemas/VirtualAddressDTO"
+                    },
+                    "phone": {
+                        "$ref": "#/components/schemas/PhoneDTO"
+                    },
+                    "taxResidenceCountry": {
+                        "$ref": "#/components/schemas/TaxResidenceCountryDTO"
+                    }
+                },
+                "description": "Incluye los datos específicos de la operación que se está solicitando"
+            },
+            "CustomerRelationshipDTO": {
+                "type": "object",
+                "properties": {
+                    "relationship": {
+                        "$ref": "#/components/schemas/RelationshipDTO"
+                    },
+                    "customerRightSide": {
+                        "$ref": "#/components/schemas/CustomerRightSideDTO"
+                    },
+                    "side": {
+                        "type": "string",
+                        "description": "side",
+                        "example": "Left"
+                    }
+                },
+                "description": "DTO que representa la relación del cliente"
+            },
+            "CustomerRightSideDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "code",
+                        "format": "int32",
+                        "example": 123
+                    },
+                    "fullName": {
+                        "type": "string",
+                        "description": "fullName",
+                        "example": "John Doe"
+                    }
+                },
+                "description": "DTO que representa el lado derecho del cliente en una relación"
+            },
+            "CustomerServiceLineDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "code",
+                        "example": "CSL001"
+                    }
+                },
+                "description": "DTO que representa la línea de atención al cliente"
+            },
+            "DegreeLevelDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código del nivel de formación académica",
+                        "example": "1"
+                    }
+                },
+                "description": "Nivel de formación académica"
+            },
+            "DisabilityTypeDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Codigo de la discapacidad",
+                        "example": "1"
+                    }
+                },
+                "description": "Tipo de discapacidad"
+            },
+            "GenderDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Codigo del genero",
+                        "example": "M"
+                    }
+                },
+                "description": "Objeto del genero"
+            },
+            "GeographicCoverageDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la cobertura geográfica",
+                        "example": "1"
+                    }
+                },
+                "description": "Objeto que representa la cobertura geográfica de una persona natural"
+            },
+            "GeolocalizationDTO": {
+                "title": "GeolocalizationDTO",
+                "type": "object",
+                "properties": {
+                    "latitude": {
+                        "type": "number",
+                        "description": "Latitud de la dirección",
+                        "example": 4.710989
+                    },
+                    "longitude": {
+                        "type": "number",
+                        "description": "Longitud de la dirección",
+                        "example": -74.072092
+                    }
+                },
+                "description": "Objeto de la geolocalización de la dirección"
+            },
+            "HomeTypeDTO": {
+                "title": "HomeTypeDTO",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código del tipo de hogar",
+                        "example": "1"
+                    }
+                },
+                "description": "Objeto tipo de hogar"
+            },
+            "IdentificationDTO": {
+                "type": "object",
+                "properties": {
+                    "number": {
+                        "type": "string",
+                        "description": "Número de identificación",
+                        "example": "1234567890"
+                    },
+                    "type": {
+                        "$ref": "#/components/schemas/TypeDTO"
+                    }
+                },
+                "description": "Información de identificación de una persona natural"
+            },
+            "IncomeSourceDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la fuente de ingresos",
+                        "example": "1"
+                    }
+                },
+                "description": "Fuente de ingresos"
+            },
+            "KnowFinancialInstitutionDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la entidad financiera",
+                        "example": "PAGMOVIL"
+                    }
+                },
+                "description": "Conocimiento de la entidad financiera"
+            },
+            "MainStreetLetterDTO": {
+                "title": "MainStreetLetterDTO",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la letra de la calle principal",
+                        "example": "A"
+                    }
+                },
+                "description": "Letra de la calle principal"
+            },
+            "MainStreetTypeDTO": {
+                "title": "MainStreetTypeDTO",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código del tipo de la calle principal",
+                        "example": "AC"
+                    }
+                },
+                "description": "Objeto tipo de la calle principal"
+            },
+            "MaritalStatusDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código del estado marital",
+                        "example": "S"
+                    }
+                },
+                "description": "Objeto estado marital"
+            },
+            "MessagingTypeDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "code",
+                        "example": "MT001"
+                    }
+                },
+                "description": "DTO que representa el tipo de mensajería"
+            },
+            "NationalityDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Código de la nacionalidad",
+                        "format": "int32",
+                        "example": 43
+                    }
+                },
+                "description": "Nacionalidad"
+            },
+            "NaturalPersonDTO": {
+                "title": "NaturalPersonDTO",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Código de la persona natural",
+                        "format": "int32",
+                        "example": 123456789
+                    },
+                    "identification": {
+                        "$ref": "#/components/schemas/IdentificationDTO"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Nombre de la persona natural",
+                        "example": "Miguel"
+                    },
+                    "otherName": {
+                        "type": "string",
+                        "description": "Segundo nombre de la persona natural",
+                        "example": "Carlos"
+                    },
+                    "lastName": {
+                        "type": "string",
+                        "description": "Primer apellido de la persona natural",
+                        "example": "González"
+                    },
+                    "otherLastName": {
+                        "type": "string",
+                        "description": "Segundo apellido de la persona natural",
+                        "example": "Lopez"
+                    },
+                    "status": {
+                        "$ref": "#/components/schemas/StatusDTO"
+                    },
+                    "subsidiary": {
+                        "$ref": "#/components/schemas/SubsidiaryDTO"
+                    },
+                    "branch": {
+                        "$ref": "#/components/schemas/BranchDTO"
+                    },
+                    "enrollmentDate": {
+                        "type": "string",
+                        "description": "Fecha de inscripción de la persona natural",
+                        "format": "date",
+                        "example": "2012-07-01"
+                    },
+                    "lastUpdateDate": {
+                        "type": "string",
+                        "description": "Fecha de última actualización de la persona natural",
+                        "format": "date",
+                        "example": "2012-07-01"
+                    },
+                    "officer": {
+                        "$ref": "#/components/schemas/OfficerDTO"
+                    },
+                    "activity": {
+                        "$ref": "#/components/schemas/ActivityDTO"
+                    },
+                    "retention": {
+                        "type": "boolean",
+                        "description": "Retención de la persona natural",
+                        "example": true
+                    },
+                    "hasInhibitoryReference": {
+                        "type": "boolean",
+                        "description": "Tiene referencia inhibitoria",
+                        "example": true
+                    },
+                    "comment": {
+                        "type": "string",
+                        "description": "Comentario de la persona natural",
+                        "example": "PRUEBA COMENTARIO"
+                    },
+                    "officerReference": {
+                        "$ref": "#/components/schemas/OfficerReferenceDTO"
+                    },
+                    "sex": {
+                        "$ref": "#/components/schemas/SexDTO"
+                    },
+                    "gender": {
+                        "$ref": "#/components/schemas/GenderDTO"
+                    },
+                    "birthDate": {
+                        "type": "string",
+                        "description": "Fecha de nacimiento de la persona natural",
+                        "format": "date",
+                        "example": "1990-07-01"
+                    },
+                    "profession": {
+                        "$ref": "#/components/schemas/ProfessionDTO"
+                    },
+                    "occupation": {
+                        "$ref": "#/components/schemas/OccupationDTO"
+                    },
+                    "maritalStatus": {
+                        "$ref": "#/components/schemas/MaritalStatusDTO"
+                    },
+                    "dependants": {
+                        "type": "integer",
+                        "description": "Número de dependientes de la persona natural",
+                        "format": "int32",
+                        "example": 2
+                    },
+                    "degreeLevel": {
+                        "$ref": "#/components/schemas/DegreeLevelDTO"
+                    },
+                    "relationship": {
+                        "type": "boolean",
+                        "description": "Relación de la persona natutral",
+                        "example": true
+                    },
+                    "currentOperationsWithFinancialEntity": {
+                        "type": "boolean",
+                        "description": "Operaciones actuales con entidad financiera",
+                        "example": true
+                    },
+                    "nationality": {
+                        "$ref": "#/components/schemas/NationalityDTO"
+                    },
+                    "incomeSource": {
+                        "$ref": "#/components/schemas/IncomeSourceDTO"
+                    },
+                    "othersIncomeSource": {
+                        "$ref": "#/components/schemas/OthersIncomeSourceDTO"
+                    },
+                    "pepSituation": {
+                        "$ref": "#/components/schemas/PepSituationDTO"
+                    },
+                    "countryBirth": {
+                        "$ref": "#/components/schemas/CountryDTO"
+                    },
+                    "provinceBirth": {
+                        "$ref": "#/components/schemas/ProvinceDTO"
+                    },
+                    "secondCountry": {
+                        "$ref": "#/components/schemas/CountryDTO"
+                    },
+                    "thirdCountry": {
+                        "$ref": "#/components/schemas/CountryDTO"
+                    },
+                    "deathDate": {
+                        "type": "string",
+                        "description": "Fecha de fallecimiento de la persona natural",
+                        "format": "date",
+                        "example": "2021-07-01"
+                    },
+                    "knowFinancialInstitution": {
+                        "$ref": "#/components/schemas/KnowFinancialInstitutionDTO"
+                    },
+                    "incomeAmount": {
+                        "type": "string",
+                        "description": "Monto de ingresos de la persona natural",
+                        "example": "34000.0"
+                    },
+                    "othersIncomeAmount": {
+                        "type": "string",
+                        "description": "Monto de otras fuentes de ingresos de la persona natural",
+                        "example": "490000.0"
+                    },
+                    "legalIncome": {
+                        "type": "boolean",
+                        "description": "Ingreso legal",
+                        "example": true
+                    },
+                    "legalActivity": {
+                        "type": "boolean",
+                        "description": "Actividad legal",
+                        "example": true
+                    },
+                    "contractGovernment": {
+                        "type": "boolean",
+                        "description": "Contrato con el gobierno",
+                        "example": true
+                    },
+                    "transactionalProfile": {
+                        "$ref": "#/components/schemas/TransactionalProfileDTO"
+                    },
+                    "segment": {
+                        "$ref": "#/components/schemas/SegmentDTO"
+                    },
+                    "fatca": {
+                        "type": "boolean",
+                        "description": "FATCA",
+                        "example": true
+                    },
+                    "crs": {
+                        "type": "boolean",
+                        "description": "CRS",
+                        "example": true
+                    },
+                    "cannabisFree": {
+                        "type": "boolean",
+                        "description": "Libre de cannabis",
+                        "example": true
+                    },
+                    "cryptocurrency": {
+                        "type": "boolean",
+                        "description": "Criptomoneda",
+                        "example": true
+                    },
+                    "geographicCoverage": {
+                        "$ref": "#/components/schemas/GeographicCoverageDTO"
+                    },
+                    "taxSituation": {
+                        "$ref": "#/components/schemas/TaxSituationDTO"
+                    },
+                    "pepDetail": {
+                        "$ref": "#/components/schemas/PepDetailDTO"
+                    },
+                    "pepRelation": {
+                        "type": "boolean",
+                        "description": "Relación PEP",
+                        "example": true
+                    },
+                    "paysTaxesLocalCountry": {
+                        "type": "boolean",
+                        "description": "Paga impuestos en el país local",
+                        "example": true
+                    },
+                    "disabilityType": {
+                        "$ref": "#/components/schemas/DisabilityTypeDTO"
+                    },
+                    "actualLastMaintenanceDate": {
+                        "type": "string",
+                        "description": "Fecha de la última mantención real de la persona natural",
+                        "format": "date",
+                        "example": "2024-10-15"
+                    },
+                    "virtualAddresses": {
+                        "$ref": "#/components/schemas/VirtualAddressesDTO"
+                    },
+                    "addresses": {
+                        "$ref": "#/components/schemas/AddressNPDTO"
+                    },
+                    "phones": {
+                        "$ref": "#/components/schemas/PhoneNPDTO"
+                    },
+                    "segmentAmount": {
+                        "type": "integer",
+                        "description": "Cantidad en el segmento de la persona natural",
+                        "format": "int32",
+                        "example": 50000
+                    },
+                    "segmentDate": {
+                        "type": "string",
+                        "description": "Fecha del segmento de la persona natural",
+                        "format": "date-time"
+                    },
+                    "secondSegment": {
+                        "$ref": "#/components/schemas/SegmentDTO"
+                    },
+                    "thirdSegment": {
+                        "$ref": "#/components/schemas/SegmentDTO"
+                    },
+                    "relationshipWithBankType": {
+                        "$ref": "#/components/schemas/RelationshipWithBankTypeDTO"
+                    },
+                    "tutor": {
+                        "type": "integer",
+                        "description": "Identificador del tutor de la persona natural",
+                        "format": "int32",
+                        "example": 789654
+                    },
+                    "tutorName": {
+                        "type": "string",
+                        "description": "Nombre del tutor de la persona natural",
+                        "example": "Juan Perez"
+                    }
+                },
+                "description": "Información de una persona natural"
+            },
+            "OccupationDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de ocupación",
+                        "example": "AM"
+                    }
+                },
+                "description": "Objeto de cupación"
+            },
+            "OfficerDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Código del oficial",
+                        "format": "int32",
+                        "example": 3
+                    }
+                },
+                "description": "Objeto oficial"
+            },
+            "OfficerReferenceDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Código del oficial de referencia",
+                        "format": "int32",
+                        "example": 6
+                    }
+                },
+                "description": "Objeto para el oficial de referencia"
+            },
+            "OthersIncomeSourceDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la fuente de ingresos",
+                        "example": "10"
+                    }
+                },
+                "description": "Objeto fuente de ingresos de otros"
+            },
+            "PepDetailDTO": {
+                "type": "object",
+                "properties": {
+                    "typePEP": {
+                        "$ref": "#/components/schemas/TypePepDTO"
+                    }
+                },
+                "description": "Información de la persona expuesta políticamente"
+            },
+            "PepSituationDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la situación de la persona expuesta políticamente (PEP)",
+                        "example": "6"
+                    }
+                },
+                "description": "Información de la situación de la persona expuesta políticamente (PEP)"
+            },
+            "PhoneDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "code",
+                        "format": "int32",
+                        "example": 123
+                    },
+                    "number": {
+                        "type": "string",
+                        "description": "number",
+                        "example": "+1234567890"
+                    },
+                    "type": {
+                        "$ref": "#/components/schemas/TypeDTO"
+                    },
+                    "prefix": {
+                        "$ref": "#/components/schemas/PrefixDTO"
+                    },
+                    "creationDate": {
+                        "type": "string",
+                        "description": "creationDate",
+                        "format": "date",
+                        "example": "2024-01-01"
+                    },
+                    "lastUpdateDate": {
+                        "type": "string",
+                        "description": "lastUpdateDate",
+                        "format": "date",
+                        "example": "2024-10-01"
+                    },
+                    "customerServiceLine": {
+                        "$ref": "#/components/schemas/CustomerServiceLineDTO"
+                    },
+                    "principalPhone": {
+                        "type": "boolean",
+                        "description": "principalPhone",
+                        "example": true
+                    },
+                    "user": {
+                        "$ref": "#/components/schemas/UserDTO"
+                    },
+                    "verified": {
+                        "type": "boolean",
+                        "description": "verified",
+                        "example": true
+                    },
+                    "contactType": {
+                        "$ref": "#/components/schemas/ContactTypeDTO"
+                    },
+                    "contractType": {
+                        "$ref": "#/components/schemas/ContractTypeDTO"
+                    },
+                    "messagingType": {
+                        "$ref": "#/components/schemas/MessagingTypeDTO"
+                    },
+                    "area": {
+                        "type": "string",
+                        "description": "area",
+                        "example": "+222"
+                    }
+                },
+                "description": "DTO que representa los datos de un teléfono"
+            },
+            "PhoneNPDTO": {
+                "type": "object",
+                "properties": {
+                    "number": {
+                        "type": "string",
+                        "description": "Número de teléfono",
+                        "example": "123456789"
+                    },
+                    "type": {
+                        "$ref": "#/components/schemas/TypeDTO"
+                    },
+                    "customerServiceLine": {
+                        "$ref": "#/components/schemas/CustomerServiceLineDTO"
+                    },
+                    "area": {
+                        "type": "string",
+                        "description": "Código de área del teléfono",
+                        "example": "57"
+                    },
+                    "user": {
+                        "$ref": "#/components/schemas/UserRegistrationDTO"
+                    }
+                },
+                "description": "DTO que representa la información de un teléfono de una persona natural"
+            },
+            "PrefixDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "code",
+                        "example": "P001"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "description",
+                        "example": "Prefix for international calls"
+                    }
+                },
+                "description": "DTO que representa un prefijo de teléfono"
+            },
+            "ProfessionDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la profesión",
+                        "example": "8453"
+                    }
+                },
+                "description": "Objeto de la profesión de una persona natural"
+            },
+            "PropertyGroupDTO": {
+                "title": "PropertyGroupDTO",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código del grupo de propiedad",
+                        "example": "BRR"
+                    }
+                },
+                "description": "Objeto grupo de propiedad"
+            },
+            "PropertyTypeDTO": {
+                "title": "PropertyTypeDTO",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código del tipo de propiedad",
+                        "example": "PRO"
+                    }
+                },
+                "description": "Objeto tipo de propiedad"
+            },
+            "ProvinceDTO": {
+                "title": "ProvinceDTO",
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Código de la provincia",
+                        "format": "int32",
+                        "example": 37
+                    }
+                },
+                "description": "Objeto de la provincia"
+            },
+            "RegionDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la región",
+                        "example": "RG-456"
+                    }
+                },
+                "description": "DTO que representa la región geográfica"
+            },
+            "RelationshipDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "code",
+                        "format": "int32"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "description",
+                        "example": "Relationship description"
+                    },
+                    "left": {
+                        "type": "string",
+                        "description": "left",
+                        "example": "Left Entity"
+                    },
+                    "right": {
+                        "type": "string",
+                        "description": "right",
+                        "example": "Right Entity"
+                    }
+                },
+                "description": "DTO que representa una relación entre entidades"
+            },
+            "RelationshipWithBankTypeDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código del tipo de relación con el banco",
+                        "example": "R01"
+                    }
+                },
+                "description": "DTO que representa el tipo de relación con el banco"
+            },
+            "SecondaryRegionDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Codigo de la region secundaria",
+                        "example": "NORTE"
+                    }
+                },
+                "description": "Objeto para la region secundaria"
+            },
+            "SecondaryStreetLetterDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Codigo de la letra de la calle secundaria",
+                        "example": "2"
+                    }
+                },
+                "description": "Objeto para la letra de la calle secundaria"
+            },
+            "SecondaryStreetTypeDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Nombre del tipo de vía secundaria",
+                        "example": "AK"
+                    }
+                },
+                "description": "Tipo de vía secundaria"
+            },
+            "SegmentDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código del segmento",
+                        "example": "PER"
+                    }
+                },
+                "description": "Objeto del semento de la persona natural"
+            },
+            "SexDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código del sexo",
+                        "example": "M"
+                    }
+                },
+                "description": "Sexo de la persona natural"
+            },
+            "StatusDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código del estado",
+                        "example": "P"
+                    }
+                },
+                "description": "Estado de la persona natural"
+            },
+            "SubdivisionDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la subdivisión",
+                        "example": "SD-123"
+                    }
+                },
+                "description": "DTO que representa la subdivisión geográfica"
+            },
+            "SubsidiaryDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Código de la sucursal",
+                        "format": "int32",
+                        "example": 1
+                    }
+                },
+                "description": "Información de la sucursal"
+            },
+            "TaxResidenceCountryDTO": {
+                "type": "object",
+                "properties": {
+                    "countryCode": {
+                        "type": "integer",
+                        "description": "countryCode",
+                        "format": "int32",
+                        "example": 123
+                    },
+                    "identification": {
+                        "$ref": "#/components/schemas/IdentificationDTO"
+                    },
+                    "creationDate": {
+                        "type": "string",
+                        "description": "creationDate",
+                        "format": "date",
+                        "example": "2024-10-28"
+                    },
+                    "residenceOfCountry": {
+                        "type": "boolean",
+                        "description": "residenceOfCountry",
+                        "example": true
+                    },
+                    "citizenOfCountry": {
+                        "type": "boolean",
+                        "description": "citizenOfCountry",
+                        "example": true
+                    }
+                },
+                "description": "DTO que representa el país de residencia fiscal"
+            },
+            "TaxSituationDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la situación tributaria",
+                        "example": "8291"
+                    }
+                },
+                "description": "Información de la situación tributaria"
+            },
+            "TransactionalProfileDTO": {
+                "type": "object",
+                "properties": {
+                    "cashTransactions": {
+                        "type": "boolean",
+                        "description": "Transacciones en efectivo",
+                        "example": true
+                    },
+                    "transactionsByCheck": {
+                        "type": "boolean",
+                        "description": "Transacciones por cheque",
+                        "example": true
+                    },
+                    "localTransfer": {
+                        "type": "boolean",
+                        "description": "Transferencias locales",
+                        "example": true
+                    },
+                    "internationalTransfersSent": {
+                        "type": "boolean",
+                        "description": "Transferencias internacionales enviadas",
+                        "example": true
+                    },
+                    "firstCountryTransfersSent": {
+                        "$ref": "#/components/schemas/CountryDTO"
+                    },
+                    "secondCountryTransfersSent": {
+                        "$ref": "#/components/schemas/CountryDTO"
+                    },
+                    "thirdCountryTransfersSent": {
+                        "$ref": "#/components/schemas/CountryDTO"
+                    },
+                    "firstCountryTransfersReceived": {
+                        "$ref": "#/components/schemas/CountryDTO"
+                    },
+                    "secondCountryTransfersReceived": {
+                        "$ref": "#/components/schemas/CountryDTO"
+                    },
+                    "thirdCountryTransfersReceived": {
+                        "$ref": "#/components/schemas/CountryDTO"
+                    },
+                    "assetTransfers": {
+                        "type": "boolean",
+                        "description": "Transferencias de activos",
+                        "example": true
+                    },
+                    "totalDepositAmount": {
+                        "type": "string",
+                        "description": "Monto total de depósitos",
+                        "example": "1000000.0"
+                    },
+                    "depositAmount": {
+                        "type": "integer",
+                        "description": "Monto de depósito",
+                        "format": "int32",
+                        "example": 1000000
+                    },
+                    "withdrawalTotalAmount": {
+                        "type": "string",
+                        "description": "Monto total de retiros",
+                        "example": "1000000.0"
+                    },
+                    "amountWithdrawal": {
+                        "type": "integer",
+                        "description": "Monto de la retirada de fondos",
+                        "format": "int32",
+                        "example": 5000
+                    },
+                    "internationalTransfersReceived": {
+                        "type": "boolean",
+                        "description": "Indica si se han recibido transferencias internacionales",
+                        "example": true
+                    }
+                },
+                "description": "Perfil transaccional"
+            },
+            "TypeDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "codigo del tipo",
+                        "example": "1"
+                    }
+                },
+                "description": "codigo del tipo"
+            },
+            "TypePepDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "codigo del tipo pep",
+                        "example": "001"
+                    }
+                },
+                "description": "codigo del tipo pep"
+            },
+            "UnitHomeTypeDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código del tipo de unidad de vivienda",
+                        "example": "MA"
+                    }
+                },
+                "description": "Tipo de unidad de vivienda"
+            },
+            "UserDTO": {
+                "title": "UserDTO",
+                "type": "object",
+                "properties": {
+                    "login": {
+                        "type": "string",
+                        "description": "Login del usuario",
+                        "example": "PIL3211"
+                    }
+                },
+                "description": "Objeto usuario"
+            },
+            "UserRegistrationDTO": {
+                "title": "UserRegistrationDTO",
+                "type": "object",
+                "properties": {
+                    "login": {
+                        "type": "string",
+                        "description": "Usuario que registro la direccion",
+                        "example": "CME3234"
+                    }
+                },
+                "description": "Objeto de usuario registrado"
+            },
+            "UserUpdatedDTO": {
+                "title": "UserUpdatedDTO",
+                "type": "object",
+                "properties": {
+                    "login": {
+                        "type": "string",
+                        "description": "Usuario que realizo la actualización",
+                        "example": "LORR9382"
+                    }
+                },
+                "description": "Objeto usuario que realizo actualización"
+            },
+            "VirtualAddressDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "code",
+                        "format": "int32",
+                        "example": 101
+                    },
+                    "username": {
+                        "type": "string",
+                        "description": "username",
+                        "example": "virtualUser"
+                    },
+                    "type": {
+                        "$ref": "#/components/schemas/TypeDTO"
+                    },
+                    "creationDate": {
+                        "type": "string",
+                        "description": "creationDate",
+                        "format": "date",
+                        "example": "2023-01-01"
+                    },
+                    "lastUpdateDate": {
+                        "type": "string",
+                        "description": "lastUpdateDate",
+                        "format": "date",
+                        "example": "2023-12-31"
+                    },
+                    "valid": {
+                        "type": "boolean",
+                        "description": "valid",
+                        "example": true
+                    },
+                    "user": {
+                        "$ref": "#/components/schemas/UserDTO"
+                    },
+                    "preferentialUse": {
+                        "type": "boolean",
+                        "description": "preferentialUse",
+                        "example": true
+                    }
+                },
+                "description": "DTO que representa una dirección virtual"
+            },
+            "VirtualAddressesDTO": {
+                "type": "object",
+                "properties": {
+                    "mail": {
+                        "type": "string",
+                        "description": "Correo electrónico",
+                        "example": "example@example.com"
+                    },
+                    "verified": {
+                        "type": "boolean",
+                        "description": "Indica si el correo está verificado",
+                        "example": true
+                    },
+                    "user": {
+                        "$ref": "#/components/schemas/UserDTO"
+                    }
+                },
+                "description": "DTO que representa una dirección virtual de una persona natural"
+            },
+            "ZipCodeDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código postal",
+                        "example": "12345"
+                    }
+                },
+                "description": "DTO que representa el código postal"
+            },
+            "ZoneDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la zona",
+                        "example": "ZN-789"
+                    }
+                },
+                "description": "DTO que representa la zona geográfica"
+            },
+            "CamposAdicionalesDto": {
+                "type": "object",
+                "properties": {
+                    "fechaIngresoAsociadoPj": {
+                        "type": "string",
+                        "description": "Fecha de ingreso del asociado PJ"
+                    },
+                    "tipoClientesPj": {
+                        "type": "string",
+                        "description": "Tipo de clientes PJ"
+                    },
+                    "sectorEconomico": {
+                        "type": "string",
+                        "description": "Sector económico"
+                    },
+                    "ciudadConstitucion": {
+                        "type": "string",
+                        "description": "Ciudad de constitución"
+                    },
+                    "marcacionCorrespondenciaUnica": {
+                        "type": "string",
+                        "description": "Marcación de correspondencia única"
+                    },
+                    "fechaCorte": {
+                        "type": "string",
+                        "description": "Fecha de corte"
+                    }
+                },
+                "description": "Campos adicionales del cliente"
+            },
+            "CanonicalConsultarDatosBasicosResponseDTO": {
+                "required": [
+                    "message",
+                    "messageId",
+                    "operationData",
+                    "path",
+                    "status",
+                    "timestamp"
+                ],
+                "type": "object",
+                "properties": {
+                    "messageId": {
+                        "type": "string",
+                        "description": "Identificador único que enlaza la respuesta con la solicitud original",
+                        "example": "12345-abcde-67890-fghij"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "description": "Marca de tiempo en que se genera la respuesta",
+                        "example": "2024-10-08T12:30:00"
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "Estado de la operación",
+                        "example": "Success"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Lista de mensajes de error, en caso de que la solicitud no se haya procesado correctamente",
+                        "example": [],
+                        "items": {
+                            "type": "string",
+                            "description": "Lista de mensajes de error, en caso de que la solicitud no se haya procesado correctamente",
+                            "example": "[]"
+                        }
+                    },
+                    "errorType": {
+                        "type": "string",
+                        "description": "Clasificación del error",
+                        "example": "validation"
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "Ruta o endpoint donde ocurrió el error",
+                        "example": "/api/v1/orders"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Descripción general del resultado de la operación",
+                        "example": "Request processed successfully"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/ConsultarDatosBasicosResponseDTO"
+                    }
+                }
+            },
+            "ConozcaSuClienteDTO": {
+                "type": "object",
+                "properties": {
+                    "tipoDiscapacidad": {
+                        "type": "string",
+                        "description": "Tipo de discapacidad del cliente",
+                        "example": "1"
+                    },
+                    "grupoEconomico": {
+                        "type": "string",
+                        "description": "Grupo económico del cliente",
+                        "example": "1"
+                    },
+                    "paisOperacion": {
+                        "type": "string",
+                        "description": "País de operación del cliente",
+                        "example": "17"
+                    },
+                    "coberturaGeografica": {
+                        "type": "string",
+                        "description": "Cobertura geográfica del cliente",
+                        "example": "1"
+                    },
+                    "numeroSucursales": {
+                        "type": "string",
+                        "description": "Número de sucursales del cliente",
+                        "example": "1"
+                    },
+                    "numeroEmpleados": {
+                        "type": "string",
+                        "description": "Número de empleados del cliente",
+                        "example": "1"
+                    },
+                    "origenIngresos": {
+                        "type": "string",
+                        "description": "Origen de ingresos del cliente",
+                        "example": "12"
+                    },
+                    "actividadEconomica": {
+                        "type": "string",
+                        "description": "Actividad económica del cliente",
+                        "example": "41"
+                    }
+                },
+                "description": "Conozca a su cliente"
+            },
+            "ConsultarDatosBasicosResponseDTO": {
+                "required": [
+                    "camposAdicionales",
+                    "contacto",
+                    "datosCliente",
+                    "direcciones",
+                    "grupoEconomico",
+                    "referenciasPersonales",
+                    "residenciaFiscal"
+                ],
+                "type": "object",
+                "properties": {
+                    "datosCliente": {
+                        "$ref": "#/components/schemas/DatosClienteDTO"
+                    },
+                    "residenciaFiscal": {
+                        "$ref": "#/components/schemas/ResidenciaFiscalDTO"
+                    },
+                    "direcciones": {
+                        "required": [
+                            "direccionPrincipal",
+                            "pais",
+                            "tipoDireccion"
+                        ],
+                        "type": "object",
+                        "properties": {
+                            "direccionPrincipal": {
+                                "type": "string",
+                                "description": "Dirección principal del cliente",
+                                "example": "false"
+                            },
+                            "tipoDireccion": {
+                                "type": "string",
+                                "description": "Tipo de dirección del cliente",
+                                "example": "RE"
+                            },
+                            "pais": {
+                                "type": "string",
+                                "description": "País de la dirección del cliente",
+                                "example": "32"
+                            },
+                            "departamento": {
+                                "type": "string",
+                                "description": "Departamento de la dirección del cliente",
+                                "example": "76"
+                            },
+                            "ciudad": {
+                                "type": "string",
+                                "description": "Ciudad de la dirección del cliente",
+                                "example": "1104"
+                            },
+                            "viaPrincipal": {
+                                "type": "string",
+                                "description": "Vía principal de la dirección del cliente",
+                                "example": "AC"
+                            },
+                            "numeroViaPrincipal": {
+                                "type": "string",
+                                "description": "Número de la vía principal de la dirección del cliente",
+                                "example": "16"
+                            },
+                            "nombreViaPrincipal": {
+                                "type": "string",
+                                "description": "Nombre de la vía principal de la dirección del cliente",
+                                "example": "ARICA"
+                            },
+                            "letraViaPrincipal": {
+                                "type": "string",
+                                "description": "Letra de la vía principal de la dirección del cliente",
+                                "example": "10"
+                            },
+                            "sectorViaPrincipal": {
+                                "type": "string",
+                                "description": "Sector de la vía principal de la dirección del cliente",
+                                "example": "1"
+                            },
+                            "viaSecundaria": {
+                                "type": "string",
+                                "description": "Vía secundaria de la dirección del cliente",
+                                "example": "CL"
+                            },
+                            "numeroViaSecundaria": {
+                                "type": "string",
+                                "description": "Número de la vía secundaria de la dirección del cliente",
+                                "example": "25"
+                            },
+                            "nombreViaSecundaria": {
+                                "type": "string",
+                                "description": "Nombre de la vía secundaria de la dirección del cliente",
+                                "example": "CL"
+                            },
+                            "letraViaSecundaria": {
+                                "type": "string",
+                                "description": "Letra de la vía secundaria de la dirección del cliente",
+                                "example": "4"
+                            },
+                            "sectorViaSecundaria": {
+                                "type": "string",
+                                "description": "Sector de la vía secundaria de la dirección del cliente",
+                                "example": "ESTE"
+                            },
+                            "numeroPredioViaSecundaria": {
+                                "type": "string",
+                                "description": "Número de predio de la vía secundaria de la dirección del cliente",
+                                "example": "4345521"
+                            },
+                            "barrio": {
+                                "type": "string",
+                                "description": "Barrio de la dirección del cliente",
+                                "example": "BRR"
+                            },
+                            "nombreBarrio": {
+                                "type": "string",
+                                "description": "Nombre del barrio de la dirección del cliente",
+                                "example": "Nombre Barrio"
+                            },
+                            "unidad": {
+                                "type": "string",
+                                "description": "Unidad de la dirección del cliente",
+                                "example": "CA"
+                            },
+                            "numeroUnidad": {
+                                "type": "string",
+                                "description": "Número de la unidad de la dirección del cliente",
+                                "example": "31"
+                            },
+                            "letraUnidad": {
+                                "type": "string",
+                                "description": "Letra de la unidad de la dirección del cliente",
+                                "example": "n"
+                            },
+                            "direccionesInterior": {
+                                "type": "string",
+                                "description": "Direcciones interior de la dirección del cliente",
+                                "example": "ATR"
+                            },
+                            "numeroInterior": {
+                                "type": "string",
+                                "description": "Número interior de la dirección del cliente",
+                                "example": "BL1"
+                            },
+                            "letraInterior": {
+                                "type": "string",
+                                "description": "Letra interior de la dirección del cliente",
+                                "example": "MR"
+                            },
+                            "anosViviendoEnLaResidencia": {
+                                "type": "string",
+                                "description": "Años viviendo en la residencia de la dirección del cliente",
+                                "example": "5"
+                            },
+                            "numeroPersonasQueHabitanLaResidencia": {
+                                "type": "string",
+                                "description": "Número de personas que habitan la residencia de la dirección del cliente",
+                                "example": "3"
+                            },
+                            "laCasaQueHabitaEs": {
+                                "type": "string",
+                                "description": "La casa que habita es de la dirección del cliente",
+                                "example": "PRO"
+                            },
+                            "referenciasUbicacion": {
+                                "type": "string",
+                                "description": "Referencias de ubicación de la dirección del cliente",
+                                "example": "CRECA A LA IGLESIA"
+                            },
+                            "ultimaFechaActualizacion": {
+                                "type": "string",
+                                "description": "Última fecha de actualización de la dirección del cliente",
+                                "example": "2024-02-05"
+                            }
+                        },
+                        "description": "Dirección del cliente"
+                    },
+                    "contacto": {
+                        "$ref": "#/components/schemas/ContactoDTO"
+                    },
+                    "referenciasPersonales": {
+                        "required": [
+                            "nombreCompleto",
+                            "parentesco",
+                            "primerApellido"
+                        ],
+                        "type": "object",
+                        "properties": {
+                            "parentesco": {
+                                "type": "string",
+                                "description": "Parentesco de la referencia personal",
+                                "example": "MA"
+                            },
+                            "nombreCompleto": {
+                                "type": "string",
+                                "description": "Nombre completo de la referencia personal",
+                                "example": "Miguel"
+                            },
+                            "primerApellido": {
+                                "type": "string",
+                                "description": "Primer apellido de la referencia personal",
+                                "example": "Gonzalez"
+                            },
+                            "segundoApellido": {
+                                "type": "string",
+                                "description": "Segundo apellido de la referencia personal",
+                                "example": "Perez"
+                            },
+                            "tipoIdentificacion": {
+                                "type": "string",
+                                "description": "Tipo de identificación de la referencia personal",
+                                "example": "CC"
+                            },
+                            "numeroIdentificacion": {
+                                "type": "string",
+                                "description": "Número de identificación de la referencia personal",
+                                "example": "1234567890"
+                            },
+                            "tipoContacto": {
+                                "type": "string",
+                                "description": "Tipo de contacto de la referencia personal",
+                                "example": "D"
+                            },
+                            "tipoTelefono": {
+                                "type": "string",
+                                "description": "Tipo de teléfono de la referencia personal",
+                                "example": "C"
+                            },
+                            "prefijo": {
+                                "type": "string",
+                                "description": "Prefijo de la referencia personal",
+                                "example": "120"
+                            },
+                            "telefono": {
+                                "type": "string",
+                                "description": "Teléfono de la referencia personal",
+                                "example": "1234567"
+                            },
+                            "pepReferencia": {
+                                "type": "string",
+                                "description": "PEP de la referencia personal",
+                                "example": "true"
+                            },
+                            "funcion": {
+                                "type": "string",
+                                "description": "Función de la referencia personal",
+                                "example": "004"
+                            },
+                            "nombreLaInstitucion": {
+                                "type": "string",
+                                "description": "Nombre de la institución de la referencia personal",
+                                "example": "1"
+                            },
+                            "cargo": {
+                                "type": "string",
+                                "description": "Cargo de la referencia personal",
+                                "example": "1"
+                            },
+                            "fechaInicio": {
+                                "type": "string",
+                                "description": "Fecha de inicio de la referencia personal",
+                                "example": "2024-02-01"
+                            },
+                            "fechaFin": {
+                                "type": "string",
+                                "description": "Fecha de fin de la referencia personal",
+                                "example": "2024-04-01"
+                            },
+                            "ultimaFechaActualizacion": {
+                                "type": "string",
+                                "description": "Última fecha de actualización de la referencia personal",
+                                "example": "2024-02-05"
+                            }
+                        },
+                        "description": "Referencia personal de un cliente"
+                    },
+                    "grupoEconomico": {
+                        "$ref": "#/components/schemas/GrupoEconomicoDto"
+                    },
+                    "camposAdicionales": {
+                        "$ref": "#/components/schemas/CamposAdicionalesDto"
+                    }
+                },
+                "description": "Objeto de respuesta de la consulta de datos básicos de un cliente"
+            },
+            "ContactoDTO": {
+                "required": [
+                    "email",
+                    "telefono"
+                ],
+                "type": "object",
+                "properties": {
+                    "telefono": {
+                        "required": [
+                            "numero",
+                            "prefijo",
+                            "telefonoPrincipal",
+                            "tipoContacto",
+                            "tipoTelefono"
+                        ],
+                        "type": "object",
+                        "properties": {
+                            "numero": {
+                                "type": "string",
+                                "description": "Número de teléfono del cliente",
+                                "example": "1234567"
+                            },
+                            "tipoTelefono": {
+                                "type": "string",
+                                "description": "Tipo de teléfono del cliente",
+                                "example": "C"
+                            },
+                            "tipoContacto": {
+                                "type": "string",
+                                "description": "Tipo de contacto del cliente",
+                                "example": "D"
+                            },
+                            "prefijo": {
+                                "type": "string",
+                                "description": "Prefijo del teléfono del cliente",
+                                "example": "120"
+                            },
+                            "operadora": {
+                                "type": "string",
+                                "description": "Operadora del teléfono del cliente",
+                                "example": "04"
+                            },
+                            "tipoContrato": {
+                                "type": "string",
+                                "description": "Tipo de contrato del teléfono del cliente",
+                                "example": "PP"
+                            },
+                            "mensajeria": {
+                                "type": "string",
+                                "description": "Mensajería del teléfono del cliente",
+                                "example": "WAP"
+                            },
+                            "telefonoPrincipal": {
+                                "type": "string",
+                                "description": "Teléfono principal del cliente",
+                                "example": "true"
+                            },
+                            "fechaUltimaActualizacion": {
+                                "type": "string",
+                                "description": "Última fecha de actualización del teléfono del cliente",
+                                "example": "2024-02-05"
+                            }
+                        },
+                        "description": "Teléfono del cliente"
+                    },
+                    "email": {
+                        "required": [
+                            "tipo",
+                            "usoPreferente",
+                            "usuario"
+                        ],
+                        "type": "object",
+                        "properties": {
+                            "usuario": {
+                                "type": "string",
+                                "description": "Usuario del email del cliente",
+                                "example": "fuan@gmail.com"
+                            },
+                            "tipo": {
+                                "type": "string",
+                                "description": "Tipo del email del cliente",
+                                "example": "PE"
+                            },
+                            "usoPreferente": {
+                                "type": "string",
+                                "description": "Uso preferente del email del cliente",
+                                "example": "true"
+                            },
+                            "ultimaFechaActualizacion": {
+                                "type": "string",
+                                "description": "Última fecha de actualización del email del cliente",
+                                "example": "2024-02-05"
+                            }
+                        },
+                        "description": "Email del cliente"
+                    }
+                },
+                "description": "Contacto del cliente"
+            },
+            "DatosClienteDTO": {
+                "required": [
+                    "conozcaSuCliente",
+                    "datosConyugue",
+                    "datosDemograficos",
+                    "encabezado",
+                    "general",
+                    "situacionImpositiva"
+                ],
+                "type": "object",
+                "properties": {
+                    "general": {
+                        "$ref": "#/components/schemas/GeneralDTO"
+                    },
+                    "datosEconomicos": {
+                        "$ref": "#/components/schemas/DatosEconomicosDTO"
+                    },
+                    "datosDemograficos": {
+                        "$ref": "#/components/schemas/DatosDemograficosDTO"
+                    },
+                    "encabezado": {
+                        "$ref": "#/components/schemas/EncabezadoDTO"
+                    },
+                    "situacionImpositiva": {
+                        "$ref": "#/components/schemas/SituacionImpositivaDTO"
+                    },
+                    "conozcaSuCliente": {
+                        "$ref": "#/components/schemas/ConozcaSuClienteDTO"
+                    },
+                    "informacionLegal": {
+                        "$ref": "#/components/schemas/InformacionLegalDTO"
+                    },
+                    "datosConyugue": {
+                        "$ref": "#/components/schemas/DatosConyugeDTO"
+                    }
+                },
+                "description": "Datos del cliente"
+            },
+            "DatosConyugeDTO": {
+                "required": [
+                    "numeroIdentificacion",
+                    "primerApellido",
+                    "primerNombre",
+                    "tipoIdentificacion"
+                ],
+                "type": "object",
+                "properties": {
+                    "tipoIdentificacion": {
+                        "type": "string",
+                        "description": "Tipo de identificación del conyugue",
+                        "example": "CC"
+                    },
+                    "numeroIdentificacion": {
+                        "type": "string",
+                        "description": "Número de identificación del conyugue",
+                        "example": "1234567890"
+                    },
+                    "primerApellido": {
+                        "type": "string",
+                        "description": "Primer apellido del conyugue",
+                        "example": "Betancourt"
+                    },
+                    "segundoApellido": {
+                        "type": "string",
+                        "description": "Segundo apellido del conyugue",
+                        "example": "Ospina"
+                    },
+                    "primerNombre": {
+                        "type": "string",
+                        "description": "Primer nombre del conyugue",
+                        "example": "Geider"
+                    },
+                    "segundoNombre": {
+                        "type": "string",
+                        "description": "Segundo nombre del conyugue",
+                        "example": "Andres"
+                    }
+                },
+                "description": "Datos del conyugue del cliente"
+            },
+            "DatosDemograficosDTO": {
+                "required": [
+                    "primeraNacionalidad"
+                ],
+                "type": "object",
+                "properties": {
+                    "segundaNacionalidad": {
+                        "type": "string",
+                        "description": "Segunda nacionalidad del cliente",
+                        "example": "100"
+                    },
+                    "primeraNacionalidad": {
+                        "type": "string",
+                        "description": "Primera nacionalidad del cliente",
+                        "example": "170"
+                    },
+                    "terceraNacionalidad": {
+                        "type": "string",
+                        "description": "Tercera nacionalidad del cliente",
+                        "example": "200"
+                    },
+                    "profesionUOficio": {
+                        "type": "string",
+                        "description": "Profesión u oficio del cliente",
+                        "example": "1039"
+                    },
+                    "nivelAcademico": {
+                        "type": "string",
+                        "description": "Nivel académico del cliente",
+                        "example": "20"
+                    },
+                    "ocupacion": {
+                        "type": "string",
+                        "description": "Ocupación del cliente",
+                        "example": "4"
+                    },
+                    "pep": {
+                        "type": "string",
+                        "description": "PEP del cliente",
+                        "example": "12"
+                    },
+                    "tipoPep": {
+                        "type": "string",
+                        "description": "Tipo PEP del cliente",
+                        "example": "9"
+                    },
+                    "relacionPep": {
+                        "type": "string",
+                        "description": "Relación PEP del cliente",
+                        "example": "4"
+                    },
+                    "dependientes": {
+                        "type": "string",
+                        "description": "Dependientes del cliente",
+                        "example": "2"
+                    }
+                },
+                "description": "Datos demográficos del cliente"
+            },
+            "DatosEconomicosDTO": {
+                "type": "object",
+                "properties": {
+                    "representanteLegal": {
+                        "type": "string",
+                        "description": "Representante legal del cliente"
+                    },
+                    "actividadEconomica": {
+                        "type": "string",
+                        "description": "Actividad económica del cliente"
+                    },
+                    "fuentePrincipalIngresos": {
+                        "type": "string",
+                        "description": "Fuente principal de ingresos del cliente"
+                    },
+                    "ingresosAnuales": {
+                        "type": "string",
+                        "description": "Ingresos anuales del cliente"
+                    },
+                    "origenIngresos": {
+                        "type": "string",
+                        "description": "Origen de ingresos del cliente"
+                    },
+                    "montoIngresosMensual": {
+                        "type": "string",
+                        "description": "Monto de ingresos mensual del cliente"
+                    }
+                },
+                "description": "Datos económicos del cliente"
+            },
+            "EncabezadoDTO": {
+                "required": [
+                    "codigoCliente",
+                    "fechaCreacion"
+                ],
+                "type": "object",
+                "properties": {
+                    "fechaVinculacion": {
+                        "type": "string",
+                        "description": "Fecha de vinculación del cliente",
+                        "example": "2021-08-01"
+                    },
+                    "fechaCreacion": {
+                        "type": "string",
+                        "description": "Fecha de creación del cliente",
+                        "example": "2023-08-08"
+                    },
+                    "codigoCliente": {
+                        "type": "string",
+                        "description": "Código del cliente",
+                        "example": "3"
+                    }
+                },
+                "description": "Encabezado del cliente"
+            },
+            "GeneralDTO": {
+                "required": [
+                    "fechaNacimiento",
+                    "numeroIdentificacion",
+                    "oficial",
+                    "oficina",
+                    "paisNacimiento",
+                    "primerApellido",
+                    "primerNombre",
+                    "sexo"
+                ],
+                "type": "object",
+                "properties": {
+                    "oficial": {
+                        "type": "string",
+                        "description": "Oficial del cliente",
+                        "example": "10"
+                    },
+                    "primerNombre": {
+                        "type": "string",
+                        "description": "Primer nombre del cliente",
+                        "example": "Geider"
+                    },
+                    "segundoNombre": {
+                        "type": "string",
+                        "description": "Segundo nombre del cliente",
+                        "example": "Andres"
+                    },
+                    "primerApellido": {
+                        "type": "string",
+                        "description": "Primer apellido del cliente",
+                        "example": "Betancourt"
+                    },
+                    "segundoApellido": {
+                        "type": "string",
+                        "description": "Segundo apellido del cliente",
+                        "example": "Ospina"
+                    },
+                    "tipoIdentificacion": {
+                        "pattern": "RC|TI|CC",
+                        "type": "string"
+                    },
+                    "numeroIdentificacion": {
+                        "type": "string",
+                        "description": "Número de identificación del cliente",
+                        "example": "1234567890"
+                    },
+                    "fechaExpedicionDocumento": {
+                        "type": "string",
+                        "description": "Fecha de expedición del documento",
+                        "example": "2021-08-01"
+                    },
+                    "paisNacimiento": {
+                        "type": "string",
+                        "description": "País de nacimiento del cliente",
+                        "example": "Colombia"
+                    },
+                    "ciudadNacimiento": {
+                        "type": "string",
+                        "description": "Ciudad de nacimiento del cliente",
+                        "example": "Santa Marta"
+                    },
+                    "fechaNacimiento": {
+                        "type": "string",
+                        "description": "Fecha de nacimiento del cliente",
+                        "example": "1990-01-01"
+                    },
+                    "tutor": {
+                        "type": "string",
+                        "description": "Tutor del cliente"
+                    },
+                    "nombreTutor": {
+                        "type": "string",
+                        "description": "Nombre del tutor del cliente",
+                        "example": "Mateo Ramirez"
+                    },
+                    "sexo": {
+                        "type": "string",
+                        "description": "Sexo del cliente",
+                        "example": "M"
+                    },
+                    "genero": {
+                        "type": "string",
+                        "description": "Género del cliente",
+                        "example": "M"
+                    },
+                    "estadoCivil": {
+                        "type": "string",
+                        "description": "Estado civil del cliente",
+                        "example": "SO"
+                    },
+                    "oficina": {
+                        "type": "string",
+                        "description": "Oficina del cliente",
+                        "example": "1"
+                    },
+                    "provinciaNacimiento": {
+                        "type": "string",
+                        "description": "Provincia de nacimiento del cliente",
+                        "example": "76"
+                    },
+                    "referidoPor": {
+                        "type": "string",
+                        "description": "Referido por del cliente",
+                        "example": "1"
+                    },
+                    "comoSeEntero": {
+                        "type": "string",
+                        "description": "Cómo se enteró del cliente",
+                        "example": "PAGWEB"
+                    },
+                    "razonSocial": {
+                        "type": "string",
+                        "description": "Razón social del cliente"
+                    },
+                    "paisConstitucion": {
+                        "type": "string",
+                        "description": "País de constitución del cliente"
+                    },
+                    "tipoCompania": {
+                        "type": "string",
+                        "description": "Tipo de compañía del cliente"
+                    },
+                    "categoriaCompania": {
+                        "type": "string",
+                        "description": "Categoría de compañía del cliente"
+                    }
+                },
+                "description": "Información general del cliente"
+            },
+            "GrupoEconomicoDto": {
+                "type": "object",
+                "properties": {
+                    "grupoEconomico": {
+                        "type": "string",
+                        "description": "Grupo económico del cliente"
+                    }
+                },
+                "description": "Grupo económico del cliente"
+            },
+            "InformacionLegalDTO": {
+                "type": "object",
+                "properties": {
+                    "nombreComercial": {
+                        "type": "string",
+                        "description": "Nombre comercial del cliente"
+                    },
+                    "fechaConstitucion": {
+                        "type": "string",
+                        "description": "Fecha de constitución del cliente",
+                        "example": "2021-08-01"
+                    },
+                    "fechaInscripcion": {
+                        "type": "string",
+                        "description": "Fecha de inscripción del cliente",
+                        "example": "2021-08-01"
+                    }
+                },
+                "description": "Información legal del cliente"
+            },
+            "PaisResidenciaFiscalDTO": {
+                "required": [
+                    "numeroIdentificacionTributaria",
+                    "paisResidenciaFiscal",
+                    "tipoIdentificacionTributaria"
+                ],
+                "type": "object",
+                "properties": {
+                    "paisResidenciaFiscal": {
+                        "type": "string",
+                        "description": "País de residencia fiscal",
+                        "example": "142"
+                    },
+                    "tipoIdentificacionTributaria": {
+                        "type": "string",
+                        "description": "Tipo de identificación tributaria",
+                        "example": "NIT"
+                    },
+                    "numeroIdentificacionTributaria": {
+                        "type": "string",
+                        "description": "Número de identificación tributaria",
+                        "example": "1234567890"
+                    },
+                    "esCiudadano": {
+                        "type": "boolean",
+                        "description": "Es ciudadano",
+                        "example": true
+                    },
+                    "esResidente": {
+                        "type": "boolean",
+                        "description": "Es residente",
+                        "example": true
+                    },
+                    "ultimaFechaModificacion": {
+                        "type": "string",
+                        "description": "Última fecha de modificación",
+                        "example": "2024-02-05"
+                    }
+                },
+                "description": "País de residencia fiscal del cliente"
+            },
+            "ResidenciaFiscalDTO": {
+                "required": [
+                    "paisResidenciaFiscal"
+                ],
+                "type": "object",
+                "properties": {
+                    "residenciaFiscalColombia": {
+                        "type": "string",
+                        "description": "Residencia fiscal en Colombia",
+                        "example": "true"
+                    },
+                    "fatca": {
+                        "type": "string",
+                        "description": "FATCA",
+                        "example": "true"
+                    },
+                    "crs": {
+                        "type": "string",
+                        "description": "CRS",
+                        "example": "true"
+                    },
+                    "personaEstadosUnidos": {
+                        "type": "string",
+                        "description": "Persona en Estados Unidos"
+                    },
+                    "personaEspecificaEstadosUnidos": {
+                        "type": "string",
+                        "description": "Persona específica en Estados Unidos"
+                    },
+                    "tin": {
+                        "type": "string",
+                        "description": "TIN"
+                    },
+                    "noTin": {
+                        "type": "string",
+                        "description": "No TIN"
+                    },
+                    "noAplica": {
+                        "type": "string",
+                        "description": "No aplica"
+                    },
+                    "clasificacionFatca": {
+                        "type": "string",
+                        "description": "Clasificación FATCA"
+                    },
+                    "giin": {
+                        "type": "string",
+                        "description": "GIIN"
+                    },
+                    "crspj": {
+                        "type": "string",
+                        "description": "CRSPJ"
+                    },
+                    "paisResidenciaFiscal": {
+                        "$ref": "#/components/schemas/PaisResidenciaFiscalDTO"
+                    }
+                },
+                "description": "Residencia fiscal del cliente"
+            },
+            "SituacionImpositivaDTO": {
+                "type": "object",
+                "properties": {
+                    "situacionImpositiva": {
+                        "type": "string",
+                        "description": "Situación impositiva del cliente",
+                        "example": "14"
+                    }
+                },
+                "description": "Situación impositiva del cliente"
+            },
+            "AccountDTO": {
+                "required": [
+                    "code"
+                ],
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Código de la cuenta",
+                        "format": "int32",
+                        "example": 1
+                    }
+                },
+                "description": "DTO que representa una cuenta de balance"
+            },
+            "BalanceMovementDTO": {
+                "required": [
+                    "account",
+                    "accountAmount",
+                    "accountJustify"
+                ],
+                "type": "object",
+                "properties": {
+                    "account": {
+                        "$ref": "#/components/schemas/AccountDTO"
+                    },
+                    "accountJustify": {
+                        "type": "string",
+                        "description": "Justificación de la cuenta",
+                        "example": "DETALLE PARA CUENTA OTROS GASTOS"
+                    },
+                    "accountAmount": {
+                        "type": "string",
+                        "description": "Monto de la cuenta",
+                        "example": "10000.15"
+                    }
+                },
+                "description": "DTO que representa un movimiento de balance"
+            },
+            "BalanceMovementResponseDTO": {
+                "required": [
+                    "balanceMovement"
+                ],
+                "type": "object",
+                "properties": {
+                    "balanceMovement": {
+                        "type": "array",
+                        "description": "Lista de movimientos de balance",
+                        "items": {
+                            "$ref": "#/components/schemas/BalanceMovementDTO"
+                        }
+                    }
+                },
+                "description": "DTO que representa el movimiento del balance"
+            },
+            "CanonicalConsultarDatosFinancierosResponse": {
+                "required": [
+                    "message",
+                    "messageId",
+                    "operationData",
+                    "path",
+                    "status",
+                    "timestamp"
+                ],
+                "type": "object",
+                "properties": {
+                    "messageId": {
+                        "type": "string",
+                        "description": "Identificador único que enlaza la respuesta con la solicitud original",
+                        "example": "12345-abcde-67890-fghij"
+                    },
+                    "timestamp": {
+                        "type": "string",
+                        "description": "Marca de tiempo en que se genera la respuesta",
+                        "example": "2024-10-08T12:30:00"
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "Estado de la operación",
+                        "example": "Success"
+                    },
+                    "errors": {
+                        "type": "array",
+                        "description": "Lista de mensajes de error, en caso de que la solicitud no se haya procesado correctamente",
+                        "example": [],
+                        "items": {
+                            "type": "string",
+                            "description": "Lista de mensajes de error, en caso de que la solicitud no se haya procesado correctamente",
+                            "example": "[]"
+                        }
+                    },
+                    "errorType": {
+                        "type": "string",
+                        "description": "Clasificación del error",
+                        "example": "validation"
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "Ruta o endpoint donde ocurrió el error",
+                        "example": "/api/v1/orders"
+                    },
+                    "message": {
+                        "type": "string",
+                        "description": "Descripción general del resultado de la operación",
+                        "example": "Request processed successfully"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/ConsultarDatosFinancierosResponseDTO"
+                    }
+                }
+            },
+            "ConsultarDatosFinancierosResponseDTO": {
+                "required": [
+                    "cuentasEnElExtranjero",
+                    "situacionEconomicaPatrimonial"
+                ],
+                "type": "object",
+                "properties": {
+                    "situacionEconomicaPatrimonial": {
+                        "$ref": "#/components/schemas/SituacionEconomicaPatrimonialDTO"
+                    },
+                    "cuentasEnElExtranjero": {
+                        "type": "array",
+                        "description": "Lista de cuentas en el extranjero",
+                        "items": {
+                            "$ref": "#/components/schemas/CuentaExtranjeraDTO"
+                        }
+                    }
+                },
+                "description": "Response de salida con información de datos financieros"
+            },
+            "CuentaExtranjeraDTO": {
+                "required": [
+                    "entidad",
+                    "numeroCuenta",
+                    "tipoCuenta"
+                ],
+                "type": "object",
+                "properties": {
+                    "entidad": {
+                        "type": "string",
+                        "description": "max:100 chars Banco al que pertenece la cuenta",
+                        "example": "Banco Internacional"
+                    },
+                    "tipoCuenta": {
+                        "type": "string",
+                        "description": "1 to 10 chars Código del tipo de de cuenta en el extranjero.",
+                        "example": "Corriente"
+                    },
+                    "numeroCuenta": {
+                        "type": "string",
+                        "description": "5 to 30 chars Número de cuenta de la operación extranjera.",
+                        "example": "1234567890"
+                    },
+                    "oficinaSucursal": {
+                        "type": "string",
+                        "description": "max:30 chars, Oficina del banco al que pertenece la operación",
+                        "example": "Sucursal Central"
+                    },
+                    "ciudad": {
+                        "type": "string",
+                        "description": "max:30 chars Ciudad de la operación",
+                        "example": "Miami"
+                    },
+                    "telefono": {
+                        "type": "string",
+                        "description": "max:30 chars Teléfono de contacto del banco.",
+                        "example": "+1 305 123 4567"
+                    },
+                    "cupo": {
+                        "type": "string",
+                        "description": "PATTERN:^\\d{1,14}\\.\\d{1,2}$ Cupo o monto mensual promedio",
+                        "example": "50000"
+                    },
+                    "moneda": {
+                        "type": "string",
+                        "description": "Moneda de la cuenta en el extranjero, 1 to 10 chars Código del tipo de contacto",
+                        "example": "USD"
+                    },
+                    "fechaVencimiento": {
+                        "type": "string",
+                        "description": "Fecha de vencimiento de la cuenta en el extranjero",
+                        "format": "date",
+                        "example": "2025-12-31"
+                    },
+                    "fechaUltimaActualizacion": {
+                        "type": "string",
+                        "description": "Fecha de la última actualización de la cuenta en el extranjero",
+                        "format": "date",
+                        "example": "2024-10-28"
+                    }
+                },
+                "description": "DTO que representa una cuenta en el extranjero"
+            },
+            "SituacionEconomicaDTO": {
+                "required": [
+                    "activos",
+                    "arrendamiento",
+                    "bgjActivos",
+                    "capitalSocial",
+                    "claseBalance",
+                    "cuales",
+                    "cuotaCoomeva",
+                    "deduccionesNomina",
+                    "egresosMensuales",
+                    "fechaCorte",
+                    "fechaUltimaActualizacion",
+                    "gastosAnuales",
+                    "gastosPersonalesFamiliares",
+                    "honorarios",
+                    "ingresosMensuales",
+                    "ingresosNoOperacionales",
+                    "otrosGastos",
+                    "otrosIngresos",
+                    "pasivos",
+                    "patrimonio",
+                    "prestamosDiferentesABancoomeva",
+                    "rendimientosFinancieros",
+                    "salarioFijo",
+                    "salarioVariableComisiones",
+                    "tarjetasCredito",
+                    "tipoBalance",
+                    "totalEgresos",
+                    "totalIngresos",
+                    "ventasAnuales"
+                ],
+                "type": "object",
+                "properties": {
+                    "tipoBalance": {
+                        "type": "string",
+                        "description": "Tipo de balance"
+                    },
+                    "claseBalance": {
+                        "type": "string",
+                        "description": "Clase de balance"
+                    },
+                    "fechaCorte": {
+                        "type": "string",
+                        "description": "Fecha de corte del balance",
+                        "format": "date"
+                    },
+                    "fechaUltimaActualizacion": {
+                        "type": "string",
+                        "description": "Fecha de la última actualización del balance",
+                        "format": "date",
+                        "example": "2024-01-15"
+                    },
+                    "ventasAnuales": {
+                        "type": "string",
+                        "description": "Ventas anuales",
+                        "example": "1500000"
+                    },
+                    "ingresosMensuales": {
+                        "type": "string",
+                        "description": "Ingresos mensuales",
+                        "example": "125000"
+                    },
+                    "ingresosNoOperacionales": {
+                        "type": "string",
+                        "description": "Ingresos no operacionales",
+                        "example": "50000"
+                    },
+                    "gastosAnuales": {
+                        "type": "string",
+                        "description": "Gastos anuales",
+                        "example": "800000"
+                    },
+                    "egresosMensuales": {
+                        "type": "string",
+                        "description": "Egresos mensuales",
+                        "example": "67000"
+                    },
+                    "bgjActivos": {
+                        "type": "string",
+                        "description": "Activos BGJ",
+                        "example": "2500000"
+                    },
+                    "activos": {
+                        "type": "string",
+                        "description": "Total de activos",
+                        "example": "3000000"
+                    },
+                    "pasivos": {
+                        "type": "string",
+                        "description": "Total de pasivos",
+                        "example": "1500000"
+                    },
+                    "patrimonio": {
+                        "type": "string",
+                        "description": "Total de patrimonio",
+                        "example": "1500000"
+                    },
+                    "capitalSocial": {
+                        "type": "string",
+                        "description": "Capital social",
+                        "example": "500000"
+                    },
+                    "salarioFijo": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "salarioVariableComisiones": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "arrendamiento": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "rendimientosFinancieros": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "honorarios": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "otrosIngresos": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "cuales": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "totalIngresos": {
+                        "type": "string",
+                        "description": "Total de ingresos",
+                        "example": "190000"
+                    },
+                    "gastosPersonalesFamiliares": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "cuotaCoomeva": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "prestamosDiferentesABancoomeva": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "deduccionesNomina": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "tarjetasCredito": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "otrosGastos": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "totalEgresos": {
+                        "type": "string",
+                        "description": "Total de egresos",
+                        "example": "92000"
+                    }
+                },
+                "description": "DTO que representa la situación económica detallada"
+            },
+            "SituacionEconomicaPatrimonialDTO": {
+                "required": [
+                    "situacionEconomica",
+                    "situacionPatrimonial"
+                ],
+                "type": "object",
+                "properties": {
+                    "situacionEconomica": {
+                        "$ref": "#/components/schemas/SituacionEconomicaDTO"
+                    },
+                    "situacionPatrimonial": {
+                        "$ref": "#/components/schemas/SituacionPatrimonialDTO"
+                    }
+                },
+                "description": "DTO que contiene la situación económica y patrimonial"
+            },
+            "SituacionPatrimonialDTO": {
+                "required": [
+                    "claseBalance",
+                    "fechaCorte",
+                    "fechaUltimaActualizacion",
+                    "tipoBalance",
+                    "totalActivos",
+                    "totalPasivos"
+                ],
+                "type": "object",
+                "properties": {
+                    "tipoBalance": {
+                        "type": "string",
+                        "description": "Tipo de balance",
+                        "example": "Consolidado"
+                    },
+                    "claseBalance": {
+                        "type": "string",
+                        "description": "Clase de balance",
+                        "example": "Patrimonial"
+                    },
+                    "fechaCorte": {
+                        "type": "string",
+                        "description": "Fecha de corte del balance",
+                        "format": "date",
+                        "example": "2023-12-31"
+                    },
+                    "fechaUltimaActualizacion": {
+                        "type": "string",
+                        "description": "Fecha de la última actualización del balance",
+                        "format": "date",
+                        "example": "2024-01-15"
+                    },
+                    "totalActivos": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    },
+                    "totalPasivos": {
+                        "$ref": "#/components/schemas/BalanceMovementResponseDTO"
+                    }
+                },
+                "description": "DTO que representa la situación patrimonial"
+            }
+        },
+        "securitySchemes": {
+            "security_auth": {
+                "type": "oauth2",
+                "flows": {
+                    "clientCredentials": {
+                        "tokenUrl": "${keycloak.tokenUrl}",
+                        "scopes": {
+                            "openid": "openid scope"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

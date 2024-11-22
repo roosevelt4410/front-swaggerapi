@@ -55,7 +55,13 @@ export const Navbar = () => {
                                 <span className="text-xs mt-1">Cobis</span>
                             </Link>
 
-                            
+                            {/* <Link
+      to="/apis/mensajeriaColas"
+      className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2 flex flex-col items-center"
+    >
+      <FontAwesomeIcon icon={faEnvelope} className="fa-lg" />
+      <span className="text-xs mt-1">Mensajería</span>
+    </Link> */}
 
                             <Link
     to="/apis/buc"

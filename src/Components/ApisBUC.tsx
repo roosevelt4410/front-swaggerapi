@@ -16,12 +16,16 @@ const ApisBuc: React.FC = () => {
   const [selectedApi, setSelectedApi] = useState<string | null>(null);
   const [openCategory, setOpenCategory] = useState<string | null>(null);
   const [activeApi, setActiveApi] = useState<string | null>(null);
- /*  const backendUrl = "http://localhost:3000"; */
+  /* const backendUrl = "http://localhost:3000"; */
   const backendUrl = "https://main.d10lb53q0mw9au.amplifyapp.com";
 
   const apis: ApiCategories = {
     BUC:[
-      { name: "BUC", url: `${backendUrl}/BUC/apidocs.json` }
+      { name: "BUC", url: `${backendUrl}/BUC/apidocs.json` },
+      
+    ],
+    MOCK:[
+      { name: "MOCKS", url: `${backendUrl}/APIDOC/apidocsfinall.json`}
     ]
   };
 
