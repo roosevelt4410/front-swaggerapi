@@ -29,13 +29,13 @@ export const Navbar = () => {
                     {login.isAuth && (
                         <>
                             
-                            <Link
+                            {/* <Link
                                 to="/users"
                                 className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2 flex flex-col items-center"
                             >
                                 <FontAwesomeIcon icon={faUsers} className="fa-lg" />
                                 <span className="text-xs mt-1">Users</span>
-                            </Link>
+                            </Link> */}
 
                             
                             <Link
@@ -86,13 +86,13 @@ export const Navbar = () => {
                             </div>
 
 
-                            <Link
+                            {/* <Link
                                 to="/users/changePassword"
                                 className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2 flex flex-col items-center"
                             >
                                <span className="fa-lg">🔒</span>
                                 <span className="text-xs mt-1">Change Password</span>
-                            </Link>
+                            </Link> */}
                         </>
                     )}
                 </div>

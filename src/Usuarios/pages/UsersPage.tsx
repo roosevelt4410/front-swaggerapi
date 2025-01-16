@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+/* import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import { AuthContext } from "../../Auth/context/AuthContext";
 import { UserModalForm } from "../components/UserModalForm";
@@ -57,3 +57,26 @@ export const UsersPage = () => {
         </>
     );
 };
+ */
+
+
+
+export const UsersPage = () => {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <div className="bg-white shadow-lg rounded-lg p-8 max-w-md text-center">
+          <h1 className="text-3xl font-bold text-empresa-rojo mb-4">
+            Bienvenido a nuestra plataforma Portal de Apis
+          </h1>
+          <p className="text-lg text-gray-700 mb-6">
+            A partir de ahora, el ingreso se realizará a través de nuestro 
+            sistema de <span className="font-semibold text-empresa-verde">Directorio Activo</span>.
+          </p>
+         
+        </div>
+      </div>
+    );
+  };
+  
+  export default UsersPage;
+  
