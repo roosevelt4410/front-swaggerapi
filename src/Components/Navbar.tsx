@@ -7,7 +7,7 @@ import { AuthContext } from '../Auth/context/AuthContext';
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { handlerLogout, login } = useContext(AuthContext);
-
+    console.log(login);
     const toggleNavbar = () => {
         setIsOpen(!isOpen);
     };
@@ -29,22 +29,24 @@ export const Navbar = () => {
                     {login.isAuth && (
                         <>
                             
-                            {/* <Link
-                                to="/users"
-                                className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2 flex flex-col items-center"
-                            >
-                                <FontAwesomeIcon icon={faUsers} className="fa-lg" />
-                                <span className="text-xs mt-1">Users</span>
-                            </Link> */}
+                            {login.isAdmin && (
+                <Link
+                    to="/users"
+                    className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2 flex flex-col items-center"
+                >
+                    <FontAwesomeIcon icon={faUsers} className="fa-lg" />
+                    <span className="text-xs mt-1">Users</span>
+                </Link>
+            )}
 
                             
-                            <Link
+                           {/*  <Link
                                 to="/apis"
                                 className="text-white hover:text-empresa-verde transition-shadow hover:shadow-md p-2 rounded-full cursor-pointer bg-empresa-verde hover:bg-empresa-rojo mx-2 flex flex-col items-center"
                             >
                                 <FontAwesomeIcon icon={faUniversity} className="fa-lg" /> 
                                 <span className="text-xs mt-1">Banco</span>
-                            </Link>
+                            </Link> */}
 
                             
                             <Link

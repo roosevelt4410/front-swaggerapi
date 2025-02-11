@@ -25,7 +25,7 @@ const ApisBuc: React.FC = () => {
       
     ],
     MOCK:[
-      { name: "MOCKS", url: `${backendUrl}/APIDOC/apidocsfinall.json`}
+      { name: "MOCKS", url: `${backendUrl}/APIDOC/api-docsAtualizada.json`}
     ]
   };
 

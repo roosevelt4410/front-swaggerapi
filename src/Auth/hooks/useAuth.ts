@@ -57,17 +57,24 @@ export const useAuth = () => {
             const response = await loginUser({ username, password });
             const token = response.data.token;
             const claims = JSON.parse(window.atob(token.split(".")[1]));
+            console.log(claims);
             const authorities = JSON.parse(claims.authorities);
             const isAdmin = authorities.some((authority:any) => authority.authority === 'admin');
 
             const user = { username: claims.sub };
+            console.log(isAdmin);
+            const isAdminFinal = isAdmin != null && isAdmin != undefined && isAdmin != false 
+            ? isAdmin 
+            : claims.isAdmin;
+             
+
             dispatch({
                 type: 'login',
-                payload: { user, isAdmin: isAdmin},
+                payload: { user, isAdmin: isAdminFinal},
             });
             sessionStorage.setItem('login', JSON.stringify({
                 isAuth: true,
-                isAdmin: isAdmin,
+                isAdmin: isAdminFinal,
                 user,
             }));
             sessionStorage.setItem('token', `Bearer ${token}`);
