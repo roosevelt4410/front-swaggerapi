@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "https://aa1e867b16de345bda69a40e28b12861-1136778230.us-east-1.elb.amazonaws.com",
+            "url": "http://localhost:8082",
             "description": "Generated server url"
         }
     ],
@@ -24,15 +24,24 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CanonicalRequesttBaseUnicaClienteRequestDTO"
+                                "$ref": "#/components/schemas/CanonicalRequestBaseUnicaClienteRequestDTO"
                             }
                         }
                     },
                     "required": true
                 },
                 "responses": {
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
                     "422": {
                         "description": "Sin procesar"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Vinculacion exitosa del cliente",
@@ -43,15 +52,6 @@
                                 }
                             }
                         }
-                    },
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    },
-                    "404": {
-                        "description": "Not found"
                     }
                 }
             }
@@ -68,13 +68,19 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CanonicalRequesttValidarProductoClienteRequestDTO"
+                                "$ref": "#/components/schemas/CanonicalRequestValidarProductoClienteRequestDTO"
                             }
                         }
                     },
                     "required": true
                 },
                 "responses": {
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
                     "200": {
                         "description": "Validación exitosa del producto del cliente",
                         "content": {
@@ -88,14 +94,8 @@
                     "422": {
                         "description": "Sin procesar"
                     },
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
-                    },
                     "401": {
                         "description": "Unauthorized"
-                    },
-                    "404": {
-                        "description": "Not found"
                     }
                 }
             }
@@ -112,18 +112,21 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CanonicalRequesttNombreIdentificacionRequestDTO"
+                                "$ref": "#/components/schemas/CanonicalRequestNombreIdentificacionRequestDTO"
                             }
                         }
                     },
                     "required": true
                 },
                 "responses": {
-                    "422": {
-                        "description": "Sin procesar"
-                    },
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "422": {
+                        "description": "Sin procesar"
                     },
                     "401": {
                         "description": "Unauthorized"
@@ -137,9 +140,6 @@
                                 }
                             }
                         }
-                    },
-                    "404": {
-                        "description": "Not found"
                     }
                 }
             }
@@ -154,24 +154,24 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CanonicalRequesttEnvioCorreosRequestDTO"
+                                "$ref": "#/components/schemas/CanonicalRequestEnvioCorreosRequestDTO"
                             }
                         }
                     },
                     "required": true
                 },
                 "responses": {
-                    "422": {
-                        "description": "Sin procesar"
-                    },
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
-                    "401": {
-                        "description": "Unauthorized"
-                    },
                     "404": {
                         "description": "Not found"
+                    },
+                    "422": {
+                        "description": "Sin procesar"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
                     }
                 }
             }
@@ -186,24 +186,24 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CanonicalRequesttEnvioCorreosRequestDTO"
+                                "$ref": "#/components/schemas/CanonicalRequestEnvioCorreosRequestDTO"
                             }
                         }
                     },
                     "required": true
                 },
                 "responses": {
-                    "422": {
-                        "description": "Sin procesar"
-                    },
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
-                    "401": {
-                        "description": "Unauthorized"
-                    },
                     "404": {
                         "description": "Not found"
+                    },
+                    "422": {
+                        "description": "Sin procesar"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
                     }
                 }
             }
@@ -220,15 +220,18 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CanonicalRequesttCrearCDTRequestDTO"
+                                "$ref": "#/components/schemas/CanonicalRequestCrearCDTRequestDTO"
                             }
                         }
                     },
                     "required": true
                 },
                 "responses": {
-                    "422": {
-                        "description": "Sin procesar"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "CDT creado con exito",
@@ -240,14 +243,11 @@
                             }
                         }
                     },
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "422": {
+                        "description": "Sin procesar"
                     },
                     "401": {
                         "description": "Unauthorized"
-                    },
-                    "404": {
-                        "description": "Not found"
                     }
                 }
             }
@@ -263,24 +263,15 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CanonicalRequesttValidateUserAppRequest"
+                                "$ref": "#/components/schemas/CanonicalRequestValidateUserAppRequest"
                             }
                         }
                     },
                     "required": true
                 },
                 "responses": {
-                    "422": {
-                        "description": "Sin procesar"
-                    },
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    },
-                    "404": {
-                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -291,6 +282,15 @@
                                 }
                             }
                         }
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "422": {
+                        "description": "Sin procesar"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
                     }
                 }
             }
@@ -418,7 +418,7 @@
                 },
                 "description": "Campos adicionales del cliente"
             },
-            "CanonicalRequesttBaseUnicaClienteRequestDTO": {
+            "CanonicalRequestBaseUnicaClienteRequestDTO": {
                 "required": [
                     "deviceContext",
                     "header",
@@ -428,7 +428,7 @@
                 "type": "object",
                 "properties": {
                     "header": {
-                        "$ref": "#/components/schemas/Headerss"
+                        "$ref": "#/components/schemas/Header"
                     },
                     "metadata": {
                         "$ref": "#/components/schemas/Metadata"
@@ -439,7 +439,8 @@
                     "operationData": {
                         "$ref": "#/components/schemas/BaseUnicaClienteRequestDTO"
                     }
-                }
+                },
+                "description": "DTO que representa el canonical request"
             },
             "ClientApp": {
                 "required": [
@@ -1561,7 +1562,7 @@
                 },
                 "description": "Grupo económico del cliente"
             },
-            "Headerss": {
+            "Header": {
                 "required": [
                     "authToken",
                     "messageId",
@@ -2401,7 +2402,7 @@
                     }
                 }
             },
-            "CanonicalRequesttValidarProductoClienteRequestDTO": {
+            "CanonicalRequestValidarProductoClienteRequestDTO": {
                 "required": [
                     "deviceContext",
                     "header",
@@ -2411,7 +2412,7 @@
                 "type": "object",
                 "properties": {
                     "header": {
-                        "$ref": "#/components/schemas/Headerss"
+                        "$ref": "#/components/schemas/Header"
                     },
                     "metadata": {
                         "$ref": "#/components/schemas/Metadata"
@@ -2422,7 +2423,8 @@
                     "operationData": {
                         "$ref": "#/components/schemas/ValidarProductoClienteRequestDTO"
                     }
-                }
+                },
+                "description": "DTO que representa el canonical request"
             },
             "ValidarProductoClienteRequestDTO": {
                 "required": [
@@ -2525,7 +2527,7 @@
                 },
                 "description": "Objeto de respuesta para la validación del producto del cliente"
             },
-            "CanonicalRequesttNombreIdentificacionRequestDTO": {
+            "CanonicalRequestNombreIdentificacionRequestDTO": {
                 "required": [
                     "deviceContext",
                     "header",
@@ -2535,7 +2537,7 @@
                 "type": "object",
                 "properties": {
                     "header": {
-                        "$ref": "#/components/schemas/Headerss"
+                        "$ref": "#/components/schemas/Header"
                     },
                     "metadata": {
                         "$ref": "#/components/schemas/Metadata"
@@ -2546,7 +2548,8 @@
                     "operationData": {
                         "$ref": "#/components/schemas/NombreIdentificacionRequestDTO"
                     }
-                }
+                },
+                "description": "DTO que representa el canonical request"
             },
             "NombreIdentificacionRequestDTO": {
                 "type": "object",
@@ -2777,7 +2780,7 @@
                 },
                 "description": "Objeto de respuesta para la validación de listas"
             },
-            "CanonicalRequesttEnvioCorreosRequestDTO": {
+            "CanonicalRequestEnvioCorreosRequestDTO": {
                 "required": [
                     "deviceContext",
                     "header",
@@ -2787,7 +2790,7 @@
                 "type": "object",
                 "properties": {
                     "header": {
-                        "$ref": "#/components/schemas/Headerss"
+                        "$ref": "#/components/schemas/Header"
                     },
                     "metadata": {
                         "$ref": "#/components/schemas/Metadata"
@@ -2798,7 +2801,8 @@
                     "operationData": {
                         "$ref": "#/components/schemas/EnvioCorreosRequestDTO"
                     }
-                }
+                },
+                "description": "DTO que representa el canonical request"
             },
             "EnvioCorreosRequestDTO": {
                 "type": "object",
@@ -2821,7 +2825,7 @@
                 },
                 "description": "Objeto de solicitud que contiene los datos de entreda del servicio."
             },
-            "CanonicalRequesttCrearCDTRequestDTO": {
+            "CanonicalRequestCrearCDTRequestDTO": {
                 "required": [
                     "deviceContext",
                     "header",
@@ -2831,7 +2835,7 @@
                 "type": "object",
                 "properties": {
                     "header": {
-                        "$ref": "#/components/schemas/Headerss"
+                        "$ref": "#/components/schemas/Header"
                     },
                     "metadata": {
                         "$ref": "#/components/schemas/Metadata"
@@ -2842,7 +2846,8 @@
                     "operationData": {
                         "$ref": "#/components/schemas/CrearCDTRequestDTO"
                     }
-                }
+                },
+                "description": "DTO que representa el canonical request"
             },
             "CrearCDTRequestDTO": {
                 "required": [
@@ -3144,7 +3149,7 @@
                     }
                 }
             },
-            "CanonicalRequesttValidateUserAppRequest": {
+            "CanonicalRequestValidateUserAppRequest": {
                 "required": [
                     "deviceContext",
                     "header",
@@ -3154,7 +3159,7 @@
                 "type": "object",
                 "properties": {
                     "header": {
-                        "$ref": "#/components/schemas/Headerss"
+                        "$ref": "#/components/schemas/Header"
                     },
                     "metadata": {
                         "$ref": "#/components/schemas/Metadata"
@@ -3165,7 +3170,8 @@
                     "operationData": {
                         "$ref": "#/components/schemas/ValidateUserAppRequest"
                     }
-                }
+                },
+                "description": "DTO que representa el canonical request"
             },
             "ValidateUserAppRequest": {
                 "type": "object",
