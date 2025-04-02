@@ -9,7 +9,7 @@ import { UsersList } from "../components/UserList";
 export const UsersPage = () => {
     const { users, visibleForm, handlerOpenForm, getUsers } = useContext(UserContext);
     const { login } = useContext(AuthContext);
-    
+
     const [isInitialLoad, setIsInitialLoad] = useState(true);
 
     useEffect(() => {
@@ -57,11 +57,15 @@ export const UsersPage = () => {
             <div className="min-h-screen flex items-center justify-center bg-gray-100">
                 <div className="bg-white shadow-lg rounded-lg p-8 max-w-md text-center">
                     <h1 className="text-3xl font-bold text-empresa-rojo mb-4">
-                        Bienvenido a nuestra plataforma Portal de Apis
+                        Bienvenido a nuestra plataforma Portal de APIs
                     </h1>
                     <p className="text-lg text-gray-700 mb-6">
-                        A partir de ahora, el ingreso se realizará a través de nuestro 
+                        A partir de ahora, el ingreso se realizará a través de nuestro
                         sistema de <span className="font-semibold text-empresa-verde">Directorio Activo</span>.
+                    </p>
+                    <p className="text-lg text-gray-700 mb-6">
+                        Los usuarios que no se encuentren en el Directorio Activo y que estén autorizados
+                        podrán solicitar su usuario de acceso a la plataforma.
                     </p>
                 </div>
             </div>
