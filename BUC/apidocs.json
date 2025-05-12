@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "https://webappspruebas.devbancoomeva.co",
+            "url": "https://webappspruebas.devbancoomeva.co:443/buc/",
             "description": "Generated server url"
         }
     ],
