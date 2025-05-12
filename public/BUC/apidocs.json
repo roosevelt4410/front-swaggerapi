@@ -7,11 +7,51 @@
     },
     "servers": [
         {
-            "url": "https://webappspruebas.devbancoomeva.co:443/buc/",
+            "url": "https://webappspruebas.devbancoomeva.co",
             "description": "Generated server url"
         }
     ],
     "paths": {
+        "/api/v3/buc/consultarTitularCuenta": {
+            "post": {
+                "tags": [
+                    "buc-controller-v-3"
+                ],
+                "summary": "Consulta titular de cuenta",
+                "operationId": "consultarTitularCuenta",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestAccountNumberRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la consulta exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    }
+                }
+            }
+        },
         "/api/v2/productoCaptacion/crearProducto": {
             "post": {
                 "tags": [
@@ -30,8 +70,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -43,11 +86,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -58,7 +98,7 @@
                     "buc-controller-v-2"
                 ],
                 "summary": "Consulta titular de cuenta",
-                "operationId": "consultarTitularCuenta",
+                "operationId": "consultarTitularCuenta_1",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -70,8 +110,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -83,11 +126,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -110,8 +150,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -126,8 +166,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -150,14 +190,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -168,6 +205,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -190,8 +230,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha asignado una tarjeta preestampada exitosamente",
@@ -203,11 +246,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -230,8 +270,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la reversa de la transaccion exitosamente",
@@ -243,11 +286,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -270,14 +310,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha Removido cuenta asignada a tarjeta debito exitosamente",
@@ -288,6 +325,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -310,8 +350,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha emitido o reexpedido una nueva tarjeta exitosamente",
@@ -323,11 +366,48 @@
                             }
                         }
                     },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    }
+                }
+            }
+        },
+        "/api/v1/tarjetas/realizarPagoTc": {
+            "post": {
+                "tags": [
+                    "tarjetas-controller"
+                ],
+                "summary": "Realizar Pago TC",
+                "operationId": "realizarPagoTc",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestRealizarPagoTcRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
                     "404": {
                         "description": "Not found"
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la actualización exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RealizarPagoTcResponseDTO"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -350,14 +430,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
                     "200": {
                         "description": "Se ha realizado el pago exitosamente",
@@ -368,6 +448,46 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        },
+        "/api/v1/tarjetas/realizarPagoTCFacturacion": {
+            "post": {
+                "tags": [
+                    "tarjetas-controller"
+                ],
+                "summary": "Realizar Pago TC Facturacion",
+                "operationId": "realizarPagoTCFacturacion",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestRealizarPagoTCFacturacionRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la actualización exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RealizarPagoTCFacturacionResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -390,24 +510,24 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado el pago",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/CanonicalRealizarPagoDirigidoTcResponse"
+                                    "$ref": "#/components/schemas/RealizarPagoDirigidoTcResponseDTO"
                                 }
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -430,6 +550,12 @@
                     "required": true
                 },
                 "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
@@ -442,12 +568,6 @@
                                 }
                             }
                         }
-                    },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     }
                 }
             }
@@ -470,11 +590,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
                     "200": {
                         "description": "Se ha realizado la actualizacion exitosamente",
@@ -485,9 +608,6 @@
                                 }
                             }
                         }
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     }
                 }
             }
@@ -510,14 +630,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha generado el CVV dinamico exitosamente",
@@ -528,6 +645,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -550,11 +670,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta del estado de la tarjeta exitosamente",
@@ -565,9 +688,6 @@
                                 }
                             }
                         }
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     }
                 }
             }
@@ -590,14 +710,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la creación de la tarjeta exitosamente",
@@ -608,6 +725,49 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    }
+                }
+            }
+        },
+        "/api/v1/tarjetas/crearTarjetaDual": {
+            "post": {
+                "tags": [
+                    "tarjetas-controller"
+                ],
+                "summary": "Crear Tarjeta Dual",
+                "operationId": "crearTarjetaDual",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestCancelarTarjetaRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la actualización exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/OperacionTarjetaResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -630,14 +790,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -648,6 +805,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -670,11 +830,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta del stock de tarjeta debito exitosamente",
@@ -685,9 +848,6 @@
                                 }
                             }
                         }
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     }
                 }
             }
@@ -710,14 +870,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha asignado consultado los movimientos exitosamente",
@@ -728,6 +885,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -750,14 +910,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha consultado la informacion exitosamente",
@@ -768,6 +925,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -790,14 +950,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -808,6 +965,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -830,12 +990,6 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
-                    },
-                    "404": {
-                        "description": "Not found"
-                    },
                     "401": {
                         "description": "Unauthorized"
                     },
@@ -848,6 +1002,12 @@
                                 }
                             }
                         }
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -870,14 +1030,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -888,6 +1045,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -910,8 +1070,51 @@
                     "required": true
                 },
                 "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la actualización exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ConsultarComprasTcResponseDTO"
+                                }
+                            }
+                        }
+                    },
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    }
+                }
+            }
+        },
+        "/api/v1/tarjetas/consultarCodigosUnicosAdquirencia": {
+            "post": {
+                "tags": [
+                    "tarjetas-controller"
+                ],
+                "summary": "consultar Codigos Unicos Adquirencia",
+                "operationId": "consultarCodigosUnicosAdquirencia",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestConsultaCodigoUnicoAdquirenciaRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la actualización exitosamente",
@@ -923,11 +1126,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -950,14 +1150,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha comprado la cartera exitosamente",
@@ -968,6 +1165,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -990,14 +1190,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -1008,6 +1205,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1030,8 +1230,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la actualización exitosamente",
@@ -1043,11 +1246,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1070,6 +1270,12 @@
                     "required": true
                 },
                 "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
@@ -1082,12 +1288,6 @@
                                 }
                             }
                         }
-                    },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     }
                 }
             }
@@ -1110,8 +1310,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado el aumento del cupo de la tarjeta de crédito exitosamente",
@@ -1123,11 +1326,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1150,14 +1350,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha asignado una tarjeta preestampada exitosamente",
@@ -1168,6 +1365,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1190,6 +1390,12 @@
                     "required": true
                 },
                 "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
@@ -1202,12 +1408,6 @@
                                 }
                             }
                         }
-                    },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     }
                 }
             }
@@ -1230,14 +1430,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -1248,6 +1445,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1270,11 +1470,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
-                    },
-                    "404": {
-                        "description": "Not found"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la actualizacion de datos basicos exitosamente",
@@ -1286,8 +1483,11 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1310,8 +1510,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -1326,8 +1526,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1350,14 +1550,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -1368,6 +1565,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1390,8 +1590,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -1406,8 +1606,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1430,8 +1630,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -1446,8 +1646,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1470,8 +1670,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -1486,8 +1686,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1510,8 +1710,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -1526,8 +1726,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1550,8 +1750,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -1563,11 +1766,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1590,8 +1790,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -1606,8 +1806,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1630,8 +1830,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -1643,11 +1846,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1669,14 +1869,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1699,11 +1899,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -1714,9 +1917,6 @@
                                 }
                             }
                         }
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     }
                 }
             }
@@ -1739,14 +1939,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Valida si el cliente tiene un producto activo como titular",
@@ -1757,6 +1954,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1779,14 +1979,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la creacion exitosamente",
@@ -1797,6 +1994,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1819,8 +2019,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -1835,8 +2035,48 @@
                             }
                         }
                     },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    }
+                }
+            }
+        },
+        "/api/v1/consultarDetalleCDT": {
+            "post": {
+                "tags": [
+                    "consulta-cdt-controller"
+                ],
+                "summary": "Consultar Detalle CDT",
+                "operationId": "actualizarBilleteraId",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestConsultarDetalleCdtRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
                     "401": {
                         "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la consulta exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ConsultarDetalleCdt"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1859,8 +2099,8 @@
                     "required": true
                 },
                 "responses": {
-                    "400": {
-                        "description": "Error en la petición",
+                    "200": {
+                        "description": "Consulta exitosa",
                         "content": {
                             "*/*": {
                                 "schema": {
@@ -1879,8 +2119,8 @@
                             }
                         }
                     },
-                    "200": {
-                        "description": "Consulta exitosa",
+                    "400": {
+                        "description": "Error en la petición",
                         "content": {
                             "*/*": {
                                 "schema": {
@@ -1903,15 +2143,15 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CanonicalRequestOperacionClienteRequest"
+                                "$ref": "#/components/schemas/CanonicalRequestCrearClienteRequestDTO"
                             }
                         }
                     },
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la creación del cliente exitosamente",
@@ -1926,8 +2166,8 @@
                     "404": {
                         "description": "Not found"
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1950,8 +2190,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -1966,8 +2206,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -1990,14 +2230,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
                     "200": {
                         "description": "Se ha realizado la creacion exitosamente",
@@ -2030,8 +2270,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la creacion exitosamente",
@@ -2046,8 +2286,8 @@
                     "404": {
                         "description": "Not found"
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2070,12 +2310,6 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
-                    },
-                    "404": {
-                        "description": "Not found"
-                    },
                     "401": {
                         "description": "Unauthorized"
                     },
@@ -2088,6 +2322,12 @@
                                 }
                             }
                         }
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2110,8 +2350,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -2123,11 +2366,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2150,8 +2390,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2166,8 +2406,88 @@
                             }
                         }
                     },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    }
+                }
+            }
+        },
+        "/api/v1/buc/verificarDatosUsuarioEMP": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Verificar Datos Usuario",
+                "operationId": "VerificarDatosUsuario",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestVerificarDatosUsuarioRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
                     "401": {
                         "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la consulta exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ConsultarVariablesInternasResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    }
+                }
+            }
+        },
+        "/api/v1/buc/validateOwnerShip": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Validate Ownership",
+                "operationId": "validateOwnership",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestValidateOwnershipRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la consulta exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ValidateOwnershipResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2190,8 +2510,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2206,8 +2526,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2230,8 +2550,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2246,8 +2566,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2270,8 +2590,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2286,48 +2606,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
-                    }
-                }
-            }
-        },
-        "/api/v1/buc/updateIDBilletera": {
-            "post": {
-                "tags": [
-                    "buc-controller"
-                ],
-                "summary": "Actualizar Id Billetera",
-                "operationId": "actualizarBilleteraId",
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/CanonicalRequestActualizarBilleteraIdRequestDTO"
-                            }
-                        }
-                    },
-                    "required": true
-                },
-                "responses": {
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
-                    },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    },
-                    "200": {
-                        "description": "Se ha realizado la actualización exitosamente",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ActualizarBilleteraIdRequestDTO"
-                                }
-                            }
-                        }
                     }
                 }
             }
@@ -2350,8 +2630,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2366,8 +2646,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2390,14 +2670,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -2430,14 +2710,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -2470,15 +2750,6 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
-                    },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
-                    },
                     "200": {
                         "description": "Transacción exitosa",
                         "content": {
@@ -2488,6 +2759,15 @@
                                 }
                             }
                         }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2510,8 +2790,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2526,8 +2806,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2550,11 +2830,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
-                    },
-                    "404": {
-                        "description": "Not found"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado el pago exitosamente",
@@ -2566,8 +2843,11 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2590,8 +2870,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2606,8 +2886,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2629,14 +2909,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2659,8 +2939,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2675,8 +2955,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2698,14 +2978,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2728,8 +3008,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2744,8 +3024,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2768,8 +3048,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2784,8 +3064,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2801,15 +3081,15 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CanonicalRequestCreacionBucRequestDTO"
+                                "$ref": "#/components/schemas/CanonicalRequestCreacionBucRequestDTOv2"
                             }
                         }
                     },
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2824,8 +3104,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2848,8 +3128,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -2864,8 +3144,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2888,6 +3168,12 @@
                     "required": true
                 },
                 "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
@@ -2900,12 +3186,6 @@
                                 }
                             }
                         }
-                    },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     }
                 }
             }
@@ -2928,6 +3208,12 @@
                     "required": true
                 },
                 "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
@@ -2940,12 +3226,6 @@
                                 }
                             }
                         }
-                    },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     }
                 }
             }
@@ -2968,6 +3248,12 @@
                     "required": true
                 },
                 "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
                     "403": {
                         "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
@@ -2980,12 +3266,86 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        },
+        "/api/v1/buc/consultarVariablesInternas": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Consultar Variables Internas",
+                "operationId": "consultarVariablesInternas",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestConsultarVariablesInternasRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
                     },
+                    "200": {
+                        "description": "Se ha realizado la consulta exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ConsultarVariablesInternasResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    }
+                }
+            }
+        },
+        "/api/v1/buc/consultarTransaccion": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Consultar transacciones productos",
+                "operationId": "consultarTransaccionProducto",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestConsultaTransaccionProductoRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
                     "401": {
                         "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la consulta exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ConsultaTitularResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -2996,7 +3356,7 @@
                     "buc-controller"
                 ],
                 "summary": "Consulta titular de cuenta",
-                "operationId": "consultarTitularCuenta_1",
+                "operationId": "consultarTitularCuenta_2",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -3008,8 +3368,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -3021,11 +3384,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -3048,11 +3408,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
-                    },
-                    "404": {
-                        "description": "Not found"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -3064,8 +3421,11 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -3088,12 +3448,6 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
-                    },
-                    "404": {
-                        "description": "Not found"
-                    },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
                         "content": {
@@ -3106,6 +3460,12 @@
                     },
                     "401": {
                         "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -3128,14 +3488,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -3146,6 +3503,49 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    }
+                }
+            }
+        },
+        "/api/v1/buc/consultarDepartamentos": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Consultar Ciudades por provincias",
+                "operationId": "consultarProvinciasPorPais",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestProvinciaRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la consulta exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProvinciaResponseDTO"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -3168,8 +3568,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -3181,11 +3584,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -3208,8 +3608,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -3221,11 +3624,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -3248,11 +3648,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -3263,9 +3666,6 @@
                                 }
                             }
                         }
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     }
                 }
             }
@@ -3288,8 +3688,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -3304,8 +3704,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -3328,8 +3728,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -3344,8 +3744,8 @@
                             }
                         }
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -3368,8 +3768,8 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
@@ -3384,8 +3784,48 @@
                             }
                         }
                     },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    }
+                }
+            }
+        },
+        "/api/v1/buc/consultarCiudades": {
+            "post": {
+                "tags": [
+                    "buc-controller"
+                ],
+                "summary": "Consultar Ciudades por provincias",
+                "operationId": "consultarCiudadesPorProvincias",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CanonicalRequestCiudadRequestDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
                     "401": {
                         "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "200": {
+                        "description": "Se ha realizado la consulta exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CiudadResposeDTO"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -3408,8 +3848,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Not found"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -3421,11 +3864,8 @@
                             }
                         }
                     },
-                    "404": {
-                        "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -3448,14 +3888,14 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
                     },
-                    "401": {
-                        "description": "Unauthorized"
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     },
                     "200": {
                         "description": "Se ha realizado la consulta exitosamente",
@@ -3488,14 +3928,11 @@
                     "required": true
                 },
                 "responses": {
-                    "403": {
-                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
+                    "401": {
+                        "description": "Unauthorized"
                     },
                     "404": {
                         "description": "Not found"
-                    },
-                    "401": {
-                        "description": "Unauthorized"
                     },
                     "200": {
                         "description": "Se ha realizado la aplicación de pago exitosamente",
@@ -3506,6 +3943,9 @@
                                 }
                             }
                         }
+                    },
+                    "403": {
+                        "description": "Forbidden. Cuando el usuario no tiene el rol adecuado para esta operación"
                     }
                 }
             }
@@ -3536,56 +3976,30 @@
             "Account": {
                 "type": "object",
                 "properties": {
-                    "code": {
-                        "type": "integer",
-                        "description": "Código de la cuenta",
-                        "format": "int32",
-                        "example": 23
-                    },
-                    "number": {
+                    "AccountIdentification": {
                         "type": "string",
-                        "description": "Número de cuenta",
-                        "example": "10803000000142"
-                    }
-                },
-                "description": "Cuenta"
-            },
-            "AccountCategoryDTO": {
-                "type": "object",
-                "properties": {
-                    "code": {
-                        "type": "string",
-                        "description": "Código de la categoría de la cuenta",
-                        "example": "Z"
-                    }
-                },
-                "description": "Categoría de la cuenta"
-            },
-            "AccountOwner": {
-                "type": "object",
-                "properties": {
-                    "customer": {
-                        "$ref": "#/components/schemas/CustomerDTO"
+                        "description": "Número de cuenta"
                     },
-                    "role": {
-                        "$ref": "#/components/schemas/RoleDTO"
+                    "AccountType": {
+                        "type": "string",
+                        "description": "Tipo de cuenta"
+                    },
+                    "AccountRestriction": {
+                        "$ref": "#/components/schemas/AccountRestriction"
                     }
                 },
-                "description": "DTO que representa los alternantes del producto"
+                "description": "Informacion de la cuenta"
             },
-            "AccountSubtypeDTO": {
+            "AccountNumberRequestDTO": {
                 "type": "object",
                 "properties": {
-                    "code": {
-                        "type": "integer",
-                        "description": "Código del subtipo de cuenta",
-                        "format": "int32",
-                        "example": 57
+                    "account": {
+                        "$ref": "#/components/schemas/Account"
                     }
                 },
-                "description": "Subtipo de cuenta"
+                "description": "Detalles de la cuenta"
             },
-            "CanonicalRequestProductoCaptaRequestDTO": {
+            "CanonicalRequestAccountNumberRequestDTO": {
                 "required": [
                     "deviceContext",
                     "header",
@@ -3604,7 +4018,7 @@
                         "$ref": "#/components/schemas/DeviceContext"
                     },
                     "operationData": {
-                        "$ref": "#/components/schemas/ProductoCaptaRequestDTO"
+                        "$ref": "#/components/schemas/AccountNumberRequestDTO"
                     }
                 },
                 "description": "DTO que representa el canonical request"
@@ -3634,30 +4048,6 @@
                     }
                 },
                 "description": "Información sobre la aplicación cliente"
-            },
-            "CurrencyDTO": {
-                "type": "object",
-                "properties": {
-                    "code": {
-                        "type": "integer",
-                        "description": "Código de la moneda",
-                        "format": "int32",
-                        "example": 0
-                    }
-                },
-                "description": "Información de la moneda de la cuenta"
-            },
-            "CustomerDTO": {
-                "type": "object",
-                "properties": {
-                    "code": {
-                        "type": "integer",
-                        "description": "Código del cliente",
-                        "format": "int32",
-                        "example": 100000125
-                    }
-                },
-                "description": "Información del cliente asociado"
             },
             "DeviceContext": {
                 "required": [
@@ -3809,6 +4199,89 @@
                     }
                 },
                 "description": "Define la prioridad, el nivel de servicio y el modo de procesamiento de la solicitud"
+            },
+            "AccountCategoryDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Código de la categoría de la cuenta",
+                        "example": "Z"
+                    }
+                },
+                "description": "Categoría de la cuenta"
+            },
+            "AccountOwner": {
+                "type": "object",
+                "properties": {
+                    "customer": {
+                        "$ref": "#/components/schemas/CustomerDTO"
+                    },
+                    "role": {
+                        "$ref": "#/components/schemas/RoleDTO"
+                    }
+                },
+                "description": "DTO que representa los alternantes del producto"
+            },
+            "AccountSubtypeDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Código del subtipo de cuenta",
+                        "format": "int32",
+                        "example": 57
+                    }
+                },
+                "description": "Subtipo de cuenta"
+            },
+            "CanonicalRequestProductoCaptaRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/ProductoCaptaRequestDTO"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "CurrencyDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Código de la moneda",
+                        "format": "int32",
+                        "example": 0
+                    }
+                },
+                "description": "Información de la moneda de la cuenta"
+            },
+            "CustomerDTO": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "description": "Código del cliente",
+                        "format": "int32",
+                        "example": 100000125
+                    }
+                },
+                "description": "Información del cliente asociado"
             },
             "OwnershipTypeDTO": {
                 "type": "object",
@@ -4369,13 +4842,14 @@
                 "description": "DTO que representa el canonical request"
             },
             "PartyCustomerIdentificationDTO": {
-                "required": [
-                    "PartyIdentification"
-                ],
                 "type": "object",
                 "properties": {
-                    "PartyIdentification": {
-                        "$ref": "#/components/schemas/PartyIdentificationPartyCustomerIdentificationDTO"
+                    "Identification": {
+                        "type": "string",
+                        "description": "Número de identificación."
+                    },
+                    "IdentificationType": {
+                        "$ref": "#/components/schemas/IdentificationType"
                     }
                 },
                 "description": "Informacion del cliente"
@@ -4549,18 +5023,18 @@
                 "description": "Información de la cotización"
             },
             "Type": {
-                "required": [
-                    "Code"
-                ],
                 "type": "object",
                 "properties": {
                     "Code": {
                         "type": "string",
-                        "description": "Tipo de tarjeta",
-                        "example": "01"
+                        "description": "Código"
+                    },
+                    "Description": {
+                        "type": "string",
+                        "description": "Descripción"
                     }
                 },
-                "description": "Tipo de tarjeta"
+                "description": "Tipo"
             },
             "ValorTarjetaPendienteResponseDTO": {
                 "type": "object",
@@ -4613,26 +5087,29 @@
                 },
                 "description": "DTO que representa el canonical request"
             },
+            "DocumentIdentification": {
+                "type": "object",
+                "properties": {
+                    "Identification": {
+                        "type": "string",
+                        "description": "Identificación del documento"
+                    }
+                },
+                "description": "Identificación del documento"
+            },
             "Invoice": {
                 "type": "object",
                 "properties": {
-                    "AdditionalData": {
-                        "$ref": "#/components/schemas/AdditionalData"
-                    },
-                    "Description": {
-                        "type": "string",
-                        "description": "Descripción de la factura."
-                    },
-                    "SellerIdentification": {
-                        "type": "string",
-                        "description": "Identificación del vendedor."
-                    },
                     "SellerName": {
                         "type": "string",
-                        "description": "Nombre del vendedor."
+                        "description": "Nombre del vendedor"
+                    },
+                    "IssueDate": {
+                        "type": "string",
+                        "description": "Fecha de emisión"
                     }
                 },
-                "description": "Datos de la factura."
+                "description": "Factura"
             },
             "PaymentCard": {
                 "type": "object",
@@ -4911,6 +5388,11 @@
                         "description": "Código de la operación",
                         "example": "OP002: Creación de tarjeta"
                     },
+                    "resultado": {
+                        "type": "string",
+                        "description": "Mensaje de resultado",
+                        "example": "Se crea en SAT/OPGP"
+                    },
                     "numContrato": {
                         "type": "string",
                         "description": "Número de contrato",
@@ -4993,6 +5475,175 @@
                 },
                 "description": "DTO para reemision de tarjeta de crédito"
             },
+            "AccountIdentification": {
+                "type": "object",
+                "properties": {
+                    "Number": {
+                        "type": "string",
+                        "description": "Número de identificación de la cuenta"
+                    }
+                },
+                "description": "Identificación de la cuenta"
+            },
+            "CanonicalRequestRealizarPagoTcRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/RealizarPagoTcRequestDTO"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "PartyIdentification": {
+                "type": "object",
+                "properties": {
+                    "IdentificationType": {
+                        "$ref": "#/components/schemas/IdentificationType"
+                    },
+                    "Identification": {
+                        "type": "string",
+                        "description": "Número de identificación de la parte titular."
+                    }
+                },
+                "description": "Identificación de la parte titular."
+            },
+            "PartyName": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "type": "string",
+                        "description": "Nombre completo de la parte titular."
+                    }
+                },
+                "description": "Nombre de la parte titular."
+            },
+            "PartyReference": {
+                "type": "object",
+                "properties": {
+                    "PartyName": {
+                        "$ref": "#/components/schemas/PartyName"
+                    },
+                    "PartyIdentification": {
+                        "$ref": "#/components/schemas/PartyIdentification"
+                    }
+                },
+                "description": "Referencia a la parte titular."
+            },
+            "RealizarPagoTcRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "RecurringPaymentCustomerReference": {
+                        "$ref": "#/components/schemas/RecurringPaymentCustomerReference"
+                    },
+                    "ProductInstanceReference": {
+                        "$ref": "#/components/schemas/ProductInstanceReference"
+                    },
+                    "Invoice": {
+                        "$ref": "#/components/schemas/Invoice"
+                    },
+                    "TransactionReference": {
+                        "$ref": "#/components/schemas/TransactionReference"
+                    },
+                    "CustomerBillingTransactionType": {
+                        "type": "string"
+                    },
+                    "PartyReference": {
+                        "$ref": "#/components/schemas/PartyReference"
+                    }
+                },
+                "description": "Objeto que contiene los datos de la operación"
+            },
+            "RecurringPaymentCustomerReference": {
+                "type": "object",
+                "properties": {
+                    "PartyIdentification": {
+                        "$ref": "#/components/schemas/PartyIdentification"
+                    }
+                },
+                "description": "Referencia del cliente de pago recurrente"
+            },
+            "TransactionIdentification": {
+                "type": "object",
+                "properties": {
+                    "TransactionReference": {
+                        "type": "string",
+                        "description": "Referencia de la transacción."
+                    },
+                    "TransactionDateTime": {
+                        "type": "string",
+                        "description": "Fecha de la transacción."
+                    },
+                    "ActivityExt": {
+                        "$ref": "#/components/schemas/ActivityExt"
+                    }
+                },
+                "description": "Identificación de la transacción."
+            },
+            "TransactionReference": {
+                "type": "object",
+                "properties": {
+                    "ApprovalCode": {
+                        "type": "string",
+                        "description": "Código de aprobación"
+                    },
+                    "RequestedAmount": {
+                        "type": "string",
+                        "description": "Monto solicitado"
+                    }
+                },
+                "description": "Descripcion resultado pago dirigido"
+            },
+            "AdditionalDataExt": {
+                "type": "object",
+                "properties": {
+                    "NewLimit": {
+                        "type": "string",
+                        "description": "Nuevo cupo solicitado",
+                        "example": "1000000"
+                    }
+                },
+                "description": "Datos adicionales de la transacción"
+            },
+            "RealizarPagoTcResponseDTO": {
+                "type": "object",
+                "properties": {
+                    "Message": {
+                        "type": "string",
+                        "description": "Mensaje asociado a la operación",
+                        "example": "Transacción exitosa"
+                    },
+                    "Code": {
+                        "type": "string",
+                        "description": "Código de la operación",
+                        "example": "TX12345"
+                    },
+                    "TransactionReference": {
+                        "$ref": "#/components/schemas/TransactionReference"
+                    },
+                    "AdditionalDataExt": {
+                        "$ref": "#/components/schemas/AdditionalDataExt"
+                    },
+                    "Invoice": {
+                        "$ref": "#/components/schemas/Invoice"
+                    }
+                },
+                "description": "Objeto principal que contiene todos los datos de la operación"
+            },
             "CanonicalRequestRealizarPagoTarjetaRequestDTO": {
                 "required": [
                     "deviceContext",
@@ -5016,38 +5667,6 @@
                     }
                 },
                 "description": "DTO que representa el canonical request"
-            },
-            "PersonIdentification": {
-                "required": [
-                    "Identification",
-                    "PersonIdentificationType"
-                ],
-                "type": "object",
-                "properties": {
-                    "PersonIdentificationType": {
-                        "$ref": "#/components/schemas/PersonIdentificationType"
-                    },
-                    "Identification": {
-                        "type": "string",
-                        "description": "Número de documento",
-                        "example": "12345678901234567"
-                    }
-                },
-                "description": "Información de identificación de la persona"
-            },
-            "PersonIdentificationType": {
-                "required": [
-                    "Code"
-                ],
-                "type": "object",
-                "properties": {
-                    "Code": {
-                        "type": "string",
-                        "description": "Tipo de documento",
-                        "example": "12345678901234567"
-                    }
-                },
-                "description": "Información de identificación de la persona"
             },
             "RealizarPagoTarjetaRequestDTO": {
                 "required": [
@@ -5097,67 +5716,15 @@
                 },
                 "description": "DTO para realizar pago de las tarjetas"
             },
-            "RecurringPaymentCustomerReference": {
-                "required": [
-                    "PersonIdentification"
-                ],
-                "type": "object",
-                "properties": {
-                    "PersonIdentification": {
-                        "$ref": "#/components/schemas/PersonIdentification"
-                    }
-                },
-                "description": "Referencia del cliente para pagos recurrentes"
-            },
             "AdditionalData": {
-                "required": [
-                    "ComsumptionTax",
-                    "ICAValue",
-                    "IvaBaseValue",
-                    "RetFTE",
-                    "RetICA",
-                    "RetIVA",
-                    "UniqueCodeExt"
-                ],
                 "type": "object",
                 "properties": {
-                    "UniqueCodeExt": {
+                    "LineExt": {
+                        "$ref": "#/components/schemas/LineExt"
+                    },
+                    "ConcurrencyControlExt": {
                         "type": "string",
-                        "description": "Código único identificador",
-                        "example": "ABCD1234"
-                    },
-                    "RetFTE": {
-                        "type": "number",
-                        "description": "Valor de detalle de la rete fuente",
-                        "format": "double",
-                        "example": 100.5
-                    },
-                    "RetIVA": {
-                        "type": "number",
-                        "description": "Valor de detalle del reteiva",
-                        "format": "double",
-                        "example": 50.25
-                    },
-                    "ICAValue": {
-                        "type": "number",
-                        "description": "Valor de detalle del Ica",
-                        "format": "double",
-                        "example": 30.75
-                    },
-                    "RetICA": {
-                        "type": "number",
-                        "description": "Valor de detalle del reteica",
-                        "format": "double",
-                        "example": 20.1
-                    },
-                    "ComsumptionTax": {
-                        "$ref": "#/components/schemas/ComsumptionTax"
-                    },
-                    "IvaBaseValue": {
-                        "type": "number",
-                        "description": "Valor de la base del Iva",
-                        "format": "double",
-                        "example": 200.0
+                        "description": "Control de concurrencia extendido"
                     }
                 },
                 "description": "Datos adicionales"
@@ -5269,41 +5836,31 @@
                 "description": "Adquisición de pagos con tarjeta"
             },
             "CardPaymentTransaction": {
-                "required": [
-                    "Commission",
-                    "Negotiation",
-                    "TransactionType"
-                ],
                 "type": "object",
                 "properties": {
-                    "TransactionType": {
-                        "$ref": "#/components/schemas/TransactionType"
+                    "PaymentIdentification": {
+                        "$ref": "#/components/schemas/PaymentIdentification"
                     },
-                    "Negotiation": {
-                        "$ref": "#/components/schemas/Negotiation"
+                    "PaymentCard": {
+                        "$ref": "#/components/schemas/PaymentCard"
                     },
-                    "Commission": {
-                        "type": "number",
-                        "description": "Valor de la comisión",
-                        "format": "double",
-                        "example": 10.0
+                    "Type": {
+                        "type": "string",
+                        "description": "Tipo de transacción"
+                    },
+                    "DescriptionExt": {
+                        "type": "string",
+                        "description": "Descripción extendida"
+                    },
+                    "Amount": {
+                        "type": "string",
+                        "description": "Monto"
+                    },
+                    "PaymentStatus": {
+                        "$ref": "#/components/schemas/PaymentStatus"
                     }
                 },
                 "description": "Transacción de pago con tarjeta"
-            },
-            "ComsumptionTax": {
-                "required": [
-                    "Value"
-                ],
-                "type": "object",
-                "properties": {
-                    "Value": {
-                        "type": "string",
-                        "description": "Valor del impuesto de consumo",
-                        "example": "15.0"
-                    }
-                },
-                "description": "Valor del impuesto de consumo"
             },
             "IvaValue": {
                 "required": [
@@ -5429,6 +5986,75 @@
                 },
                 "description": "Valor de la propina"
             },
+            "CanonicalRequestRealizarPagoTCFacturacionRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/RealizarPagoTCFacturacionRequestDTO"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "RealizarPagoTCFacturacionRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "RecurringPaymentCustomerReference": {
+                        "$ref": "#/components/schemas/RecurringPaymentCustomerReference"
+                    },
+                    "ProductInstanceReference": {
+                        "$ref": "#/components/schemas/ProductInstanceReference"
+                    },
+                    "Invoice": {
+                        "$ref": "#/components/schemas/Invoice"
+                    },
+                    "TransactionReference": {
+                        "$ref": "#/components/schemas/TransactionReference"
+                    },
+                    "CustomerBillingTransactionType": {
+                        "type": "string",
+                        "description": "Tipo de transacción de facturación del cliente"
+                    }
+                },
+                "description": "DTO para representar la información de pago total de una compra o pago parcial de una facturacion TC"
+            },
+            "RealizarPagoTCFacturacionResponseDTO": {
+                "type": "object",
+                "properties": {
+                    "Message": {
+                        "type": "string",
+                        "description": "Mensaje de respuesta"
+                    },
+                    "Code": {
+                        "type": "string",
+                        "description": "Código de respuesta"
+                    },
+                    "TransactionReference": {
+                        "$ref": "#/components/schemas/TransactionReference"
+                    },
+                    "AdditionalDataExt": {
+                        "$ref": "#/components/schemas/AdditionalDataExt"
+                    },
+                    "Invoice": {
+                        "$ref": "#/components/schemas/Invoice"
+                    }
+                },
+                "description": "DTO para representar la información de pago total de una compra o pago parcial de una facturacion TC"
+            },
             "CanonicalRequestRealizarPagoDirigidoTcRequestDTO": {
                 "required": [
                     "deviceContext",
@@ -5453,112 +6079,43 @@
                 },
                 "description": "DTO que representa el canonical request"
             },
-            "PaymentConcepts": {
+            "Identification": {
                 "type": "object",
                 "properties": {
-                    "InstallmentOperationNumberExt": {
-                        "type": "string",
-                        "description": "Numero de operacion cuotas"
-                    },
-                    "CurrentFinancingNumberExt": {
-                        "type": "string",
-                        "description": "Numero de financiacion actual"
-                    },
-                    "PaymentAmount": {
-                        "type": "string",
-                        "description": "Valor del pago"
-                    },
-                    "DocumentDirectoryEntryInstanceReference": {
-                        "type": "string",
-                        "description": "Tipo de documento para movimientos de pago"
-                    },
-                    "PaymentTransactionType": {
-                        "type": "string",
-                        "description": "Tipo de factura"
+                    "Number": {
+                        "type": "string"
                     }
                 }
             },
             "RealizarPagoDirigidoTcRequestDTO": {
                 "type": "object",
                 "properties": {
-                    "PayerProductInstanceReference": {
-                        "type": "string",
-                        "description": "Número de tarjeta no debe contener espacios"
+                    "ProductInstanceReference": {
+                        "$ref": "#/components/schemas/ProductInstanceReference"
                     },
-                    "PaymentConcepts": {
-                        "$ref": "#/components/schemas/PaymentConcepts"
+                    "TransactionReference": {
+                        "$ref": "#/components/schemas/TransactionReference"
+                    },
+                    "PartyReference": {
+                        "$ref": "#/components/schemas/PartyReference"
                     }
                 },
                 "description": "DTO para representar la información de pago total de una compra o pago parcial de una compra"
             },
-            "AdditionalDataExt": {
+            "InvoiceReconciliation": {
                 "type": "object",
                 "properties": {
-                    "NewLimit": {
+                    "IssueDate": {
                         "type": "string",
-                        "description": "Nuevo cupo solicitado",
-                        "example": "1000000"
+                        "description": "Fecha de emisión"
+                    },
+                    "DocumentIdentification": {
+                        "$ref": "#/components/schemas/DocumentIdentification"
                     }
                 },
-                "description": "Datos adicionales de la transacción"
+                "description": "Fecha de la factura"
             },
-            "CanonicalRealizarPagoDirigidoTcResponse": {
-                "required": [
-                    "message",
-                    "messageId",
-                    "operationData",
-                    "path",
-                    "status",
-                    "timestamp"
-                ],
-                "type": "object",
-                "properties": {
-                    "messageId": {
-                        "type": "string",
-                        "description": "Identificador único que enlaza la respuesta con la solicitud original",
-                        "example": "12345-abcde-67890-fghij"
-                    },
-                    "timestamp": {
-                        "type": "string",
-                        "description": "Marca de tiempo en que se genera la respuesta",
-                        "example": "2024-10-08T12:30:00"
-                    },
-                    "status": {
-                        "type": "string",
-                        "description": "Estado de la operación",
-                        "example": "Success"
-                    },
-                    "errors": {
-                        "type": "array",
-                        "description": "Lista de mensajes de error, en caso de que la solicitud no se haya procesado correctamente",
-                        "example": [],
-                        "items": {
-                            "type": "string",
-                            "description": "Lista de mensajes de error, en caso de que la solicitud no se haya procesado correctamente",
-                            "example": "[]"
-                        }
-                    },
-                    "errorType": {
-                        "type": "string",
-                        "description": "Clasificación del error",
-                        "example": "validation"
-                    },
-                    "path": {
-                        "type": "string",
-                        "description": "Ruta o endpoint donde ocurrió el error",
-                        "example": "/api/v1/orders"
-                    },
-                    "message": {
-                        "type": "string",
-                        "description": "Descripción general del resultado de la operación",
-                        "example": "Request processed successfully"
-                    },
-                    "operationData": {
-                        "$ref": "#/components/schemas/RealizarPagoDirigidoTcResponseDTO"
-                    }
-                }
-            },
-            "PaymentDetails": {
+            "PaymentReference": {
                 "type": "object",
                 "properties": {
                     "AdditionalDataExt": {
@@ -5568,17 +6125,11 @@
                         "type": "string",
                         "description": "Moneda utilizada en la operación"
                     },
-                    "InvoiceDate": {
-                        "type": "string",
-                        "description": "Fecha de la factura"
+                    "InvoiceReconciliation": {
+                        "$ref": "#/components/schemas/InvoiceReconciliation"
                     },
-                    "ExternalCode": {
-                        "type": "string",
-                        "description": "Número de referencia de la factura"
-                    },
-                    "ResponseCode": {
-                        "type": "string",
-                        "description": "Descripcion resultado pago dirigido"
+                    "TransactionResult": {
+                        "$ref": "#/components/schemas/TransactionResult"
                     }
                 }
             },
@@ -5593,11 +6144,27 @@
                         "type": "string",
                         "description": "Estado de la operación"
                     },
-                    "PaymentDetails": {
-                        "$ref": "#/components/schemas/PaymentDetails"
+                    "PaymentReference": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/PaymentReference"
+                        }
+                    },
+                    "TransactionReference": {
+                        "$ref": "#/components/schemas/TransactionReference"
                     }
                 },
                 "description": "DTO de respuesta con información adicional"
+            },
+            "TransactionResult": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "type": "string",
+                        "description": "Código de resultado de la transacción"
+                    }
+                },
+                "description": "Número de referencia de la factura"
             },
             "AvanceTarjetaCreditoRequestDTO": {
                 "type": "object",
@@ -6151,6 +6718,40 @@
                     }
                 }
             },
+            "CustomerReferenceDTO": {
+                "type": "object",
+                "properties": {
+                    "PartyIdentification": {
+                        "$ref": "#/components/schemas/PartyCustomerIdentificationDTO"
+                    },
+                    "CustomerType": {
+                        "type": "string",
+                        "description": "Tipo de cliente"
+                    }
+                },
+                "description": "Informacion del cliente"
+            },
+            "OperacionTarjetaResponseDTO": {
+                "type": "object",
+                "properties": {
+                    "Message": {
+                        "type": "string",
+                        "description": "Mensaje de la operación"
+                    },
+                    "Code": {
+                        "type": "string",
+                        "description": "Código de la operación"
+                    },
+                    "ProductInstanceReference": {
+                        "type": "array",
+                        "description": "Referencia de la instancia del producto",
+                        "items": {
+                            "$ref": "#/components/schemas/ProductInstanceReference"
+                        }
+                    }
+                },
+                "description": "DTO para la respuesta de operación de tarjetas"
+            },
             "BranchData": {
                 "type": "object",
                 "properties": {
@@ -6263,31 +6864,6 @@
                         "description": "Fecha hasta"
                     }
                 }
-            },
-            "PartyIdentification": {
-                "type": "object",
-                "properties": {
-                    "IdentificationType": {
-                        "$ref": "#/components/schemas/IdentificationType"
-                    },
-                    "Identification": {
-                        "type": "string",
-                        "description": "Número de identificación de la parte titular."
-                    }
-                },
-                "description": "Identificación de la parte titular."
-            },
-            "PartyReference": {
-                "type": "object",
-                "properties": {
-                    "PartyName": {
-                        "$ref": "#/components/schemas/PartyName"
-                    },
-                    "PartyIdentification": {
-                        "$ref": "#/components/schemas/PartyIdentification"
-                    }
-                },
-                "description": "Referencia a la parte titular."
             },
             "SecuritiesBalanceAccountingReport": {
                 "type": "object",
@@ -6426,7 +7002,7 @@
                         "type": "string",
                         "description": "Estado general de la operación."
                     },
-                    "Movements": {
+                    "CardPaymentTransaction": {
                         "type": "array",
                         "description": "Lista de movimientos.",
                         "items": {
@@ -6458,6 +7034,19 @@
                 },
                 "description": "Información sobre la tasa de cambio."
             },
+            "LineExt": {
+                "type": "object",
+                "properties": {
+                    "Reference": {
+                        "type": "string",
+                        "description": "Referencia"
+                    },
+                    "type": {
+                        "$ref": "#/components/schemas/Type"
+                    }
+                },
+                "description": "Línea extendida"
+            },
             "Movements": {
                 "type": "object",
                 "properties": {
@@ -6473,9 +7062,6 @@
                     "CurrencyExchange": {
                         "$ref": "#/components/schemas/CurrencyExchange"
                     },
-                    "CardPaymentTransaction": {
-                        "$ref": "#/components/schemas/CardPaymentTransaction"
-                    },
                     "AdditionalData": {
                         "$ref": "#/components/schemas/AdditionalData"
                     },
@@ -6484,26 +7070,15 @@
                     },
                     "CountryName": {
                         "type": "string"
+                    },
+                    "TransactionIdentification": {
+                        "$ref": "#/components/schemas/TransactionIdentification"
+                    },
+                    "Negotiation": {
+                        "$ref": "#/components/schemas/Negotiation"
                     }
                 },
                 "description": "Lista de movimientos."
-            },
-            "TransactionIdentification": {
-                "type": "object",
-                "properties": {
-                    "TransactionReference": {
-                        "type": "string",
-                        "description": "Referencia de la transacción."
-                    },
-                    "TransactionDateTime": {
-                        "type": "string",
-                        "description": "Fecha de la transacción."
-                    },
-                    "ActivityExt": {
-                        "$ref": "#/components/schemas/ActivityExt"
-                    }
-                },
-                "description": "Identificación de la transacción."
             },
             "CanonicalRequestMovimientoAdquirienteRequestDTO": {
                 "required": [
@@ -6726,20 +7301,6 @@
                 },
                 "description": "Valor de la comisión del establecimiento"
             },
-            "TransactionType": {
-                "required": [
-                    "Code"
-                ],
-                "type": "object",
-                "properties": {
-                    "Code": {
-                        "type": "string",
-                        "description": "Tipo de movimiento",
-                        "example": "01"
-                    }
-                },
-                "description": "Tipo de movimiento"
-            },
             "CanonicalRequestConsultarComprasTcRequestDTO": {
                 "required": [
                     "deviceContext",
@@ -6767,21 +7328,167 @@
             "ConsultarComprasTcRequestDTO": {
                 "type": "object",
                 "properties": {
-                    "fechaInicio": {
-                        "type": "string",
-                        "description": "Fecha de inicio",
-                        "example": "01-01-2020"
+                    "ProductInstanceReference": {
+                        "$ref": "#/components/schemas/ProductInstanceReference"
                     },
-                    "fechaFin": {
-                        "type": "string",
-                        "description": "Fecha de Finalizacion",
-                        "example": "01-01-2020"
-                    },
-                    "numeroTarjeta": {
-                        "type": "string"
+                    "Date": {
+                        "$ref": "#/components/schemas/Date"
                     }
                 },
                 "description": "DTO para la consulta de compras de tarjeta de crédito"
+            },
+            "Date": {
+                "type": "object",
+                "properties": {
+                    "FromToDate": {
+                        "$ref": "#/components/schemas/FromToDate"
+                    }
+                }
+            },
+            "ConsultarComprasTcResponseDTO": {
+                "type": "object",
+                "properties": {
+                    "status_code": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "Movements": {
+                        "type": "array",
+                        "description": "Lista de movimientos",
+                        "items": {
+                            "$ref": "#/components/schemas/Movement"
+                        }
+                    }
+                },
+                "description": "DTO para la respuesta de la consulta de compras de tarjeta de crédito"
+            },
+            "Movement": {
+                "type": "object",
+                "properties": {
+                    "CardPaymentTransaction": {
+                        "$ref": "#/components/schemas/CardPaymentTransaction"
+                    },
+                    "Invoice": {
+                        "$ref": "#/components/schemas/Invoice"
+                    },
+                    "AdditionalData": {
+                        "$ref": "#/components/schemas/AdditionalData"
+                    }
+                },
+                "description": "DTO para representar un movimiento"
+            },
+            "PaymentIdentification": {
+                "type": "object",
+                "properties": {
+                    "TransactionIdentification": {
+                        "type": "string",
+                        "description": "Identificación de la transacción"
+                    },
+                    "FinancingIdentificationExt": {
+                        "type": "string",
+                        "description": "Identificación de financiamiento extendida"
+                    },
+                    "PurchaseIdentificationExt": {
+                        "type": "string",
+                        "description": "Identificación de compra extendida"
+                    }
+                },
+                "description": "Identificación de pago"
+            },
+            "PaymentStatus": {
+                "type": "object",
+                "properties": {
+                    "Status": {
+                        "type": "string",
+                        "description": "Estado"
+                    },
+                    "StatusDescription": {
+                        "type": "string",
+                        "description": "Descripción del estado"
+                    }
+                },
+                "description": "Estado del pago"
+            },
+            "CanonicalRequestConsultaCodigoUnicoAdquirenciaRequest": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/ConsultaCodigoUnicoAdquirenciaRequest"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "ConsultaCodigoUnicoAdquirenciaRequest": {
+                "required": [
+                    "LegalEntityIdentification",
+                    "LegalEntityIdentificationType",
+                    "OtherIdentification"
+                ],
+                "type": "object",
+                "properties": {
+                    "PartyIdentificationType": {
+                        "maxLength": 3,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "Tipo de documento. Aplica únicamente para clientes del tipo 'Jurídico'",
+                        "example": "NIT"
+                    },
+                    "PartyIdentification": {
+                        "maxLength": 17,
+                        "minLength": 0,
+                        "type": "string",
+                        "description": "Número de documento. Aplica únicamente para clientes del tipo 'Jurídico'",
+                        "example": "12345678901"
+                    },
+                    "LegalEntityIdentificationType": {
+                        "type": "string",
+                        "description": "Tipo de documento del usuario",
+                        "example": "CC"
+                    },
+                    "LegalEntityIdentification": {
+                        "type": "string",
+                        "description": "Número de documento del usuario",
+                        "example": "9876543210"
+                    },
+                    "OtherIdentification": {
+                        "$ref": "#/components/schemas/OtherIdentification"
+                    }
+                },
+                "description": "request para la consulta de codigo unico adquirencia"
+            },
+            "OtherIdentification": {
+                "required": [
+                    "Identification"
+                ],
+                "type": "object",
+                "properties": {
+                    "Identification": {
+                        "type": "string",
+                        "description": "Código de usuario",
+                        "example": "USR12345"
+                    }
+                },
+                "description": "Otra identificación"
             },
             "CancelarTarjetaResponseDTO": {
                 "type": "object",
@@ -7080,12 +7787,10 @@
             "TaxReference": {
                 "type": "object",
                 "properties": {
-                    "Value": {
-                        "type": "number",
-                        "description": "impuesto"
+                    "IdentifierValue": {
+                        "$ref": "#/components/schemas/ValueWrapper"
                     }
-                },
-                "description": "impuesto"
+                }
             },
             "CambiarPlazoTarjetaRequestDTO": {
                 "required": [
@@ -7527,10 +8232,10 @@
             "AsignarCuentaTarjetaRequestDTO": {
                 "type": "object",
                 "properties": {
-                    "partyReference": {
+                    "PartyReference": {
                         "$ref": "#/components/schemas/PartyReferenceDTO"
                     },
-                    "productInstanceReference": {
+                    "ProductInstanceReference": {
                         "$ref": "#/components/schemas/ProductInstanceReferenceDTO"
                     }
                 },
@@ -7563,10 +8268,10 @@
             "PartyIdentificationDTO": {
                 "type": "object",
                 "properties": {
-                    "partyIdentificationType": {
+                    "PartyIdentificationType": {
                         "$ref": "#/components/schemas/PartyIdentificationTypeDTO"
                     },
-                    "identification": {
+                    "Identification": {
                         "type": "string"
                     }
                 }
@@ -7574,7 +8279,7 @@
             "PartyIdentificationTypeDTO": {
                 "type": "object",
                 "properties": {
-                    "code": {
+                    "Code": {
                         "type": "string"
                     }
                 }
@@ -7582,7 +8287,7 @@
             "PartyReferenceDTO": {
                 "type": "object",
                 "properties": {
-                    "partyIdentification": {
+                    "PartyIdentification": {
                         "$ref": "#/components/schemas/PartyIdentificationDTO"
                     }
                 }
@@ -7684,59 +8389,11 @@
                     }
                 }
             },
-            "CustomerLanguage": {
-                "type": "object",
-                "properties": {
-                    "Code": {
-                        "type": "string"
-                    }
-                }
-            },
-            "CustomerLocation": {
-                "type": "object",
-                "properties": {
-                    "LocationReference": {
-                        "$ref": "#/components/schemas/LocationReference"
-                    }
-                }
-            },
-            "CustomerProfile": {
-                "type": "object",
-                "properties": {
-                    "EconomicGroup": {
-                        "$ref": "#/components/schemas/EconomicGroup"
-                    }
-                }
-            },
             "CustomerReference": {
                 "type": "object",
                 "properties": {
-                    "Identification": {
-                        "$ref": "#/components/schemas/Identification"
-                    },
-                    "CustomerType": {
-                        "type": "string"
-                    },
-                    "SubTypeExt": {
-                        "$ref": "#/components/schemas/SubTypeExt"
-                    },
-                    "CustomerLanguage": {
-                        "$ref": "#/components/schemas/CustomerLanguage"
-                    },
-                    "Country": {
-                        "$ref": "#/components/schemas/Country"
-                    },
-                    "PersonNames": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/PersonName"
-                        }
-                    },
-                    "CustomerProfile": {
-                        "$ref": "#/components/schemas/CustomerProfile"
-                    },
-                    "CustomerLocation": {
-                        "$ref": "#/components/schemas/CustomerLocation"
+                    "PartyReference": {
+                        "$ref": "#/components/schemas/PartyReference"
                     }
                 }
             },
@@ -7756,26 +8413,10 @@
                     }
                 }
             },
-            "EconomicGroup": {
-                "type": "object",
-                "properties": {
-                    "Code": {
-                        "type": "string"
-                    }
-                }
-            },
             "Gender": {
                 "type": "object",
                 "properties": {
                     "Code": {
-                        "type": "string"
-                    }
-                }
-            },
-            "Identification": {
-                "type": "object",
-                "properties": {
-                    "Number": {
                         "type": "string"
                     }
                 }
@@ -7910,14 +8551,6 @@
                 "type": "object",
                 "properties": {
                     "ClassificationType": {
-                        "type": "string"
-                    }
-                }
-            },
-            "SubTypeExt": {
-                "type": "object",
-                "properties": {
-                    "Code": {
                         "type": "string"
                     }
                 }
@@ -9534,6 +10167,185 @@
                 },
                 "description": "Datos específicos de la operación, que contienen los resultados relevantes de la solicitud"
             },
+            "CanonicalRequestConsultarDetalleCdtRequest": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/ConsultarDetalleCdtRequest"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "ConsultarDetalleCdtRequest": {
+                "type": "object",
+                "properties": {
+                    "bankingMobileActiveExt": {
+                        "type": "boolean"
+                    },
+                    "legalEntityIdentificationType": {
+                        "type": "string"
+                    },
+                    "legalEntityIdentification": {
+                        "type": "string"
+                    },
+                    "partyIdentificationType": {
+                        "type": "string"
+                    },
+                    "partyIdentification": {
+                        "type": "string"
+                    },
+                    "savingsAccountAgreementIdentification": {
+                        "type": "string"
+                    }
+                },
+                "description": "Request de la consulta del detalle del CDT"
+            },
+            "AmountValue": {
+                "type": "object",
+                "properties": {
+                    "AmountValue": {
+                        "$ref": "#/components/schemas/ValueWrapper"
+                    }
+                }
+            },
+            "BalanceAmount": {
+                "type": "object",
+                "properties": {
+                    "BalanceAmount": {
+                        "$ref": "#/components/schemas/AmountValue"
+                    }
+                }
+            },
+            "ConsultarDetalleCdt": {
+                "type": "object",
+                "properties": {
+                    "CustomerReference": {
+                        "$ref": "#/components/schemas/CustomerReference"
+                    },
+                    "InterestPaymentFrequency": {
+                        "$ref": "#/components/schemas/InterestPaymentFrequency"
+                    },
+                    "TermDepositAccountProductType": {
+                        "type": "string"
+                    },
+                    "TaxReference": {
+                        "$ref": "#/components/schemas/TaxReference"
+                    },
+                    "TaxRateExt": {
+                        "type": "string"
+                    },
+                    "TermDepositMaturityDate": {
+                        "$ref": "#/components/schemas/DateTimeWrapper"
+                    },
+                    "nextInterestPaymentDateExt": {
+                        "$ref": "#/components/schemas/DateTimeWrapper"
+                    },
+                    "InterestTransaction": {
+                        "$ref": "#/components/schemas/InterestTransaction"
+                    },
+                    "TermDepositAccountProductID": {
+                        "$ref": "#/components/schemas/IdentifierWrapper"
+                    },
+                    "TermDepositDuration": {
+                        "$ref": "#/components/schemas/TermDepositDuration"
+                    },
+                    "InterestRate": {
+                        "$ref": "#/components/schemas/RateWrapper"
+                    },
+                    "descriptionTypeSignatureExt": {
+                        "type": "string"
+                    },
+                    "TermDepositOpenDate": {
+                        "$ref": "#/components/schemas/DateTimeWrapper"
+                    },
+                    "AccountBalance": {
+                        "$ref": "#/components/schemas/BalanceAmount"
+                    },
+                    "InterestTax": {
+                        "$ref": "#/components/schemas/TaxAmount"
+                    }
+                },
+                "description": "Respuesta de la consulta del detalle del CDT"
+            },
+            "DateTimeWrapper": {
+                "type": "object",
+                "properties": {
+                    "DateTimeContent": {
+                        "type": "string"
+                    }
+                }
+            },
+            "IdentifierWrapper": {
+                "type": "object",
+                "properties": {
+                    "IdentifierValue": {
+                        "$ref": "#/components/schemas/ValueWrapper"
+                    }
+                }
+            },
+            "InterestPaymentFrequency": {
+                "type": "object",
+                "properties": {
+                    "FrequencyCode": {
+                        "type": "string"
+                    }
+                }
+            },
+            "InterestTransaction": {
+                "type": "object",
+                "properties": {
+                    "InterestTransactionAmount": {
+                        "$ref": "#/components/schemas/AmountValue"
+                    }
+                }
+            },
+            "RateWrapper": {
+                "type": "object",
+                "properties": {
+                    "RateValue": {
+                        "$ref": "#/components/schemas/ValueWrapper"
+                    }
+                }
+            },
+            "TaxAmount": {
+                "type": "object",
+                "properties": {
+                    "TaxAmount": {
+                        "$ref": "#/components/schemas/AmountValue"
+                    }
+                }
+            },
+            "TermDepositDuration": {
+                "type": "object",
+                "properties": {
+                    "TermDaysExt": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ValueWrapper": {
+                "type": "object",
+                "properties": {
+                    "Value": {
+                        "type": "string"
+                    }
+                }
+            },
             "CanonicalRequestConsultarDatosAsociadosRequestDTO": {
                 "required": [
                     "deviceContext",
@@ -9624,6 +10436,48 @@
                     }
                 },
                 "description": "DTO que representa el canonical response"
+            },
+            "CanonicalRequestCrearClienteRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/CrearClienteRequestDTO"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "CrearClienteRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "coreDestino": {
+                        "type": "string"
+                    },
+                    "tipoDocumento": {
+                        "type": "string"
+                    },
+                    "numDocumento": {
+                        "type": "string"
+                    },
+                    "tipoPersona": {
+                        "type": "string"
+                    }
+                },
+                "description": "Incluye los datos específicos de la operación que se está solicitando"
             },
             "CanonicalRequestOperacionClienteRequest": {
                 "required": [
@@ -11150,6 +12004,162 @@
                 },
                 "description": "DTO para la solicitud de verificación de datos de usuario"
             },
+            "CanonicalRequestVerificarDatosUsuarioRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/VerificarDatosUsuarioRequestDTO"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "VerificarDatosUsuarioRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "LegalEntityIdentificationType": {
+                        "type": "string",
+                        "description": "Tipo de identificación de la entidad legal",
+                        "example": "NIT"
+                    },
+                    "LegalEntityIdentification": {
+                        "type": "string"
+                    },
+                    "PartyIdentificationType": {
+                        "type": "string"
+                    },
+                    "PartyIdentification": {
+                        "type": "string"
+                    },
+                    "legalEntityIdentificationType": {
+                        "type": "string"
+                    },
+                    "legalEntityIdentification": {
+                        "type": "string"
+                    },
+                    "partyIdentificationType": {
+                        "type": "string"
+                    },
+                    "partyIdentification": {
+                        "type": "string"
+                    }
+                },
+                "description": "Incluye los datos específicos de la operación que se está solicitando"
+            },
+            "ConsultarVariablesInternasResponseDTO": {
+                "type": "object",
+                "properties": {
+                    "Concept": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/VariableInternaDTO"
+                        }
+                    }
+                },
+                "description": "Objeto para la consulta de variables internas"
+            },
+            "VariableInternaDTO": {
+                "type": "object",
+                "properties": {
+                    "LastUpdate": {
+                        "type": "string",
+                        "description": "Fecha de actualización"
+                    },
+                    "CutOffDate": {
+                        "type": "string",
+                        "description": "Fecha de corte"
+                    },
+                    "Name": {
+                        "type": "string",
+                        "description": "Nombre de la variable interna"
+                    },
+                    "Value": {
+                        "type": "string",
+                        "description": "Valor de la variable interna"
+                    }
+                },
+                "description": "Objeto para la consulta de variables internas"
+            },
+            "CanonicalRequestValidateOwnershipRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/ValidateOwnershipRequestDTO"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "ValidateOwnershipRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "Account": {
+                        "$ref": "#/components/schemas/Account"
+                    },
+                    "PartyIdentification": {
+                        "$ref": "#/components/schemas/PartyCustomerIdentificationDTO"
+                    }
+                },
+                "description": "Objeto para la validación de titularidad"
+            },
+            "AccountRestriction": {
+                "type": "object",
+                "properties": {
+                    "CreditBlock": {
+                        "type": "string",
+                        "description": "Bloqueo de crédito"
+                    },
+                    "DebitBlock": {
+                        "type": "string",
+                        "description": "Bloqueo de débito"
+                    }
+                },
+                "description": "Restricciones de la cuenta"
+            },
+            "ValidateOwnershipResponseDTO": {
+                "type": "object",
+                "properties": {
+                    "OwnerShip": {
+                        "type": "boolean",
+                        "description": "Validación de titularidad"
+                    },
+                    "PartyIdentification": {
+                        "$ref": "#/components/schemas/PartyCustomerIdentificationDTO"
+                    },
+                    "Account": {
+                        "$ref": "#/components/schemas/Account"
+                    }
+                },
+                "description": "Objeto para la validación de titularidad"
+            },
             "CanonicalRequestValidateOTPRequestDTO": {
                 "required": [
                     "deviceContext",
@@ -11354,44 +12364,6 @@
                     }
                 },
                 "description": "Incluye los datos específicos de la operación que se está solicitando"
-            },
-            "ActualizarBilleteraIdRequestDTO": {
-                "type": "object",
-                "properties": {
-                    "statusCode": {
-                        "type": "string",
-                        "description": "Código de respuesta",
-                        "example": "200"
-                    },
-                    "body": {
-                        "$ref": "#/components/schemas/Body"
-                    }
-                },
-                "description": "Objeto para la actualización de billetera id"
-            },
-            "CanonicalRequestActualizarBilleteraIdRequestDTO": {
-                "required": [
-                    "deviceContext",
-                    "header",
-                    "metadata",
-                    "operationData"
-                ],
-                "type": "object",
-                "properties": {
-                    "header": {
-                        "$ref": "#/components/schemas/Header"
-                    },
-                    "metadata": {
-                        "$ref": "#/components/schemas/Metadata"
-                    },
-                    "deviceContext": {
-                        "$ref": "#/components/schemas/DeviceContext"
-                    },
-                    "operationData": {
-                        "$ref": "#/components/schemas/ActualizarBilleteraIdRequestDTO"
-                    }
-                },
-                "description": "DTO que representa el canonical request"
             },
             "CanonicalRequestSendNotificationContRequestDTO": {
                 "required": [
@@ -11729,14 +12701,6 @@
                 },
                 "description": "DTO para la transacción de pago"
             },
-            "TransactionReference": {
-                "type": "object",
-                "properties": {
-                    "TransactionIdentification": {
-                        "$ref": "#/components/schemas/TransactionIdentification"
-                    }
-                }
-            },
             "CanonicalListenConvenios": {
                 "required": [
                     "message",
@@ -11838,15 +12802,6 @@
                 },
                 "description": "DTO para la transacción de pago"
             },
-            "AccountIdentification": {
-                "type": "object",
-                "properties": {
-                    "IdentifierValue": {
-                        "$ref": "#/components/schemas/IdentifierValue"
-                    }
-                },
-                "description": "Identificación de la cuenta"
-            },
             "Amount": {
                 "required": [
                     "AmountValue"
@@ -11858,19 +12813,6 @@
                     }
                 },
                 "description": "Monto de la transacción"
-            },
-            "AmountValue": {
-                "required": [
-                    "Value"
-                ],
-                "type": "object",
-                "properties": {
-                    "Value": {
-                        "type": "string",
-                        "description": "Valor del pago a realizar"
-                    }
-                },
-                "description": "Valor del monto"
             },
             "CanonicalRequestPagarEstadoCuentaRequestDTO": {
                 "required": [
@@ -12496,6 +13438,10 @@
                     "CommentIdentification": {
                         "type": "string",
                         "description": "CommentIdentification"
+                    },
+                    "TypeEntity": {
+                        "type": "string",
+                        "description": "TypeEntity"
                     },
                     "TypeEntityFATCA": {
                         "$ref": "#/components/schemas/CreateOrEditBucTypeEntityFATCA"
@@ -14508,15 +15454,6 @@
                     "CutOffDate": {
                         "type": "string",
                         "description": "CutOffDate"
-                    },
-                    "balance": {
-                        "$ref": "#/components/schemas/CreateOrEditBucSimpleObject"
-                    },
-                    "certification": {
-                        "$ref": "#/components/schemas/CreateOrEditBucSimpleObject"
-                    },
-                    "cutOffDate": {
-                        "type": "string"
                     }
                 },
                 "description": "Esquema para CreateOrEditPersonReferenceBucFinancialTotal"
@@ -14564,18 +15501,6 @@
                         "type": "string"
                     },
                     "AccountJustify": {
-                        "type": "string"
-                    },
-                    "name": {
-                        "type": "string"
-                    },
-                    "accountAmount": {
-                        "type": "string"
-                    },
-                    "accountJustify": {
-                        "type": "string"
-                    },
-                    "code": {
                         "type": "string"
                     }
                 },
@@ -14975,6 +15900,46 @@
                     }
                 },
                 "description": "PersonReferenceCreateOrEditBucPersonReference"
+            },
+            "CanonicalRequestCreacionBucRequestDTOv2": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/CreacionBucRequestDTOv2"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "CreacionBucRequestDTOv2": {
+                "type": "object",
+                "properties": {
+                    "CustomerReference": {
+                        "$ref": "#/components/schemas/CustomerReference"
+                    },
+                    "BranchData": {
+                        "$ref": "#/components/schemas/BranchData"
+                    },
+                    "OfficesExt": {
+                        "type": "string",
+                        "description": "External office information"
+                    }
+                },
+                "description": "Request DTO for creating a BUC"
             },
             "CanonicalRequestCrearDatosFinancierosBucRequestDTO": {
                 "required": [
@@ -16674,6 +17639,122 @@
                 },
                 "description": "Incluye los datos específicos de la operación que se está solicitando"
             },
+            "CanonicalRequestConsultarVariablesInternasRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/ConsultarVariablesInternasRequestDTO"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "ConsultarVariablesInternasRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "CustomerReference": {
+                        "$ref": "#/components/schemas/CustomerReferenceDTO"
+                    }
+                },
+                "description": "Objeto para la consulta de variables internas"
+            },
+            "AccountDTO": {
+                "type": "object",
+                "properties": {
+                    "Number": {
+                        "type": "string",
+                        "description": "Corresponde al número del prodcuto"
+                    }
+                }
+            },
+            "AccountReferent": {
+                "type": "object",
+                "properties": {
+                    "Identification": {
+                        "$ref": "#/components/schemas/AccountDTO"
+                    }
+                },
+                "description": "Referencia del conteo"
+            },
+            "CanonicalRequestConsultaTransaccionProductoRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/ConsultaTransaccionProductoRequestDTO"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "ConsultaTransaccionProductoRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "TransactionReference": {
+                        "$ref": "#/components/schemas/TransactionReference"
+                    },
+                    "AccountReferent": {
+                        "$ref": "#/components/schemas/AccountReferent"
+                    },
+                    "DateTime": {
+                        "$ref": "#/components/schemas/DateTimeRange"
+                    }
+                },
+                "description": "Objeto para la consulta de cobis"
+            },
+            "DateTimeRange": {
+                "type": "object",
+                "properties": {
+                    "FromDateTime": {
+                        "type": "string",
+                        "description": "Fecha inicial"
+                    },
+                    "ToDateTime": {
+                        "type": "string",
+                        "description": "Fecha final"
+                    }
+                },
+                "description": "Hace referencia a los rangos de fechas"
+            },
+            "ConsultaTitularResponseDTO": {
+                "required": [
+                    "partyReference"
+                ],
+                "type": "object",
+                "properties": {
+                    "partyReference": {
+                        "$ref": "#/components/schemas/PartyReference"
+                    }
+                },
+                "description": "Dto de respuesta de consulta de titular de cuenta"
+            },
             "CanonicalRequestConsultaAmortizacionLoanRequestDTO": {
                 "required": [
                     "deviceContext",
@@ -17665,6 +18746,82 @@
                     }
                 }
             },
+            "CanonicalRequestProvinciaRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/ProvinciaRequestDTO"
+                    }
+                },
+                "description": "DTO que representa el canonical request"
+            },
+            "CodigoDTO": {
+                "required": [
+                    "Code"
+                ],
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "type": "string",
+                        "description": "Código del país"
+                    }
+                },
+                "description": "País con código"
+            },
+            "ProvinciaRequestDTO": {
+                "required": [
+                    "Country"
+                ],
+                "type": "object",
+                "properties": {
+                    "Country": {
+                        "$ref": "#/components/schemas/CodigoDTO"
+                    }
+                },
+                "description": "DTO request para consultar provincias"
+            },
+            "Provincia": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "type": "string",
+                        "description": "Código de la provincia"
+                    },
+                    "Name": {
+                        "type": "string",
+                        "description": "Nombre de la provincia"
+                    }
+                },
+                "description": "Objeto provincia"
+            },
+            "ProvinciaResponseDTO": {
+                "type": "object",
+                "properties": {
+                    "Provinces": {
+                        "type": "array",
+                        "description": "Listado de provincias filtradas",
+                        "items": {
+                            "$ref": "#/components/schemas/Provincia"
+                        }
+                    }
+                },
+                "description": "DTO de respuesta para provincias"
+            },
             "CanonicalRequestConsultaBucRequestDTO": {
                 "required": [
                     "deviceContext",
@@ -18091,15 +19248,83 @@
                 },
                 "description": "DTO para la respuesta de consulta de costo titular"
             },
-            "PartyName": {
+            "CanonicalRequestCiudadRequestDTO": {
+                "required": [
+                    "deviceContext",
+                    "header",
+                    "metadata",
+                    "operationData"
+                ],
                 "type": "object",
                 "properties": {
-                    "Name": {
-                        "type": "string",
-                        "description": "Nombre completo de la parte titular."
+                    "header": {
+                        "$ref": "#/components/schemas/Header"
+                    },
+                    "metadata": {
+                        "$ref": "#/components/schemas/Metadata"
+                    },
+                    "deviceContext": {
+                        "$ref": "#/components/schemas/DeviceContext"
+                    },
+                    "operationData": {
+                        "$ref": "#/components/schemas/CiudadRequestDTO"
                     }
                 },
-                "description": "Nombre de la parte titular."
+                "description": "DTO que representa el canonical request"
+            },
+            "CiudadRequestDTO": {
+                "type": "object",
+                "properties": {
+                    "Province": {
+                        "$ref": "#/components/schemas/Province"
+                    }
+                },
+                "description": "request para consultar las ciudades"
+            },
+            "Province": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "type": "string"
+                    }
+                },
+                "description": "Referencia a la identidad province.",
+                "example": "codigo de departamento"
+            },
+            "Ciudad": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "type": "string",
+                        "description": "Código de la ciudad"
+                    },
+                    "Name": {
+                        "type": "string",
+                        "description": "Nombre de la ciudad"
+                    },
+                    "ProvinceId": {
+                        "type": "string",
+                        "description": "Código de la provincia/departamento"
+                    },
+                    "CountryId": {
+                        "type": "string",
+                        "description": "Código del país"
+                    }
+                },
+                "description": "Objeto ciudad"
+            },
+            "CiudadResposeDTO": {
+                "type": "object",
+                "properties": {
+                    "Cities": {
+                        "type": "array",
+                        "description": "Listado de ciudades filtradas",
+                        "items": {
+                            "$ref": "#/components/schemas/Ciudad"
+                        }
+                    }
+                },
+                "description": "DTO de respuesta para ciudades"
             },
             "CanonicalRequestConsultarBucRequestPNPJDTO": {
                 "required": [

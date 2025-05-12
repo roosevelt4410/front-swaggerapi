@@ -16,7 +16,7 @@ const ApisBuc: React.FC = () => {
   const [selectedApi, setSelectedApi] = useState<string | null>(null);
   const [openCategory, setOpenCategory] = useState<string | null>(null);
   const [activeApi, setActiveApi] = useState<string | null>(null);
-  /* const backendUrl = "http://localhost:3000";*/
+  /*const backendUrl = "http://localhost:3000";*/
   const backendUrl = "https://main.d10lb53q0mw9au.amplifyapp.com"; 
 
   const apis: ApiCategories = {
