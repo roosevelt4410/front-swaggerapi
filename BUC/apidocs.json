@@ -19661,7 +19661,7 @@
                 "type": "oauth2",
                 "flows": {
                     "clientCredentials": {
-                        "tokenUrl": "${keycloak.tokenUrl}",
+                        "tokenUrl": "https://keycloakqa.bancoomeva.com.co/realms/qa-bancoomeva/protocol/openid-connect/token",
                         "scopes": {
                             "openid": "openid scope"
                         }
