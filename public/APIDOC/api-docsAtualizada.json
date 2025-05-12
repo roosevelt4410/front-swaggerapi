@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "https://webappspruebas.devbancoomeva.co/mocks/api/"
+            "url": "https://webappspruebas.devbancoomeva.co/mocks/"
         }
     ],
     "paths": {
